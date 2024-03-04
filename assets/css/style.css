@@ -7,4 +7,12 @@
     height: 100px;
 }
 
-body {}
+:root{
+    --green:#25D865;
+}
+#btnHeaderplay{
+background-color: var(--green);
+}
+#titleSongHeader{
+    font-size: 4rem;
+}
