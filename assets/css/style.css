@@ -1,7 +1,16 @@
 /* ------------------------------
         PLAYER CSS
 ---------------------------------- */
+body {
+  font-family: "Circular";
+}
 
+#player-container p:first-of-type {
+  font-size: 0.8rem;
+}
+#player-container p:last-of-type {
+  font-size: 0.7rem;
+}
 .player-img-container {
   height: 3.7rem;
   width: 3.7rem;
@@ -26,6 +35,10 @@
   background-color: #474747;
 }
 
-.active {
+.activeColor {
   color: green;
+}
+.range {
+  height: 0.2rem;
+  font-size: 300;
 }
