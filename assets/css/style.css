@@ -7,4 +7,9 @@
     height: 100px;
 }
 
-body {}
+/* SIDEBAR SINISTRA PHILIP */
+#nav {
+    top: 0;
+    z-index: 10;
+}
+/* SIDEBAR SINISTRA PHILIP */
