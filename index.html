@@ -20,76 +20,111 @@
   <body>
     <header></header>
 
-    <div class="container-fluid bg-black text-white sticky-bottom">
-      <div class="container">
-        <div class="row" id="player-container">
-          <div class="col-4 d-flex">
-            <div class="player-img-container">
-              <img src="./assets/imgs/main/image-1.jpg" alt="" />
-            </div>
-            <div>
-              <p>Title song</p>
-              <p>Artist</p>
+    <div class="container-fluid bg-black text-white sticky-bottom p-2">
+      <div class="row justify-content-center align-items-center" id="player-container">
+        <div class="col-3 d-flex align-items-center">
+          <div class="player-img-container rounded-1">
+            <img src="./assets/imgs/main/image-3.jpg" alt="" />
+          </div>
+          <div class="ms-2">
+            <p class="m-0">Title song</p>
+            <p class="m-0 small text-secondary">Artist</p>
+          </div>
+          <div></div>
+        </div>
+        <div class="col-6">
+          <!-- icons player -->
+          <div>
+            <div class="d-flex justify-content-center align-items-center" id="controls">
+              <button class="btn text-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-shuffle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"
+                  />
+                  <path
+                    d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"
+                  />
+                </svg>
+              </button>
+              <button class="btn text-secondary prev">
+                <svg
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  viewBox="-0.5 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  transform="rotate(-180)"
+                >
+                  <path
+                    d="m0 22.835v-21.665c0-.007 0-.015 0-.024 0-.63.511-1.141 1.141-1.141.201 0 .391.052.555.144l-.006-.003 18.71 10.493v-10.038c0-.331.268-.6.599-.6h1.2c.332 0 .6.269.6.6v22.799.001c0 .331-.268.599-.599.599h-.001-1.2c-.331 0-.599-.268-.599-.599v-.001-10.038l-18.71 10.494c-.158.091-.347.145-.548.145-.632-.007-1.142-.521-1.142-1.155 0-.004 0-.008 0-.011v.001z"
+                  />
+                </svg>
+              </button>
+              <button class="btn play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-play-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"
+                  />
+                </svg>
+              </button>
+              <button class="pause">Pause</button>
+              <button class="btn text-secondary next">
+                <svg
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  viewBox="-0.5 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m0 22.835v-21.665c0-.007 0-.015 0-.024 0-.63.511-1.141 1.141-1.141.201 0 .391.052.555.144l-.006-.003 18.71 10.493v-10.038c0-.331.268-.6.599-.6h1.2c.332 0 .6.269.6.6v22.799.001c0 .331-.268.599-.599.599h-.001-1.2c-.331 0-.599-.268-.599-.599v-.001-10.038l-18.71 10.494c-.158.091-.347.145-.548.145-.632-.007-1.142-.521-1.142-1.155 0-.004 0-.008 0-.011v.001z"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
-          <div class="col-4">
-            <!-- icons player -->
-            <div>
-              <div id="controls">
-                <div class="audio-track"><div class="time"></div></div>
-                <button class="btn text-secondary">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-shuffle"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"
-                    />
-                    <path
-                      d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"
-                    />
-                  </svg>
-                </button>
-                <button class="btn play">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-play-circle-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"
-                    />
-                  </svg>
-                </button>
-                <button class="pause">Pause</button>
-                <button class="prev">
-                  <svg fill="#000000" width="16" height="16" viewBox="-0.5 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="m0 22.835v-21.665c0-.007 0-.015 0-.024 0-.63.511-1.141 1.141-1.141.201 0 .391.052.555.144l-.006-.003 18.71 10.493v-10.038c0-.331.268-.6.599-.6h1.2c.332 0 .6.269.6.6v22.799.001c0 .331-.268.599-.599.599h-.001-1.2c-.331 0-.599-.268-.599-.599v-.001-10.038l-18.71 10.494c-.158.091-.347.145-.548.145-.632-.007-1.142-.521-1.142-1.155 0-.004 0-.008 0-.011v.001z"
-                      rotate
-                    />
-                  </svg>
-                </button>
-                <button class="next">
-                  <svg fill="#000000" width="16" height="16" viewBox="-0.5 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="m0 22.835v-21.665c0-.007 0-.015 0-.024 0-.63.511-1.141 1.141-1.141.201 0 .391.052.555.144l-.006-.003 18.71 10.493v-10.038c0-.331.268-.6.599-.6h1.2c.332 0 .6.269.6.6v22.799.001c0 .331-.268.599-.599.599h-.001-1.2c-.331 0-.599-.268-.599-.599v-.001-10.038l-18.71 10.494c-.158.091-.347.145-.548.145-.632-.007-1.142-.521-1.142-1.155 0-.004 0-.008 0-.011v.001z"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div>0.33-3.00</div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="small">0.00</div>
+            <div class="audio-track"><div class="time"></div></div>
+            <div class="small">3.00</div>
           </div>
-          <div class="col-lg-4"></div>
+        </div>
+        <div class="col-lg-3 text-end">
+          <button class="btn text-secondary active"></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button class="btn text-secondary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrows-angle-expand"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

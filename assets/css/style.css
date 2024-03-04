@@ -3,8 +3,9 @@
 ---------------------------------- */
 
 .player-img-container {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 3.7rem;
+  width: 3.7rem;
+  overflow: hidden;
 }
 
 .player-img-container img {
@@ -13,14 +14,18 @@
 }
 
 .audio-track {
-  width: 150px;
-  height: 3px;
+  width: 90%;
+  height: 2px;
+  border-radius: 5px;
   background-color: #dddddd;
-  margin: 20px 0;
 }
 
 .time {
   width: 0;
   height: 3px;
   background-color: #474747;
+}
+
+.active {
+  color: green;
 }
