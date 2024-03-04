@@ -1,8 +1,26 @@
-.footer {
-    height: 100px;
+/* ------------------------------
+        PLAYER CSS
+---------------------------------- */
 
+.player-img-container {
+  height: 3.5rem;
+  width: 3.5rem;
 }
 
-.footer img {
-    height: 100px;
+.player-img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.audio-track {
+  width: 150px;
+  height: 3px;
+  background-color: #dddddd;
+  margin: 20px 0;
+}
+
+.time {
+  width: 0;
+  height: 3px;
+  background-color: #474747;
 }
