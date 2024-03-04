@@ -6,24 +6,27 @@ body {
 }
 
 .footer img {
-    height: 100px;
+  height: 100px;
 }
 
-:root{
-    --green:#25D865;
+:root {
+  --green: #25d865;
 }
-#btnHeaderplay{
-background-color: var(--green);
+#btnHeaderplay {
+  background-color: var(--green);
 }
-#titleSongHeader{
-    font-size: 4rem;
+#titleSongHeader {
+  font-size: 4rem;
 }
 /* SIDEBAR SINISTRA PHILIP */
 #nav {
-    top: 0;
-    z-index: 10;
+  top: 0;
+  z-index: 10;
 }
 /* SIDEBAR SINISTRA PHILIP */
+
+/* PLAYER NICOLE */
+
 #player-container p:first-of-type {
   font-size: 0.8rem;
 }
@@ -31,8 +34,8 @@ background-color: var(--green);
   font-size: 0.7rem;
 }
 .player-img-container {
-  height: 3.7rem;
-  width: 3.7rem;
+  height: 3.9rem;
+  width: 3.9rem;
   overflow: hidden;
 }
 
@@ -41,9 +44,42 @@ background-color: var(--green);
   height: 100%;
 }
 
+#player-right-side svg:hover,
+#player-right-side svg:active {
+  color: var(--green);
+}
+
+#controls svg:hover {
+  color: white;
+}
+#controls svg:active {
+  color: rgb(150, 148, 148) !important;
+}
+
+#controls button {
+  margin: 0.375rem 0.75rem;
+  padding: 0 !important;
+}
+
+#controls .play:hover,
+#controls .pause:hover {
+  scale: 1.1;
+}
+#controls .play svg:active,
+#controls .pause svg:active {
+  color: white !important;
+}
+
+.player-btn {
+  cursor: pointer;
+  padding: 0.375rem 0.75rem;
+  background-color: transparent;
+  border: transparent;
+}
+
 .audio-track {
-  width: 90%;
-  height: 2px;
+  width: 70%;
+  height: 3px;
   border-radius: 5px;
   background-color: #dddddd;
 }
@@ -54,9 +90,6 @@ background-color: var(--green);
   background-color: #474747;
 }
 
-.activeColor {
-  color:var(--green)
-}
 .range {
   height: 0.2rem;
   font-size: 300;
