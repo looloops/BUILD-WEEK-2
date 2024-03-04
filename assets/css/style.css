@@ -1,6 +1,8 @@
-.footer {
-    height: 100px;
-
+/* ------------------------------
+        PLAYER CSS
+---------------------------------- */
+body {
+  font-family: "Circular";
 }
 
 .footer img {
@@ -22,3 +24,40 @@ background-color: var(--green);
     z-index: 10;
 }
 /* SIDEBAR SINISTRA PHILIP */
+#player-container p:first-of-type {
+  font-size: 0.8rem;
+}
+#player-container p:last-of-type {
+  font-size: 0.7rem;
+}
+.player-img-container {
+  height: 3.7rem;
+  width: 3.7rem;
+  overflow: hidden;
+}
+
+.player-img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.audio-track {
+  width: 90%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #dddddd;
+}
+
+.time {
+  width: 0;
+  height: 3px;
+  background-color: #474747;
+}
+
+.activeColor {
+  color:var(--green)
+}
+.range {
+  height: 0.2rem;
+  font-size: 300;
+}
