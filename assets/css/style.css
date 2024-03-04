@@ -6,30 +6,36 @@ body {
 }
 
 .footer img {
-    height: 100px;
+  height: 100px;
 }
 
-:root{
-    --green:#25D865;
+:root {
+  --green: #25D865;
 }
-#btnHeaderplay{
-background-color: var(--green);
+
+#btnHeaderplay {
+  background-color: var(--green);
 }
-#titleSongHeader{
-    font-size: 4rem;
+
+#titleSongHeader {
+  font-size: 4rem;
 }
+
 /* SIDEBAR SINISTRA PHILIP */
 #nav {
-    top: 0;
-    z-index: 10;
+  top: 0;
+  z-index: 10;
 }
+
 /* SIDEBAR SINISTRA PHILIP */
 #player-container p:first-of-type {
   font-size: 0.8rem;
 }
+
 #player-container p:last-of-type {
   font-size: 0.7rem;
 }
+
 .player-img-container {
   height: 3.7rem;
   width: 3.7rem;
@@ -55,9 +61,36 @@ background-color: var(--green);
 }
 
 .activeColor {
-  color:var(--green)
+  color: var(--green)
 }
+
 .range {
   height: 0.2rem;
   font-size: 300;
+}
+
+/* LU_________________ */
+.mix-card {
+  padding: 0;
+  height: 60px;
+
+}
+
+.img-mix {
+  width: 60px;
+}
+
+.mix-card img {
+  width: 100%;
+  object-fit: cover;
+
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.card {
+  padding: 15px;
 }
