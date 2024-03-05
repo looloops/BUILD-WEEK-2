@@ -35,6 +35,12 @@ btnPlay.onclick = () => {
     // prendiamo tutto il tempo della canzone
     let audioLength = Math.round(audio.duration);
 
+    // function innerLongSong(time, length) {
+    //   let start = document.getElementById("start-song");
+    //   let long = document.getElementById("end-song");
+
+    // }
+
     // assegnamo una lunghezza in base all'elemento
     time.style.width = (audioTime * 100) / audioLength + "%";
     // mostra i secondi di riempimento della barra e controlla che la variabile sia meno di 4

@@ -251,25 +251,42 @@
       </div>
     </div>
     <!-- ----------------------------------------------------------------------------------------------------------lavoro nicole -->
-    <div class="container-fluid bg-black text-white fixed-bottom p-3">
+
+    <!-- player versione dexstop -->
+    <div class="container-fluid text-white fixed-bottom p-3 bg-player-color">
       <div class="row justify-content-center align-items-center" id="player-container">
-        <div class="col-2 col-lg-4 d-flex align-items-center">
-          <div class="player-img-container rounded-1">
+        <div class="col-4 col-md-4 d-flex align-items-center">
+          <div class="player-img-container">
             <img src="./assets/imgs/main/image-3.jpg" alt="" />
           </div>
           <div class="ms-2">
-            <p class="m-0">Title song</p>
-            <p class="m-0 small text-secondary">Artist</p>
+            <p class="m-0" id="player-title">Title song</p>
+            <p class="m-0 small text-secondary d-none d-md-block" id="player-artist">Artist</p>
           </div>
-          <div></div>
+          <button class="player-btn text-secondary add-pref-song ms-2">
+            <svg
+              fill="currentColor"
+              width="16"
+              height="16"
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              class="Svg-sc-ytk21e-0 dYnaPI"
+            >
+              <path
+                d="M1.69 2A4.582 4.582 0 0 1 8 2.023 4.583 4.583 0 0 1 11.88.817h.002a4.618 4.618 0 0 1 3.782 3.65v.003a4.543 4.543 0 0 1-1.011 3.84L9.35 14.629a1.765 1.765 0 0 1-2.093.464 1.762 1.762 0 0 1-.605-.463L1.348 8.309A4.582 4.582 0 0 1 1.689 2zm3.158.252A3.082 3.082 0 0 0 2.49 7.337l.005.005L7.8 13.664a.264.264 0 0 0 .311.069.262.262 0 0 0 .09-.069l5.312-6.33a3.043 3.043 0 0 0 .68-2.573 3.118 3.118 0 0 0-2.551-2.463 3.079 3.079 0 0 0-2.612.816l-.007.007a1.501 1.501 0 0 1-2.045 0l-.009-.008a3.082 3.082 0 0 0-2.121-.861z"
+              ></path>
+            </svg>
+          </button>
         </div>
-        <div class="col-5 col-lg-4">
+        <div class="col-4 col-md-4">
           <!-- icons player -->
-          <div class="">
+          <div>
             <div class="d-flex justify-content-center align-items-center" id="controls">
               <!-- casual btn -->
               <audio id="audio" class="d-none" src="./song.mp3" controls></audio>
-              <button class="player-btn text-secondary">
+              <button class="player-btn text-secondary d-none d-md-block">
                 <svg
                   fill="currentColor"
                   width="16"
@@ -289,7 +306,7 @@
                 </svg>
               </button>
               <!-- back btn -->
-              <button class="player-btn text-secondary prev">
+              <button class="player-btn text-secondary prev d-none d-md-block">
                 <svg
                   fill="currentColor"
                   width="16"
@@ -335,7 +352,7 @@
                 </svg>
               </button>
               <!-- btn next -->
-              <button class="player-btn text-secondary next">
+              <button class="player-btn text-secondary next d-none d-md-block">
                 <svg
                   fill="currentColor"
                   width="16"
@@ -352,7 +369,7 @@
                 </svg>
               </button>
               <!-- reapet btn -->
-              <button class="player-btn text-secondary">
+              <button class="player-btn text-secondary d-none d-md-block">
                 <svg
                   fill="currentColor"
                   width="16"
@@ -371,15 +388,15 @@
             </div>
           </div>
           <div class="d-flex justify-content-center align-items-center">
-            <div class="small text-secondary">0.00</div>
+            <div class="small text-secondary d-none d-md-block" id="start-song">0.00</div>
             <div class="audio-track mx-2">
               <div class="time"></div>
             </div>
-            <div class="small text-secondary">3.00</div>
+            <div class="small text-secondary d-none d-md-block" id="end-song">3.00</div>
           </div>
         </div>
         <!-- side right -->
-        <div class="col-4 col-lg-4 text-end" id="player-right-side">
+        <div class="col-4 col-md-4 text-end" id="player-right-side">
           <!-- stai ascoltando btn -->
           <button class="player-btn text-secondary p-1">
             <svg
