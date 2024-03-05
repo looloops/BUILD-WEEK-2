@@ -1,6 +1,11 @@
 /* ------------------------------
         PLAYER CSS
 ---------------------------------- */
+
+:root {
+  --green: #25D865;
+  
+}
 body {
   font-family: "Circular";
 }
@@ -9,17 +14,15 @@ body {
   height: 100px;
 }
 
-body {}
 
 .bi:hover{
     cursor: pointer;
 }
-
+/* icona per aggiungere amici */
 .bi-person-add:hover{
     scale: 102%;
     transition: scale 0.2s;
     animation: addFriendsHover 0.4s  backwards;
-    content: "add";
 }
 
 .bi-x-lg{
@@ -37,9 +40,7 @@ body {}
         color: white;
     }
 }
-:root {
-  --green: #25D865;
-}
+
 
 #btnHeaderplay {
   background-color: var(--green);
