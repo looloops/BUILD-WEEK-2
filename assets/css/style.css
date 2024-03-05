@@ -1,6 +1,11 @@
 /* ------------------------------
         PLAYER CSS
 ---------------------------------- */
+
+:root {
+  --green: #25d865;
+  --bgGrey: linear-gradient(180deg, rgba(55, 55, 55, 1) 0%, rgba(38, 38, 38, 1) 55%, rgba(18, 18, 18, 1) 100%);
+}
 body {
   font-family: "Circular";
 }
@@ -18,18 +23,70 @@ body {
 #titleSongHeader {
   font-size: 4rem;
 }
+.bi:hover {
+  cursor: pointer;
+}
+/* icona per aggiungere amici */
+.bi-person-add:hover {
+  scale: 102%;
+  transition: scale 0.2s;
+  animation: addFriendsHover 0.4s backwards;
+}
+
+.bi-x-lg {
+  font-size: small;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+}
+
+.bi-x-lg:hover {
+  background-color: rgba(211, 211, 211, 0.288);
+}
+
+@keyframes addFriendsHover {
+  to {
+    color: white;
+  }
+}
+
+#btnHeaderplay {
+  background-color: var(--green);
+}
+
+#titleSongHeader {
+  font-size: 4rem;
+}
+
+/* LU_________________ */
+.mix-card {
+  padding: 0;
+  height: 60px;
+}
+
+.img-mix {
+  width: 60px;
+}
+
+.mix-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.card {
+  padding: 15px;
+}
+
 /* SIDEBAR SINISTRA PHILIP */
 #nav {
   top: 0;
   z-index: 10;
 }
 /* SIDEBAR SINISTRA PHILIP */
-
-/* PLAYER NICOLE */
-
-.bg-player-color {
-  background-color: gray;
-}
 
 #player-container p:first-of-type {
   font-size: 0.8rem;
@@ -101,7 +158,6 @@ body {
   background-color: #dddddd;
 }
 
-/* classe audio */
 .range {
   height: 0.2rem;
   font-size: 300;
