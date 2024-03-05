@@ -1,8 +1,238 @@
-.footer {
-    height: 100px;
+/* ------------------------------
+        PLAYER CSS
+---------------------------------- */
 
+:root {
+  --green: #25d865;
+  --bgGrey:linear-gradient(180deg, rgba(33,33,33,1) 0%, rgba(30,30,30,1) 17%, rgba(24,24,24,1) 37%, rgba(18,18,18,1) 70%, rgba(18,18,18,1) 100%);
+  --grey2:#2A2A2A;
+  --greycard:#1d1d1d;
+  --bgArtist: linear-gradient(29deg, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 0.7148109243697479) 49%, rgba(32, 32, 32, 0) 94%);
+  --btnNav:#131313;
+}
+body {
+  font-family: "Circular";
 }
 
 .footer img {
-    height: 100px;
+  height: 100px;
+}
+
+:root {
+  --green: #25d865;
+}
+#btnHeaderplay {
+  background-color: var(--green);
+}
+#titleSongHeader {
+  font-size: 4rem;
+}
+.bi:hover {
+  cursor: pointer;
+}
+
+/* alfio */
+#btnlogoAvatar {
+  padding: 3px;
+}
+#titleSongHeader {
+  font-size: 4rem;
+}
+.header {
+  background: var(--bgArtist);
+}
+.body {
+  background: var(--bgGrey);
+  height: 100%;
+  overflow: scroll;
+}
+
+/* icona per aggiungere amici */
+.bi-person-add:hover {
+  scale: 102%;
+  transition: scale 0.2s;
+  animation: addFriendsHover 0.4s backwards;
+}
+
+.bi-x-lg {
+  font-size: small;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+}
+
+.bi-x-lg:hover {
+  background-color: rgba(211, 211, 211, 0.288);
+}
+
+@keyframes addFriendsHover {
+  to {
+    color: white;
+  }
+}
+
+#btnHeaderplay {
+  background-color: var(--green);
+}
+
+/* ALBUM PAGE CLASS NiCOLE */
+
+/* LU_________________ */
+.Jude {
+  background-color: var(--grey2);
+}
+.mix-card {
+  padding: 0;
+  height: 60px;
+}
+
+.img-mix {
+  width: 60px;
+}
+
+.mix-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.card {
+  padding: 15px;
+  background-color: var(--greycard);
+  border: 0px;
+}
+
+/* SIDEBAR SINISTRA PHILIP */
+#nav {
+  top: 0;
+  z-index: 10;
+}
+
+/* PLAYER NICOLE */
+
+.bg-player-color {
+  background-color: #282828;
+  border-radius: 15px;
+  width: 98%;
+  margin-inline: auto;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.player-mobile-relative {
+  position: relative;
+}
+
+#player-container p:first-of-type {
+  font-size: 0.8rem;
+}
+
+#player-container p:last-of-type {
+  font-size: 0.7rem;
+}
+
+.player-img-container {
+  height: 3.4rem;
+  width: 3.4rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.player-img-container img {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+nav button:hover{
+  scale: 1.04;
+}
+
+#player-right-side svg:hover,
+#player-right-side svg:active,
+.add-pref-song svg:active {
+  color: var(--green);
+}
+
+#minute-walk-song {
+  justify-content: end;
+}
+
+#controls svg:hover,
+.add-pref-song svg:hover {
+  color: white;
+}
+#controls svg:active {
+  color: rgb(150, 148, 148) !important;
+}
+
+#controls button {
+  margin: 0.375rem 0.75rem;
+  padding: 0 !important;
+}
+
+#controls .play:hover,
+#controls .pause:hover {
+  scale: 1.1;
+}
+#controls .play svg:active,
+#controls .pause svg:active {
+  color: white !important;
+}
+
+.player-btn {
+  cursor: pointer;
+  padding: 0.375rem 0.75rem;
+  background-color: transparent;
+  border: transparent;
+}
+
+/* classi per "far camminare" il player */
+.audio-track {
+  position: absolute;
+  bottom: 0;
+  width: 94%;
+  height: 4px;
+  background-color: #474747;
+}
+
+.time {
+  width: 0;
+  height: 3px;
+  background-color: #dddddd;
+}
+
+.range {
+  height: 0.2rem;
+  font-size: 300;
+}
+
+/* player version mobile */
+@media screen and (min-width: 778px) {
+  .bg-player-color {
+    background-color: black;
+    border-radius: initial;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .player-container {
+    position: relative;
+  }
+  .player-img-container {
+    border-radius: 5px;
+    height: 3.9rem;
+    width: 3.9rem;
+  }
+  #minute-walk-song {
+    justify-content: center;
+  }
+  .audio-track {
+    position: initial;
+    width: 70%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #474747;
+  }
 }
