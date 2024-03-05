@@ -4,12 +4,10 @@
 
 :root {
   --green: #25d865;
-  --bgGrey: linear-gradient(
-    180deg,
-    rgba(55, 55, 55, 1) 0%,
-    rgba(38, 38, 38, 1) 55%,
-    rgba(18, 18, 18, 1) 100%
-  );
+  --bgGrey:linear-gradient(180deg, rgba(36,36,36,0.9808298319327731) 0%, rgba(21,21,21,1) 56%, rgba(18,18,18,1) 100%);
+  --grey2:#2A2A2A;
+  --greycard:#1d1d1d;
+  --bgArtist: linear-gradient(29deg, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 0.7148109243697479) 49%, rgba(32, 32, 32, 0) 94%);
 }
 body {
   font-family: "Circular";
@@ -49,9 +47,7 @@ body {
   background-color: var(--green);
 }
 
-#titleSongHeader {
-  font-size: 4rem;
-}
+
 
 /* SIDEBAR SINISTRA PHILIP */
 #nav {
@@ -102,6 +98,9 @@ body {
 }
 
 /* LU_________________ */
+.Jude{
+  background-color: var(--grey2);
+}
 .mix-card {
   padding: 0;
   height: 60px;
@@ -123,4 +122,21 @@ a {
 
 .card {
   padding: 15px;
+  background-color: var(--greycard);
+  border: 0px;
+}
+/* alfio */
+#btnlogoAvatar{
+  padding: 3px;
+}
+#titleSongHeader {
+  font-size: 4rem;
+}
+.header{
+  background:var(--bgArtist);
+}
+.body{
+  background: var(--bgGrey);
+  height: 100%;
+  overflow: scroll;
 }
