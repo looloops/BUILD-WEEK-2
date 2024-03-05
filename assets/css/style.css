@@ -3,8 +3,13 @@
 ---------------------------------- */
 
 :root {
-  --green: #25D865;
-  
+  --green: #25d865;
+  --bgGrey: linear-gradient(
+    180deg,
+    rgba(55, 55, 55, 1) 0%,
+    rgba(38, 38, 38, 1) 55%,
+    rgba(18, 18, 18, 1) 100%
+  );
 }
 body {
   font-family: "Circular";
@@ -14,33 +19,31 @@ body {
   height: 100px;
 }
 
-
-.bi:hover{
-    cursor: pointer;
+.bi:hover {
+  cursor: pointer;
 }
 /* icona per aggiungere amici */
-.bi-person-add:hover{
-    scale: 102%;
-    transition: scale 0.2s;
-    animation: addFriendsHover 0.4s  backwards;
+.bi-person-add:hover {
+  scale: 102%;
+  transition: scale 0.2s;
+  animation: addFriendsHover 0.4s backwards;
 }
 
-.bi-x-lg{
-    font-size: small;
-    padding-inline: 0.5rem;
-    padding-block: 0.25rem;
+.bi-x-lg {
+  font-size: small;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
 }
 
-.bi-x-lg:hover{
-    background-color: rgba(211, 211, 211, 0.288);
+.bi-x-lg:hover {
+  background-color: rgba(211, 211, 211, 0.288);
 }
 
-@keyframes addFriendsHover{
-    to{
-        color: white;
-    }
+@keyframes addFriendsHover {
+  to {
+    color: white;
+  }
 }
-
 
 #btnHeaderplay {
   background-color: var(--green);
@@ -52,11 +55,10 @@ body {
 
 /* SIDEBAR SINISTRA PHILIP */
 #nav {
-    top: 0;
-    z-index: 10;
+  top: 0;
+  z-index: 10;
 }
 /* SIDEBAR SINISTRA PHILIP */
-
 
 #player-container p:first-of-type {
   font-size: 0.8rem;
@@ -91,7 +93,7 @@ body {
 }
 
 .activeColor {
-  color: var(--green)
+  color: var(--green);
 }
 
 .range {
@@ -103,7 +105,6 @@ body {
 .mix-card {
   padding: 0;
   height: 60px;
-
 }
 
 .img-mix {
@@ -113,7 +114,6 @@ body {
 .mix-card img {
   width: 100%;
   object-fit: cover;
-
 }
 
 a {
