@@ -8,3 +8,30 @@
 }
 
 body {}
+
+.bi:hover{
+    cursor: pointer;
+}
+
+.bi-person-add:hover{
+    scale: 102%;
+    transition: scale 0.2s;
+    animation: addFriendsHover 0.4s  backwards;
+    content: "add";
+}
+
+.bi-x-lg{
+    font-size: small;
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+}
+
+.bi-x-lg:hover{
+    background-color: rgba(211, 211, 211, 0.288);
+}
+
+@keyframes addFriendsHover{
+    to{
+        color: white;
+    }
+}
