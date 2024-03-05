@@ -87,6 +87,12 @@ a {
   z-index: 10;
 }
 /* SIDEBAR SINISTRA PHILIP */
+.bg-player-color {
+  background-color: #282828;
+  border-radius: 15px;
+  width: 98%;
+  margin-inline: auto;
+}
 
 #player-container p:first-of-type {
   font-size: 0.8rem;
@@ -112,6 +118,10 @@ a {
 #player-right-side svg:active,
 .add-pref-song svg:active {
   color: var(--green);
+}
+
+#minute-walk-song {
+  justify-content: end;
 }
 
 #controls svg:hover,
@@ -147,7 +157,7 @@ a {
 .audio-track {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 94%;
   height: 4px;
   background-color: #474747;
 }
@@ -166,9 +176,10 @@ a {
 /* player version mobile */
 @media screen and (min-width: 778px) {
   .bg-player-color {
-    background-color: gray;
+    background-color: black;
+    border-radius: initial;
+    width: 100%;
   }
-
   .player-container {
     position: relative;
   }
@@ -177,10 +188,14 @@ a {
     height: 3.9rem;
     width: 3.9rem;
   }
+  #minute-walk-song {
+    justify-content: center;
+  }
   .audio-track {
     position: initial;
     width: 70%;
     height: 3px;
     border-radius: 5px;
+    background-color: #474747;
   }
 }
