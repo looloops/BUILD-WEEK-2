@@ -1,10 +1,12 @@
-.footer {
-    height: 100px;
-
+/* ------------------------------
+        PLAYER CSS
+---------------------------------- */
+body {
+  font-family: "Circular";
 }
 
 .footer img {
-    height: 100px;
+  height: 100px;
 }
 
 body {}
@@ -34,4 +36,89 @@ body {}
     to{
         color: white;
     }
+}
+:root {
+  --green: #25D865;
+}
+
+#btnHeaderplay {
+  background-color: var(--green);
+}
+
+#titleSongHeader {
+  font-size: 4rem;
+}
+
+/* SIDEBAR SINISTRA PHILIP */
+#nav {
+  top: 0;
+  z-index: 10;
+}
+
+/* SIDEBAR SINISTRA PHILIP */
+#player-container p:first-of-type {
+  font-size: 0.8rem;
+}
+
+#player-container p:last-of-type {
+  font-size: 0.7rem;
+}
+
+.player-img-container {
+  height: 3.7rem;
+  width: 3.7rem;
+  overflow: hidden;
+}
+
+.player-img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.audio-track {
+  width: 90%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #dddddd;
+}
+
+.time {
+  width: 0;
+  height: 3px;
+  background-color: #474747;
+}
+
+.activeColor {
+  color: var(--green)
+}
+
+.range {
+  height: 0.2rem;
+  font-size: 300;
+}
+
+/* LU_________________ */
+.mix-card {
+  padding: 0;
+  height: 60px;
+
+}
+
+.img-mix {
+  width: 60px;
+}
+
+.mix-card img {
+  width: 100%;
+  object-fit: cover;
+
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.card {
+  padding: 15px;
 }
