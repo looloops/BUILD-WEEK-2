@@ -8,7 +8,6 @@ function hiddenSectionfriends() {
     sectionFriends.classList.add("d-none");
     body.className = "col-9 body";
   } else {
-
     sectionFriends.classList.remove("d-none");
     sectionFriends.classList.add("d-block");
     body.className = "col-7 body";
@@ -17,3 +16,18 @@ function hiddenSectionfriends() {
 btnFriends.onclick = function () {
   hiddenSectionfriends();
 };
+
+//funzione che fa scomparire la scrollbar
+
+body.style.overflow = "hidden";
+body.style.paddingRight = "13";
+body.addEventListener("mouseout", function () {
+    body.style.overflow = "hidden";
+    body.style.paddingRight = "13px"; // Sostituisci con la larghezza della tua barra di scorrimento
+  }); 
+  body.addEventListener("mouseover", function () {
+    body.style.overflow = "scroll";
+    body.style.paddingRight = "0";
+  });
+//////////////////////////////////////
+ 
