@@ -19,15 +19,15 @@ btnFriends.onclick = function () {
 
 //funzione che fa scomparire la scrollbar
 
-body.style.overflow = "hidden";
-body.style.paddingRight = "13";
-body.addEventListener("mouseout", function () {
-    body.style.overflow = "hidden";
-    body.style.paddingRight = "13px"; // Sostituisci con la larghezza della tua barra di scorrimento
-  }); 
-  body.addEventListener("mouseover", function () {
-    body.style.overflow = "scroll";
-    body.style.paddingRight = "0";
-  });
+// body.style.overflow = "hidden";
+// body.style.paddingRight = "13";
+// body.addEventListener("mouseout", function () {
+//     body.style.overflow = "hidden";
+//     body.style.paddingRight = "13px"; // Sostituisci con la larghezza della tua barra di scorrimento
+//   }); 
+//   body.addEventListener("mouseover", function () {
+//     body.style.overflow = "scroll";
+//     body.style.paddingRight = "0";
+//   });
 //////////////////////////////////////
  
