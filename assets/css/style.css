@@ -86,12 +86,20 @@ a {
   top: 0;
   z-index: 10;
 }
-/* SIDEBAR SINISTRA PHILIP */
+
+/* PLAYER NICOLE */
+
 .bg-player-color {
   background-color: #282828;
   border-radius: 15px;
   width: 98%;
   margin-inline: auto;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.player-mobile-relative {
+  position: relative;
 }
 
 #player-container p:first-of-type {
@@ -179,6 +187,7 @@ a {
     background-color: black;
     border-radius: initial;
     width: 100%;
+    padding-bottom: 1rem;
   }
   .player-container {
     position: relative;
