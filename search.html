@@ -15,9 +15,280 @@
 </head>
 
 <body>
-    <header>
+    <div class="container-fluid bg-black h-100 overflow-y-auto">
+        <div class="col-2 h-100 p-0 d-none d-lg-block">
+            <!-- header // sidebar sinistra -->
+            <nav class="bg-black">
+              <div class="row w-100 m-0">
+                <div class="col px-2 pt-2">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-three-dots" viewBox="0 0 20 20">
+                        <path
+                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                    </svg></a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none home"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                    </svg>Home</a
+                      >
+                    </li>
+                    <li class="my-1">
+                      <a href="./search.html" class="text-white text-decoration-none"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>Cerca</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-collection-play-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437" />
+                    </svg>La tua libreria</a>
+                    </li>
+                    <li class="mt-3">
+                      <a href="#" class="text-white text-decoration-none"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus-square" viewBox="0 0 16 16">
+                        <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                    </svg>Crea playlist</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-clipboard-heart" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M5 1.5A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm5 0a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" />
+                        <path
+                            d="M3 1.5h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2" />
+                        <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.31 8 6.982" />
+                    </svg>Brani che ti piacciono</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="text-white text-decoration-none"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2" />
+                    </svg>I tuoi episodi</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="col-12 border-top border-secondary bg-black text-white-50 p-2 position-relative"
+                  id="sidebar-scroll"
+                >
+                  <div class="d-flex flex-column">
+                    <span>early strage emily syndrone (sett-ott 2022)</span>
+                    <span>Be The Young</span>
+                    <span>"..." cit.Kimiko (lug-ago 2022)</span>
+                    <span>saggio vibes</span>
+                    <span>main characters energy (mag-giu 2022)</span>
+                    <span>that fucking mood</span>
+                    <span>VEE, CARLOTTA E GIACOMO VANNO A BOSIO</span>
+                    <span>An Emily Winchester king of mood</span>
+                    <span>landing page (mar-apr 2022)</span>
+                    <span>2021 lol</span>
+                    <span>cosa cazzo vuol dire questa affermazione</span>
+                    <span>honey and glass (nov-dic 2022)</span>
+                    <span>(Revenge) Training Arc</span>
+                    <span>Lidia & Emily</span>
+                    <span>minecraft e nintendo switch (sep-oct 2021)</span>
+                    <span>silvano d'orba? I hardly know her (lug-ago 2021)</span>
+                    <span>Culo 2021</span>
+                    <span>Frah Qiontale Mix</span>
+                    <span>Francesco Guccini Mix</span><span>landing page (mar-apr 2022)</span>
+                    <span>2021 lol</span>
+                    <span>cosa cazzo vuol dire questa affermazione</span>
+                    <span>honey and glass (nov-dic 2022)</span>
+                    <span>(Revenge) Training Arc</span>
+                    <span>Lidia & Emily</span>
+                    <span>minecraft e nintendo switch (sep-oct 2021)</span>
+                    <span>silvano d'orba? I hardly know her (lug-ago 2021)</span>
+                    <span>Culo 2021</span>
+                    <span>Frah Qiontale Mix</span>
+                    <span>Francesco Guccini Mix</span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- NICOLE -->
+    <div class="container-fluid bg-black text-white fixed-bottom p-2">
+        <div class="row justify-content-center align-items-center" id="player-container">
+            <div class="col-3 d-flex align-items-center">
+                <div class="player-img-container rounded-1">
+                    <img src="./assets/imgs/main/image-3.jpg" alt="" />
+                </div>
+                <div class="ms-2">
+                    <p class="m-0">Title song</p>
+                    <p class="m-0 small text-secondary">Artist</p>
+                </div>
+                <div></div>
+            </div>
+            <div class="col-6">
+                <!-- icons player -->
+                <div class="">
+                    <div class="d-flex justify-content-center align-items-center" id="controls">
+                        <button class="btn text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-shuffle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5" />
+                                <path
+                                    d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192" />
+                            </svg>
+                        </button>
+                        <button class="btn text-secondary prev">
+                            <svg fill="currentColor" width="16" height="16" viewBox="-0.5 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" transform="rotate(-180)">
+                                <path
+                                    d="m0 22.835v-21.665c0-.007 0-.015 0-.024 0-.63.511-1.141 1.141-1.141.201 0 .391.052.555.144l-.006-.003 18.71 10.493v-10.038c0-.331.268-.6.599-.6h1.2c.332 0 .6.269.6.6v22.799.001c0 .331-.268.599-.599.599h-.001-1.2c-.331 0-.599-.268-.599-.599v-.001-10.038l-18.71 10.494c-.158.091-.347.145-.548.145-.632-.007-1.142-.521-1.142-1.155 0-.004 0-.008 0-.011v.001z" />
+                            </svg>
+                        </button>
+                        <button class="btn play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+                            </svg>
+                        </button>
+                        <button class="pause d-none">Pause</button>
+                        <button class="btn text-secondary next">
+                            <svg fill="currentColor" width="16" height="16" viewBox="-0.5 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m0 22.835v-21.665c0-.007 0-.015 0-.024 0-.63.511-1.141 1.141-1.141.201 0 .391.052.555.144l-.006-.003 18.71 10.493v-10.038c0-.331.268-.6.599-.6h1.2c.332 0 .6.269.6.6v22.799.001c0 .331-.268.599-.599.599h-.001-1.2c-.331 0-.599-.268-.599-.599v-.001-10.038l-18.71 10.494c-.158.091-.347.145-.548.145-.632-.007-1.142-.521-1.142-1.155 0-.004 0-.008 0-.011v.001z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="small">0.00</div>
+                    <div class="audio-track">
+                        <div class="time"></div>
+                    </div>
+                    <div class="small">3.00</div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-end">
+                <button class="btn text-white p-1">
+                    <svg fill="currentColor" height="16" width="16" version="1.1" id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.351 20.351">
+                        <g>
+                            <g>
+                                <path d="M19.659,0H0.693C0.31,0,0,0.311,0,0.693V19.66c0,0.383,0.311,0.691,0.692,0.691h18.966
+                   c0.383,0,0.692-0.31,0.692-0.692V0.693C20.351,0.311,20.042,0,19.659,0z M18.966,18.966H1.386V1.386h17.579L18.966,18.966
+                   L18.966,18.966z" />
+                                <path d="M7.534,15.033c0.074,0.037,0.157,0.06,0.239,0.06c0.103,0,0.203-0.031,0.291-0.092l6.419-4.402
+                   c0.141-0.096,0.225-0.254,0.225-0.424s-0.084-0.328-0.225-0.424L8.065,5.35c-0.156-0.107-0.36-0.12-0.53-0.031
+                   C7.365,5.408,7.26,5.584,7.26,5.775v8.806C7.26,14.77,7.365,14.944,7.534,15.033z" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <button class="btn text-white p-1">
+                    <svg fill="currentColor" height="16" width="16" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.018 512.018">
+                        <g>
+                            <g>
+                                <path d="M478.723,33.289c-44.359-44.385-116.323-44.385-160.709,0c-24.734,24.758-36.272,58.916-32.52,92.842L5.677,428.734
+                   c-7.779,8.412-7.524,21.467,0.578,29.569l47.467,47.467c8.102,8.102,21.156,8.357,29.569,0.578l302.611-279.824
+                   c33.934,3.763,68.07-7.775,92.821-32.526C523.107,149.613,523.107,77.673,478.723,33.289z M69.385,461.093l-18.454-18.454
+                   l259.181-280.287l19.787,19.787l19.773,19.773L69.385,461.093z M448.553,163.828c-15.02,15.02-35.523,22.237-56.155,20.47
+                   l-64.678-64.678c-1.752-20.629,5.47-41.151,20.472-56.168c27.714-27.714,72.656-27.714,100.357,0.003
+                   C476.275,91.181,476.275,136.105,448.553,163.828z" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <button class="btn text-white p-1">
+                    <svg fill="currentColor" width="16" height="16" viewBox="0 0 56 56"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M 12.0626 6.3789 C 7.2813 6.3789 5.5704 8.4648 5.5704 13.0117 L 5.5704 23.9101 C 5.5704 28.4570 7.2813 30.5430 12.0626 30.5430 L 43.9375 30.5430 C 48.7189 30.5430 50.4296 28.4570 50.4296 23.9101 L 50.4296 13.0117 C 50.4296 8.4648 48.7189 6.3789 43.9375 6.3789 Z M 9.3438 24.0274 L 9.3438 12.8945 C 9.3438 10.8086 10.0235 9.8945 12.0860 9.8945 L 43.9141 9.8945 C 46.0000 9.8945 46.6563 10.8086 46.6563 12.8945 L 46.6563 24.0274 C 46.6563 26.1133 46.0000 27.0274 43.9141 27.0274 L 12.0860 27.0274 C 10.0235 27.0274 9.3438 26.1133 9.3438 24.0274 Z M 11.1016 37.9023 C 11.1016 36.5195 9.9766 35.3711 8.5704 35.3711 C 7.1641 35.3711 6.0391 36.5195 6.0391 37.9023 C 6.0391 39.3086 7.1641 40.4102 8.5704 40.4102 C 9.9766 40.4102 11.1016 39.3086 11.1016 37.9023 Z M 49.6093 37.9023 C 49.6093 36.8711 48.7424 36.0977 47.5938 36.0977 L 16.0704 36.0977 C 14.8985 36.0977 14.0548 36.8711 14.0548 37.9023 C 14.0548 38.9336 14.8985 39.7305 16.0704 39.7305 L 47.5938 39.7305 C 48.7424 39.7305 49.6093 38.9336 49.6093 37.9023 Z M 11.1016 47.0898 C 11.1016 45.7070 9.9766 44.5352 8.5704 44.5352 C 7.1641 44.5352 6.0391 45.7070 6.0391 47.0898 C 6.0391 48.4961 7.1641 49.6211 8.5704 49.6211 C 9.9766 49.6211 11.1016 48.4961 11.1016 47.0898 Z M 49.6093 47.0898 C 49.6093 46.0586 48.7424 45.2852 47.5938 45.2852 L 16.0704 45.2852 C 14.8985 45.2852 14.0548 46.0586 14.0548 47.0898 C 14.0548 48.1211 14.8985 48.9180 16.0704 48.9180 L 47.5938 48.9180 C 48.7424 48.9180 49.6093 48.1211 49.6093 47.0898 Z" />
+                    </svg>
+                </button>
+                <button class="btn text-white p-1">
+                    <svg fill="currentColor" height="16" width="16" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 511.999 511.999" xml:space="preserve">
+                        <g>
+                            <g>
+                                <g>
+                                    <path d="M401.835,0h-291.67C93.532,0,79.999,13.533,79.999,30.167v430.335c0,16.633,13.532,30.165,30.167,30.165h27.669v10.665
+                c0,5.891,4.777,10.668,10.668,10.668c5.892,0,10.668-4.777,10.668-10.668v-10.665h191.992v10.665
+                c0,5.891,4.776,10.668,10.668,10.668c5.892,0,10.668-4.777,10.668-10.668v-10.665h29.338c16.633,0,30.165-13.532,30.165-30.165
+                V30.167C432.001,13.533,418.468,0,401.835,0z M401.836,469.332H110.166c-4.87,0-8.832-3.961-8.832-8.83V30.167
+                c0-4.871,3.962-8.832,8.832-8.832h291.67c4.869,0,8.83,3.961,8.83,8.832v430.336h0.001
+                C410.666,465.371,406.705,469.332,401.836,469.332z" />
+                                    <path d="M255.167,212.166c-64.696,0-117.331,52.636-117.331,117.334c0,64.695,52.635,117.33,117.331,117.33
+                c64.699,0,117.334-52.636,117.334-117.33C372.502,264.8,319.867,212.166,255.167,212.166z M255.167,425.495
+                c-52.932,0-95.996-43.064-95.996-95.995c0-52.935,43.064-95.999,95.996-95.999c52.936,0,95.999,43.064,95.999,95.999
+                C351.167,382.431,308.103,425.495,255.167,425.495z" />
+                                    <path d="M231.201,269.203c-3.047-5.043-9.603-6.657-14.647-3.615c-22.241,13.437-36.056,37.926-36.056,63.911
+                c0,5.891,4.776,10.668,10.668,10.668s10.668-4.777,10.668-10.668c0-18.562,9.867-36.053,25.754-45.65
+                C232.63,280.805,234.248,274.247,231.201,269.203z" />
+                                    <path d="M308.5,329.5c0,18.559-9.869,36.051-25.754,45.647c-5.043,3.048-6.661,9.605-3.615,14.647
+                c2.004,3.319,5.529,5.155,9.14,5.155c1.88,0,3.782-0.498,5.507-1.539c22.241-13.437,36.056-37.924,36.056-63.909
+                c0-5.892-4.777-10.668-10.668-10.668C313.277,318.832,308.5,323.608,308.5,329.5z" />
+                                    <path
+                                        d="M287.17,329.5c0-17.647-14.355-32.005-32.003-32.005c-17.645,0-32.002,14.357-32.002,32.005
+                c0,17.645,14.356,32,32.002,32C272.815,361.5,287.17,347.145,287.17,329.5z M244.501,329.5c0-5.884,4.784-10.67,10.666-10.67
+                c5.882,0,10.668,4.785,10.668,10.67c0,5.88-4.785,10.665-10.668,10.665C249.285,340.165,244.501,335.38,244.501,329.5z" />
+                                    <path
+                                        d="M183.502,132.667h30.35c4.748,18.38,21.473,32,41.315,32c19.846,0,36.569-13.62,41.319-32h30.348
+                c5.891,0,10.668-4.778,10.668-10.667c0-5.893-4.777-10.668-10.668-10.668h-30.348c-4.749-18.383-21.474-32-41.319-32
+                c-19.844,0-36.567,13.618-41.315,32h-30.35c-5.892,0-10.668,4.775-10.668,10.668C172.834,127.89,177.609,132.667,183.502,132.667
+                z M255.167,100.666c7.876,0,14.751,4.3,18.447,10.665h-36.891C240.418,104.966,247.294,100.666,255.167,100.666z
+                 M273.615,132.667c-3.696,6.365-10.572,10.665-18.447,10.665c-7.874,0-14.749-4.3-18.444-10.665H273.615z" />
+                                    <path d="M254.796,276.169c0.063,0,0.125,0,0.188-0.002h0.182c5.892,0,10.668-4.778,10.668-10.668
+                c0-5.892-4.776-10.668-10.668-10.668c-0.247,0-0.498,0-0.748,0.009c-5.869,0.158-10.461,5.03-10.33,10.899
+                C244.217,271.545,249.009,276.169,254.796,276.169z" />
+                                    <path d="M255.628,382.829h-0.463c-5.892,0-10.668,4.776-10.668,10.668c0,5.89,4.776,10.668,10.668,10.668h0.463
+                c5.892,0,10.668-4.778,10.668-10.668C266.296,387.605,261.52,382.829,255.628,382.829z" />
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <button class="btn text-white p-1">
+                    <svg fill="currentColor" width="16" height="16" viewBox="0 0 1920 1920"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1129.432 113v1694.148H936.638l-451.773-451.773h-315.45C76.01 1355.375 0 1279.365 0 1185.96V734.187c0-93.404 76.01-169.414 169.415-169.414h315.45L936.638 113h192.794Zm-112.943 112.943h-33.093l-418.68 418.68v630.901l418.68 418.68h33.093V225.944Zm655.488 135.114C1831.904 521.097 1920 733.77 1920 960.107c0 226.226-88.096 438.898-248.023 598.938l-79.851-79.85c138.694-138.695 214.93-323.018 214.93-519.087 0-196.183-76.236-380.506-214.93-519.2Zm-239.112 239.745c95.663 97.018 148.294 224.644 148.294 359.272s-52.631 262.254-148.294 359.272l-80.529-79.286c74.769-75.785 115.88-175.175 115.88-279.986 0-104.811-41.111-204.201-115.88-279.986Zm-981.092 76.914H169.415c-31.06 0-56.472 25.3-56.472 56.471v451.773c0 31.172 25.412 56.472 56.472 56.472h282.358V677.716Z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </button>
 
-    </header>
+                <input type="range" class="range w-25" id="customRange1" />
+                <button class="btn text-white p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
