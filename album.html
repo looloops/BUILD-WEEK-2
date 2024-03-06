@@ -18,143 +18,180 @@
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <title>Document</title>
+    <title>Albun-page</title>
   </head>
 
   <body data-bs-theme="dark">
     <div class="row h-100 m-0 justify-content-center">
       <!-- SIDEBAR SINISTRA PHILIP -->
-      <div class="col-lg-3 bg-black">
+      <div class="col-3 p-0 d-none d-lg-block position-relative">
         <nav class="bg-black">
-          <div class="row w-100">
-            <ul class="list-unstyled px-2">
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-three-dots"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
-                  />
-                </svg>
-                <a href="#"></a>
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-house-door-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
-                  />
-                </svg>
-                <a href="#" class="text-white text-decoration-none home">Home</a>
-              </li>
-              <li class="my-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-search"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                  />
-                </svg>
-                <a href="./search.html" class="text-white text-decoration-none home">Cerca</a>
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-collection-play-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437"
-                  />
-                </svg>
-                <a href="./album.html" class="text-white text-decoration-none">La tua libreria</a>
-              </li>
-              <li class="mt-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-plus-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
-                  />
-                  <path
-                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-                  />
-                </svg>
-                <a href="#" class="text-white text-decoration-none">Cerca playlist</a>
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-clipboard-heart"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5 1.5A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm5 0a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"
-                  />
-                  <path
-                    d="M3 1.5h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2"
-                  />
-                  <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.31 8 6.982" />
-                </svg>
-                <a href="#" class="text-white text-decoration-none">Brani che ti piacciono</a>
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-bookmark-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
-                  />
-                </svg>
-                <a href="#" class="text-white text-decoration-none">I tuoi episodi</a>
-              </li>
-            </ul>
-
-            <div class="col-12 border-top border-secondary bg-black text white-50 p-2 position-relative">
-              <div class="d-flex flex-column">
-                <!-- ARRAY PLAYLIST FINITE -->
-                <div class="bg-black ps-0">
-                  <p>Playlist già ascoltati</p>
-                </div>
+          <div class="w-100 m-0">
+            <div class="px-3 pt-3">
+              <ul class="list-unstyled">
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-three-dots"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                    />
+                  </svg>
+                  <a href="#"></a>
+                </li>
+                <li class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-house-door-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                    />
+                  </svg>
+                  <a href="#" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">Home</a>
+                </li>
+                <li class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
+                  <a href="./search.html" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">Cerca</a>
+                </li>
+                <li class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-collection-play-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437"
+                    />
+                  </svg>
+                  <a href="./album.html" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">La tua libreria</a>
+                </li>
+                <li class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-plus-square"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                    />
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                    />
+                  </svg>
+                  <a href="#" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">Cerca playlist</a>
+                </li>
+                <li class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-clipboard-heart"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5 1.5A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm5 0a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"
+                    />
+                    <path
+                      d="M3 1.5h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2"
+                    />
+                    <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.31 8 6.982" />
+                  </svg>
+                  <a href="#" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">Brani che ti piacciono</a>
+                </li>
+                <li class="mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-bookmark-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
+                    />
+                  </svg>
+                  <a href="#" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">I tuoi episodi</a>
+                </li>
+              </ul>
+            </div>
+            <div class="border-top border-secondary bg-black text-white p-3 position-relative" style="height: 65vh">
+              <!-- ARRAY PLAYLIST FINITE -->
+              <div class="d-flex flex-column h-100 philip">
+                <p>Playllist già ascoltati</p>
+                <span>early strage emily syndrone (sett-ott 2022)</span>
+                <span>Be The Young</span>
+                <span>"..." cit.Kimiko (lug-ago 2022)</span>
+                <span>saggio vibes</span>
+                <span>main characters energy (mag-giu 2022)</span>
+                <span>that fucking mood</span>
+                <span>VEE, CARLOTTA E GIACOMO VANNO A BOSIO</span>
+                <span>An Emily Winchester king of mood</span>
+                <span>landing page (mar-apr 2022)</span>
+                <span>2021 lol</span>
+                <span>cosa cazzo vuol dire questa affermazione</span>
+                <span>honey and glass (nov-dic 2022)</span>
+                <span>(Revenge) Training Arc</span>
+                <span>Lidia & Emily</span>
+                <span>minecraft e nintendo switch (sep-oct 2021)</span>
+                <span>silvano d'orba? I hardly know her (lug-ago 2021)</span>
+                <span>Culo 2021</span>
+                <span>Frah Qiontale Mix</span>
+                <span>Francesco Guccini Mix</span><span>landing page (mar-apr 2022)</span>
+                <span>2021 lol</span>
+                <span>cosa cazzo vuol dire questa affermazione</span>
+                <span>honey and glass (nov-dic 2022)</span>
+                <span>(Revenge) Training Arc</span>
+                <span>Lidia & Emily</span>
+                <span>minecraft e nintendo switch (sep-oct 2021)</span>
+                <span>silvano d'orba? I hardly know her (lug-ago 2021)</span>
+                <span>Culo 2021</span>
+                <span>Frah Qiontale Mix</span>
+                <span>Francesco Guccini Mix</span>
+                <span>Culo 2021</span>
+                <span>Frah Qiontale Mix</span>
+                <span>Francesco Guccini Mix</span>
+                <span>Culo 2021</span>
+                <span>Frah Qiontale Mix</span>
+                <span>Francesco Guccini Mix</span>
+                <span>Culo 2021</span>
+                <span>Frah Qiontale Mix</span>
+                <span>Francesco Guccini Mix</span>
               </div>
             </div>
           </div>
         </nav>
       </div>
-      <div class="col-7 body">
+      <div class="col-12 col-lg-7 body">
         <!------------------------------------------------------------------------------------------------------- inizio navbar -->
         <div class="container-fluid m-0">
           <nav class="navbar px-0">
@@ -279,27 +316,29 @@
           <div class="row ms-1 pb-5">
             <div class="row align-items-end px-0 pb-4 pt-1">
               <!-- cover e title album -->
-              <div class="col-3">
+              <div class="col-md-3">
                 <div class="d-flex album-page-image-container">
                   <img src="./assets/imgs/search/image-51.jpg" width="100%" height="100%" alt="" />
                 </div>
               </div>
-              <div class="col-9">
-                <p class="text-uppercase small text-secondary">ALBUM</p>
-                <p class="h1 text-uppercase">TITOLO DELLA CANZONE</p>
-                <p class="small text-secondary">
+              <div class="col-md-9">
+                <p class="text-uppercase album-page-list-fs-small text-secondary d-none d-md-block">ALBUM</p>
+                <p class="album-page-main-title-mobile">Titolo Della Canzone</p>
+                <p class="album-page-list-fs-small text-secondary d-none d-md-block">
                   Globale: il tuo aggiornamento quotidiano sui brani più ascoltati in questo momento.
                 </p>
-                <div class="d-flex align-items-center info-album">
-                  <img
-                    src="./assets/imgs/search/image-15.jpg"
-                    width="30px"
-                    height="30px"
-                    class="rounded-circle"
-                    alt=""
-                  />
-                  <div class="d-flex justify-content-center m-0">
+                <div class="d-md-flex align-items-center album-page-info album-page-list-fs-small">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="./assets/imgs/search/image-15.jpg"
+                      width="50px"
+                      height="50px"
+                      class="rounded-circle"
+                      alt=""
+                    />
                     <p class="fw-bolder">Artist</p>
+                  </div>
+                  <div class="d-flex align-items-center mt-4 mt-md-0 album-page-list-fs-small">
                     <p class="fw-light">Year</p>
                     <p class="fw-light">Tot brani, <span class="text-secondary">(somma del tempo)</span></p>
                   </div>
@@ -307,53 +346,93 @@
               </div>
             </div>
             <!-- tasti play preferiti e elenco -->
-            <div class="d-flex align-items-center py-4 text-secondary px-0">
-              <div class="btn-page-album-play">
-                <svg
-                  fill="currentColor"
-                  width="25"
-                  height="25"
-                  data-encore-id="icon"
-                  role="img"
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  class="Svg-sc-ytk21e-0 bneLcE"
-                >
-                  <path
-                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
-                  ></path>
-                </svg>
+            <div class="d-flex align-items-center py-4 text-secondary px-0" id="album-page-icons-songs">
+              <div class="d-flex align-items-center order-last order-md-0 ms-auto ms-md-0">
+                <!-- btn-random -->
+                <button class="player-btn text-secondary d-block d-md-none">
+                  <svg
+                    fill="currentColor"
+                    width="30"
+                    height="30"
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="me-4"
+                  >
+                    <path
+                      d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
+                    ></path>
+                    <path
+                      d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- btn-play -->
+                <div class="btn-page-album-play">
+                  <svg
+                    fill="currentColor"
+                    width="25"
+                    height="25"
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    class="Svg-sc-ytk21e-0 bneLcE"
+                  >
+                    <path
+                      d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                    ></path>
+                  </svg>
+                </div>
               </div>
+              <!-- btn-prefer -->
               <svg
                 fill="currentColor"
-                width="25"
-                height="25"
+                width="30"
+                height="30"
                 data-encore-id="icon"
                 role="img"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
-                class="mx-4 album-page-points"
+                class="mx-md-4 album-page-icons-md-mobile"
               >
                 <path
                   d="M5.21 1.57a6.757 6.757 0 0 1 6.708 1.545.124.124 0 0 0 .165 0 6.741 6.741 0 0 1 5.715-1.78l.004.001a6.802 6.802 0 0 1 5.571 5.376v.003a6.689 6.689 0 0 1-1.49 5.655l-7.954 9.48a2.518 2.518 0 0 1-3.857 0L2.12 12.37A6.683 6.683 0 0 1 .627 6.714 6.757 6.757 0 0 1 5.21 1.57zm3.12 1.803a4.757 4.757 0 0 0-5.74 3.725l-.001.002a4.684 4.684 0 0 0 1.049 3.969l.009.01 7.958 9.485a.518.518 0 0 0 .79 0l7.968-9.495a4.688 4.688 0 0 0 1.049-3.965 4.803 4.803 0 0 0-3.931-3.794 4.74 4.74 0 0 0-4.023 1.256l-.008.008a2.123 2.123 0 0 1-2.9 0l-.007-.007a4.757 4.757 0 0 0-2.214-1.194z"
                 ></path>
               </svg>
+              <!-- btn-arrow-down -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-arrow-down-circle mx-5 d-md-none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"
+                />
+              </svg>
+              <!-- btn-points -->
               <svg
                 fill="currentColor"
-                width="25"
-                height="25"
+                width="30"
+                height="30"
                 data-encore-id="icon"
                 role="img"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
-                class="album-page-points"
+                transform="rotate(90)"
+                class="album-page-icon-middle-points"
               >
                 <path
                   d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
                 ></path>
               </svg>
 
-              <div class="d-flex justify-content-center ms-auto me-2 album-page-list">
+              <div class="justify-content-center ms-auto me-2 album-page-list d-none d-md-flex">
                 <p class="fs-6 m-0">Elenco</p>
                 <svg
                   fill="currentColor"
@@ -372,7 +451,10 @@
               </div>
             </div>
             <!-- titoli descrizione album -->
-            <div class="row border-bottom border-secondary pt-2 text-secondary" id="album-page-header-list-song">
+            <div
+              class="row border-bottom border-secondary pt-2 text-secondary d-none d-md-flex album-page-list-fs-small"
+              id="album-page-header-list-song"
+            >
               <div class="col-1">
                 <p>#</p>
               </div>
@@ -386,8 +468,8 @@
               <div class="col-1 ps-4">
                 <svg
                   fill="currentColor"
-                  width="16"
-                  height="16"
+                  width="20"
+                  height="20"
                   data-encore-id="icon"
                   role="img"
                   aria-hidden="true"
@@ -402,208 +484,43 @@
               class="row justify-content-center align-items-center my-2 py-2 text-secondary"
               id="album-page-list-row"
             >
-              <div class="col-1">
+              <div class="col-1 d-none d-md-flex">
                 <div class="album-page-list-fs-small" id="album-page-list-number">0</div>
               </div>
-              <div class="col-4">
+              <div class="col-11 col-md-4">
                 <div class="d-flex align-items-center">
-                  <div class="img-container-album-song me-2">
+                  <div class="img-container-album-song me-2 d-none d-md-flex">
                     <img src="./assets/imgs/main/image-17.jpg" width="100%" height="100%" alt="" />
                   </div>
                   <div>
-                    <div class="album-page-list-fs-big text-white" id="album-page-list-title">TITLE SONG</div>
+                    <div class="album-page-list-fs-big text-white" id="album-page-list-title">Title Song</div>
                     <div class="album-page-list-fs-small" id="album-page-list-artist">Artist Name</div>
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-3 d-none d-md-flex">
                 <div class="album-page-list-fs-small" id="album-page-list-album">Album Name</div>
               </div>
-              <div class="col-3"></div>
-              <div class="col-1">
+              <div class="col-3 d-none d-md-flex"></div>
+              <div class="col-1 d-none d-md-flex">
                 <div class="album-page-list-fs-small" id="album-page-list-timing">0.00</div>
               </div>
-            </div>
-            <div
-              class="row justify-content-center align-items-center my-2 py-2 text-secondary"
-              id="album-page-list-row"
-            >
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-number">0</div>
-              </div>
-              <div class="col-4">
-                <div class="d-flex align-items-center">
-                  <div class="img-container-album-song me-2">
-                    <img src="./assets/imgs/main/image-17.jpg" width="100%" height="100%" alt="" />
-                  </div>
-                  <div>
-                    <div class="album-page-list-fs-big text-white" id="album-page-list-title">TITLE SONG</div>
-                    <div class="album-page-list-fs-small" id="album-page-list-artist">Artist Name</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="album-page-list-fs-small" id="album-page-list-album">Album Name</div>
-              </div>
-              <div class="col-3"></div>
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-timing">0.00</div>
-              </div>
-            </div>
-            <div
-              class="row justify-content-center align-items-center my-2 py-2 text-secondary"
-              id="album-page-list-row"
-            >
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-number">0</div>
-              </div>
-              <div class="col-4">
-                <div class="d-flex align-items-center">
-                  <div class="img-container-album-song me-2">
-                    <img src="./assets/imgs/main/image-17.jpg" width="100%" height="100%" alt="" />
-                  </div>
-                  <div>
-                    <div class="album-page-list-fs-big text-white" id="album-page-list-title">TITLE SONG</div>
-                    <div class="album-page-list-fs-small" id="album-page-list-artist">Artist Name</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="album-page-list-fs-small" id="album-page-list-album">Album Name</div>
-              </div>
-              <div class="col-3"></div>
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-timing">0.00</div>
-              </div>
-            </div>
-            <div
-              class="row justify-content-center align-items-center my-2 py-2 text-secondary"
-              id="album-page-list-row"
-            >
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-number">0</div>
-              </div>
-              <div class="col-4">
-                <div class="d-flex align-items-center">
-                  <div class="img-container-album-song me-2">
-                    <img src="./assets/imgs/main/image-17.jpg" width="100%" height="100%" alt="" />
-                  </div>
-                  <div>
-                    <div class="album-page-list-fs-big text-white" id="album-page-list-title">TITLE SONG</div>
-                    <div class="album-page-list-fs-small" id="album-page-list-artist">Artist Name</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="album-page-list-fs-small" id="album-page-list-album">Album Name</div>
-              </div>
-              <div class="col-3"></div>
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-timing">0.00</div>
-              </div>
-            </div>
-            <div
-              class="row justify-content-center align-items-center my-2 py-2 text-secondary"
-              id="album-page-list-row"
-            >
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-number">0</div>
-              </div>
-              <div class="col-4">
-                <div class="d-flex align-items-center">
-                  <div class="img-container-album-song me-2">
-                    <img src="./assets/imgs/main/image-17.jpg" width="100%" height="100%" alt="" />
-                  </div>
-                  <div>
-                    <div class="album-page-list-fs-big text-white" id="album-page-list-title">TITLE SONG</div>
-                    <div class="album-page-list-fs-small" id="album-page-list-artist">Artist Name</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="album-page-list-fs-small" id="album-page-list-album">Album Name</div>
-              </div>
-              <div class="col-3"></div>
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-timing">0.00</div>
-              </div>
-            </div>
-            <div
-              class="row justify-content-center align-items-center my-2 py-2 text-secondary"
-              id="album-page-list-row"
-            >
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-number">0</div>
-              </div>
-              <div class="col-4">
-                <div class="d-flex align-items-center">
-                  <div class="img-container-album-song me-2">
-                    <img src="./assets/imgs/main/image-17.jpg" width="100%" height="100%" alt="" />
-                  </div>
-                  <div>
-                    <div class="album-page-list-fs-big text-white" id="album-page-list-title">TITLE SONG</div>
-                    <div class="album-page-list-fs-small" id="album-page-list-artist">Artist Name</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="album-page-list-fs-small" id="album-page-list-album">Album Name</div>
-              </div>
-              <div class="col-3"></div>
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-timing">0.00</div>
-              </div>
-            </div>
-            <div
-              class="row justify-content-center align-items-center my-2 py-2 text-secondary"
-              id="album-page-list-row"
-            >
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-number">0</div>
-              </div>
-              <div class="col-4">
-                <div class="d-flex align-items-center">
-                  <div class="img-container-album-song me-2">
-                    <img src="./assets/imgs/main/image-17.jpg" width="100%" height="100%" alt="" />
-                  </div>
-                  <div>
-                    <div class="album-page-list-fs-big text-white" id="album-page-list-title">TITLE SONG</div>
-                    <div class="album-page-list-fs-small" id="album-page-list-artist">Artist Name</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="album-page-list-fs-small" id="album-page-list-album">Album Name</div>
-              </div>
-              <div class="col-3"></div>
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-timing">0.00</div>
-              </div>
-            </div>
-            <div
-              class="row justify-content-center align-items-center my-2 py-2 text-secondary"
-              id="album-page-list-row"
-            >
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-number">0</div>
-              </div>
-              <div class="col-4">
-                <div class="d-flex align-items-center">
-                  <div class="img-container-album-song me-2">
-                    <img src="./assets/imgs/main/image-17.jpg" width="100%" height="100%" alt="" />
-                  </div>
-                  <div>
-                    <div class="album-page-list-fs-big text-white" id="album-page-list-title">TITLE SONG</div>
-                    <div class="album-page-list-fs-small" id="album-page-list-artist">Artist Name</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="album-page-list-fs-small" id="album-page-list-album">Album Name</div>
-              </div>
-              <div class="col-3"></div>
-              <div class="col-1">
-                <div class="album-page-list-fs-small" id="album-page-list-timing">0.00</div>
+              <div class="col-1 d-md-none">
+                <!-- btn-points -->
+                <svg
+                  fill="currentColor"
+                  width="30"
+                  height="30"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  transform="rotate(90)"
+                >
+                  <path
+                    d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                  ></path>
+                </svg>
               </div>
             </div>
           </div>
@@ -652,16 +569,16 @@
             </div>
           </section>
         </div>
-        <div class="container-fluid my-5" id="footer-page">
-          <div class="d-flex">
+        <div class="container-fluid mt-5 fw-lighter" id="footer-page">
+          <div class="d-md-flex mb-5">
             <ul class="list-group w-20">
-              <li class="fw-bolder">Azienda</li>
+              <li class="fw-bolder mb-2 mt-3">Azienda</li>
               <li>Chi siamo</li>
               <li>Opportunità di lavoro</li>
               <li>For the Record</li>
             </ul>
             <ul class="list-group w-20">
-              <li class="fw-bolder">Community</li>
+              <li class="fw-bolder mb-2 mt-3">Community</li>
               <li>Per artsti</li>
               <li>Sviluppatori</li>
               <li>Pubblicità</li>
@@ -669,16 +586,17 @@
               <li>Venditori</li>
             </ul>
 
-            <div class="d-flex justify-content-between w-60">
+            <div class="d-md-flex justify-content-between w-60 me-auto">
               <ul class="list-group">
-                <li class="fw-bolder">Link utili</li>
+                <li class="fw-bolder mb-2 mt-3">Link utili</li>
                 <li>Assistenza</li>
                 <li>App per cellulare</li>
                 <li>App per cellure <br />gratuita</li>
                 <li>Diritti del consumatore</li>
               </ul>
-              <div class="">
-                <div>
+              <div class="d-flex mt-5 mt-md-0">
+                <!-- ig -->
+                <div class="album-page-icon-social-footer">
                   <svg
                     fill="currentColor"
                     role="img"
@@ -697,7 +615,8 @@
                     ></path>
                   </svg>
                 </div>
-                <div>
+                <!-- twitter -->
+                <div class="album-page-icon-social-footer mx-3">
                   <svg
                     fill="currentColor"
                     role="img"
@@ -713,7 +632,8 @@
                     ></path>
                   </svg>
                 </div>
-                <div>
+                <!-- fb -->
+                <div class="album-page-icon-social-footer">
                   <svg
                     fill="currentColor"
                     role="img"
@@ -732,6 +652,23 @@
               </div>
             </div>
           </div>
+          <div class="container-fluid">
+            <div class="row py-5 border-top border-secondary">
+              <div class="col-md-9 px-0">
+                <p>
+                  <span>Informazioni legali</span>
+                  <span>Sicurezza e Centro sulla privacy</span>
+                  <span>Informativa sulla privacy</span>
+                  <span>Inpostazioni Cookie</span>
+                  <span>Info annunci</span>
+                  <span>Accessibilità</span>
+                </p>
+              </div>
+              <div class="col-md-3 px-0">
+                <p>&copy; 2024 Spotify AB</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!------------------------------------------------------------------------- samuele -->
@@ -739,7 +676,7 @@
         <div class="d-flex mt-3 align-items-center">
           <p>Attività amici</p>
           <p class="bi bi-person-add ms-auto me-2 pe-auto"></p>
-          <p class="bi bi-x-lg rounded-circle"></p>
+          <p class="bi bi-x-lg rounded-circle" id="close-btn-friend-section"></p>
         </div>
         <div class="d-flex flex-column">
           <div class="d-flex mb-3">

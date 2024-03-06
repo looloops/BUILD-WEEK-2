@@ -1,21 +1,30 @@
-const body = document.getElementsByClassName("body")[0];//div centrale pagina
-const btnFriends = document.getElementById("btnFriends");//bottone amici navbar
-const sectionFriends = document.getElementById("sectionFriends");//sezione amici creata da samuele
+const body = document.getElementsByClassName("body")[0]; //div centrale pagina
+const btnFriends = document.getElementById("btnFriends"); //bottone amici navbar
+const sectionFriends = document.getElementById("sectionFriends"); //sezione amici creata da samuele
 
 //funzione che nasconde/mostra la sezione amici
 function hiddenSectionfriends() {
   if (sectionFriends.classList == "col-2 bg-black rounded d-block") {
     sectionFriends.classList.remove("d-block");
     sectionFriends.classList.add("d-none");
-    body.className = "col-9 body";
+    body.className = "col-lg-9 body";
   } else {
     sectionFriends.classList.remove("d-none");
     sectionFriends.classList.add("d-block");
-    body.className = "col-7 body";
+    body.className = "col-lg-7 body";
   }
 }
 btnFriends.onclick = function () {
   hiddenSectionfriends();
+};
+
+const closeBtnFriends = document.getElementById("close-btn-friend-section");
+closeBtnFriends.onclick = () => {
+  if (sectionFriends.classList == "col-2 bg-black rounded d-block") {
+    sectionFriends.classList.remove("d-block");
+    sectionFriends.classList.add("d-none");
+    body.className = "col-lg-9 body";
+  }
 };
 
 //funzione che fa scomparire la scrollbar
@@ -33,11 +42,11 @@ btnFriends.onclick = function () {
 // ////////////////////////////////////
 
 //fetch
-const apiSearch = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";//+nome artista
+const apiSearch = "https://deezerdevs-deezer.p.rapidapi.com/search?q="; //+nome artista
 const apiInfos = "https://deezerdevs-deezer.p.rapidapi.com/infos";
-const apiPlaylist ="https://deezerdevs-deezer.p.rapidapi.com/playlist/";//+id playlist
-const getAlbum = "https://deezerdevs-deezer.p.rapidapi.com/album/";//+id album
-const getArtist='https://deezerdevs-deezer.p.rapidapi.com/artist/';//+id artista
+const apiPlaylist = "https://deezerdevs-deezer.p.rapidapi.com/playlist/"; //+id playlist
+const getAlbum = "https://deezerdevs-deezer.p.rapidapi.com/album/"; //+id album
+const getArtist = "https://deezerdevs-deezer.p.rapidapi.com/artist/"; //+id artista
 
 function getFetch(url, id) {
   fetch(url + id, {
@@ -47,7 +56,7 @@ function getFetch(url, id) {
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
-    .then((response) => {
+    .then(response => {
       if (response.ok) {
         return response.json();
       } else {
@@ -63,10 +72,10 @@ function getFetch(url, id) {
         throw new Error("Errore nel reperimento dati");
       }
     })
-    .then((oggetto) => {
+    .then(oggetto => {
       console.log(oggetto);
     })
-    .catch((err) => console.log(err));
+    .catch(err => console.log(err));
 }
 
-getFetch(apiSearch,"elvis")
+getFetch(apiSearch, "elvis");
