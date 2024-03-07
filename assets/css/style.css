@@ -394,17 +394,17 @@ nav button:hover {
 }
 /* ----------------------------------------------------- */
 .show {
-  display: block !important;
+  display: block!important;
 }
 
 .hidden {
-  display: none !important;
+  display: none!important;
 }
 @media screen and (max-width: 1199px) {
   .libreria {
     display: none;
   }
-  #sectionFriends {
+  .sectionFriends {
     display: none;
   }
   .libreriaSm {
@@ -413,12 +413,12 @@ nav button:hover {
 }
 @media screen and (max-width: 992px) {
   #sectionFriends {
-    display: none;
+    display: none !important;
   }
   .libreria {
-    display: none;
+    display: none !important;
   }
   .libreriaSm {
-    display: none;
+    display: none !important;
   }
 }
