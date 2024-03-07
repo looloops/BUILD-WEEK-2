@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <title>Albun-page</title>
+    <title>Album-page</title>
   </head>
 
   <body data-bs-theme="dark">
@@ -191,11 +191,11 @@
           </div>
         </nav>
       </div>
-      <div class="col-12 col-lg-7 body">
+      <div class="col-12 col-lg-7 body px-0" id="body">
         <!------------------------------------------------------------------------------------------------------- inizio navbar -->
-        <div class="container-fluid m-0">
-          <nav class="navbar px-0">
-            <div>
+        <div class="container-fluid m-0 ps-0">
+          <nav class="row align-content-center album-page-header-padding sticky-top py-1" id="album-page-navbar-sticky">
+            <div class="col-3 pt-1">
               <button class="rounded-circle border-0" style="background-color: #131313">
                 <img src="./assets/arrow-prev-small-svgrepo-com.svg" alt="" srcset="" class="rounded-circle" />
               </button>
@@ -204,7 +204,7 @@
               </button>
             </div>
 
-            <div>
+            <div class="col-9 text-end px-0">
               <button type="button" class="btn btn-light rounded-pill fw-bold px-3">Esplora Premium</button>
               <button type="button" class="btn rounded-circle fw-bold" style="background-color: #131313">
                 <svg
@@ -313,17 +313,23 @@
           </nav>
 
           <!-- HEADER PAGE ALBUM -->
-          <div class="row ms-1 pb-5">
-            <div class="row align-items-end px-0 pb-4 pt-1">
+          <div class="row pb-5" id="album-page-header">
+            <div class="row align-items-end px-0 pb-4 pt-1 album-page-header-padding">
               <!-- cover e title album -->
               <div class="col-md-3">
                 <div class="d-flex album-page-image-container">
-                  <img src="./assets/imgs/search/image-51.jpg" width="100%" height="100%" alt="" />
+                  <img
+                    src="./assets/imgs/search/image-51.jpg"
+                    width="100%"
+                    height="100%"
+                    alt=""
+                    id="album-page-image-color"
+                  />
                 </div>
               </div>
               <div class="col-md-9">
-                <p class="text-uppercase album-page-list-fs-small text-secondary d-none d-md-block">ALBUM</p>
-                <p class="album-page-main-title-mobile">Titolo Della Canzone</p>
+                <p class="text-uppercase small text-secondary d-none d-md-block mb-0">ALBUM</p>
+                <p class="album-page-main-title-mobile mb-0" id="album-page-title-album">Titolo Della Canzone</p>
                 <p class="album-page-list-fs-small text-secondary d-none d-md-block">
                   Globale: il tuo aggiornamento quotidiano sui brani più ascoltati in questo momento.
                 </p>
@@ -331,22 +337,25 @@
                   <div class="d-flex align-items-center">
                     <img
                       src="./assets/imgs/search/image-15.jpg"
-                      width="50px"
-                      height="50px"
+                      width="40px"
+                      height="40px"
                       class="rounded-circle"
                       alt=""
                     />
-                    <p class="fw-bolder">Artist</p>
+                    <p class="fw-bolder" id="album-page-artist">Artist</p>
                   </div>
                   <div class="d-flex align-items-center mt-4 mt-md-0 album-page-list-fs-small">
-                    <p class="fw-light">Year</p>
-                    <p class="fw-light">Tot brani, <span class="text-secondary">(somma del tempo)</span></p>
+                    <p class="fw-light" id="album-page-year">Year</p>
+                    <p class="fw-light" id="album-page-number-song">Tot brani</p>
                   </div>
                 </div>
               </div>
             </div>
             <!-- tasti play preferiti e elenco -->
-            <div class="d-flex align-items-center py-4 text-secondary px-0" id="album-page-icons-songs">
+            <div
+              class="d-flex align-items-center py-4 text-secondary px-0 album-page-header-padding"
+              id="album-page-icons-songs"
+            >
               <div class="d-flex align-items-center order-last order-md-0 ms-auto ms-md-0">
                 <!-- btn-random -->
                 <button class="player-btn text-secondary d-block d-md-none">
@@ -450,9 +459,9 @@
                 </svg>
               </div>
             </div>
-            <!-- titoli descrizione album -->
+            <!-- header descrizione album -->
             <div
-              class="row border-bottom border-secondary pt-2 text-secondary d-none d-md-flex album-page-list-fs-small"
+              class="row border-bottom border-secondary pt-2 text-secondary d-none d-md-flex album-page-list-fs-small album-page-header-padding"
               id="album-page-header-list-song"
             >
               <div class="col-1">
@@ -480,8 +489,9 @@
                 </svg>
               </div>
             </div>
+            <!-- titoli descrizione album -->
             <div
-              class="row justify-content-center align-items-center my-2 py-2 text-secondary"
+              class="row justify-content-center align-items-center my-2 py-2 text-secondary album-page-header-padding"
               id="album-page-list-row"
             >
               <div class="col-1 d-none d-md-flex">
@@ -526,10 +536,10 @@
           </div>
           <!-- -------------------------------------------------------------------------------------------------------Luljeta -->
 
-          <section id="consigliati" class="text-white">
+          <section id="consigliati" class="text-white album-page-header-padding">
             <h3 class="d-flex fs-5 align-items-center my-3">Altro di ciò che ti piace</h3>
 
-            <div class="row row-gap-3">
+            <div class="row row-gap-3 px-0">
               <div class="col-6 col-md-4 col-lg-3">
                 <div class="card">
                   <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="..." />
@@ -569,7 +579,7 @@
             </div>
           </section>
         </div>
-        <div class="container-fluid mt-5 fw-lighter" id="footer-page">
+        <div class="container-fluid mt-5 fw-lighter album-page-header-padding" id="footer-page">
           <div class="d-md-flex mb-5">
             <ul class="list-group w-20">
               <li class="fw-bolder mb-2 mt-3">Azienda</li>
@@ -1047,6 +1057,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="./js/audioplayer.js"></script>
     <script src="./js/index.js"></script>
   </body>

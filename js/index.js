@@ -78,4 +78,4 @@ function getFetch(url, id) {
     .catch(err => console.log(err));
 }
 
-getFetch(apiSearch, "elvis");
+getFetch(apiSearch, "");

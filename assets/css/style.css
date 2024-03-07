@@ -130,6 +130,11 @@ body {
   color: var(--greyText) !important;
 }
 
+.album-page-header-padding {
+  padding-left: 3rem !important;
+  padding-right: 1.5rem !important;
+}
+
 .album-page-image-container {
   width: 65%;
   height: 65%;
@@ -199,6 +204,10 @@ body {
   border-radius: 2px;
 }
 
+#album-page-header-list-song {
+  background-color: #121212;
+}
+
 #album-page-list-row:hover {
   background-color: var(--grey2);
   border-radius: 5px;
@@ -222,13 +231,12 @@ body {
 }
 
 #footer-page {
-  padding-bottom: 10rem;
+  padding-bottom: 6rem;
 }
 
 #footer-page p {
   color: var(--greyText);
   font-size: 0.9rem;
-  padding-inline: 0;
 }
 #footer-page p span {
   margin-right: 1rem;
@@ -242,6 +250,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#album-page-header-list-song {
+  position: sticky;
+  top: 3rem;
 }
 
 /* LU_________________ */
@@ -398,7 +411,7 @@ nav button:hover {
     font-size: 1.1rem;
   }
 
-  .album-page-info {
+  .album-page-info img {
     width: "30px";
     height: "30px";
   }
