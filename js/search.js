@@ -4,7 +4,7 @@ const row = document.querySelector('.container.main')
 
 
 let timer;
-
+//CALLBACK & DELAY FUNCTION
 function debounce(callback, delay) {
     clearTimeout(timer);
     timer = setTimeout(callback, delay);
