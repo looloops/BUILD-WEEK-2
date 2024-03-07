@@ -17,7 +17,8 @@ const secToMin = (sec) => {
 
 
 const artistID = Math.floor(Math.random()*5000)
-const URL = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + artistID
+console.log(artistID);
+const URL = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + 3951
 
 
 
@@ -85,6 +86,7 @@ fetch(URL)
 
             .then(tracklist => {
                 const artistSongsContainer = document.getElementsByClassName("artistSongsContainer")[0]
+                console.log(tracklist.data);
                 for (let i = 0; i < 5; i++) {
                     const artistSongGenerate = document.createElement("div")
                     artistSongGenerate.innerHTML = `<div class="artistSong d-flex justify-content-between align-items-center mb-4">
@@ -96,7 +98,42 @@ fetch(URL)
                                         <p class="reprudactionNumber m-0 text-secondary-emphasis">276.616.912</p>
                                         <p class="songDuration m-0 d-none d-sm-inline-block text-secondary-emphasis">${secToMin(String(tracklist.data[i].duration))}</p>
                                     </div>`
-                artistSongsContainer.appendChild(artistSongGenerate)
+
+                                    artistSongsContainer.appendChild(artistSongGenerate)
+
+                                    const artistSong = document.getElementsByClassName("artistSong")[i]
+                                    artistSong.onclick = (e) => {
+                                        const nameSong = e.target.firstChild.data
+                                        let urlMp3Track = ""
+                                        let trackDuration = ""
+                                        let artistTrack = ""
+                                        let titleTrack = ""
+                                        let imgTrack = ""
+                                        for (let i = 0; i < tracklist.data.length; i++) {
+                                            if (nameSong === tracklist.data[i].title_short) {
+                                                trackDuration = String(tracklist.data[i].duration)
+                                                urlMp3Track = tracklist.data[i].preview
+                                                trackDuration = secToMin(trackDuration)
+                                                artistTrack = tracklist.data[i].contributors[0].name
+                                                titleTrack = tracklist.data[i].title_short
+                                                imgTrack = tracklist.data[i].album.cover_small
+                                            }
+                                            
+                                        }
+                                        
+                                        console.log(trackDuration);
+                                        
+                                        const playerArtist = document.getElementById("player-artist")
+                                        playerArtist.innerText = artistTrack
+                                        
+                                        const playerTitle = document.getElementById("player-title")
+                                        playerTitle.innerText = titleTrack
+                                        const playerimg = document.getElementById("player-img")
+                                        playerimg.src = imgTrack
+
+                                        audio.src = urlMp3Track
+                                        audio.play()
+                                    }
                 
                 }
                 
@@ -141,7 +178,37 @@ fetch(URL)
                                     <p class="songDuration m-0 d-none d-sm-inline-block text-secondary-emphasis">${secToMin(String(tracklist.data[i].duration))}</p>
                                 </div>`
                                 artistSongsContainerMore.appendChild(artistSongGenerate)
+                                const artistSong = document.getElementsByClassName("artistSong")[i]
+                                    artistSong.onclick = (e) => {
+                                        const nameSong = e.target.firstChild.data
+                                        let urlMp3Track = ""
+                                        let trackDuration = ""
+                                        let artistTrack = ""
+                                        let titleTrack = ""
+                                        let imgTrack = ""
+                                        for (let i = 0; i < tracklist.data.length; i++) {
+                                            if (nameSong === tracklist.data[i].title_short) {
+                                                trackDuration = String(tracklist.data[i].duration)
+                                                urlMp3Track = tracklist.data[i].preview
+                                                trackDuration = secToMin(trackDuration)
+                                                artistTrack = tracklist.data[i].contributors[0].name
+                                                titleTrack = tracklist.data[i].title_short
+                                                imgTrack = tracklist.data[i].album.cover_small
+                                            }
+                                            
+                                        }
+                                        
+                                        const playerArtist = document.getElementById("player-artist")
+                                        playerArtist.innerText = artistTrack
+                                        
+                                        const playerTitle = document.getElementById("player-title")
+                                        playerTitle.innerText = titleTrack
+                                        const playerimg = document.getElementById("player-img")
+                                        playerimg.src = imgTrack
 
+                                        audio.src = urlMp3Track
+                                        audio.play()
+                                    }
                                 
                 }
 
@@ -164,9 +231,14 @@ fetch(URL)
             })
             .catch(err => console.log(err))
 
-            })
-            .catch(err => console.log(err))
             
+        })
+        .catch(err => console.log(err))
+        
+        /*const handleBtnClick = (e,p) => {
+            console.log(e);
+            console.log(p);
+        }*/
             
 
             
