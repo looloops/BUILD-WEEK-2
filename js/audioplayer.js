@@ -1,3 +1,34 @@
+// ALBUM PAGE FUNZIONE BACKGROUD
+// funzione color random
+
+function getColorForAlbumPage() {
+  const colorThief = new ColorThief();
+  const img = document.getElementById("album-page-image-color");
+
+  // Make sure image is finished loading
+  if (img.complete) {
+    let arrayColor = colorThief.getColor(img);
+    let color = arrayColor.toString();
+    return color;
+  } else {
+    image.addEventListener("load", function () {
+      colorThief.getColor(img);
+    });
+  }
+}
+
+function albumPageBackground() {
+  const nav = document.getElementById("album-page-navbar-sticky");
+  const header = document.getElementById("album-page-header");
+  let color = getColorForAlbumPage();
+  nav.style.backgroundColor = `rgb(${color})`;
+  header.style = `background: linear-gradient(180deg, rgba(${color},1) 0%, rgba(18,18,18,1) 63%);`;
+}
+
+albumPageBackground();
+
+// PLAYER WALKER
+
 let audio = document.getElementById("audio"); // elemento audio
 let time = document.querySelector(".time"); // traccia audio
 let btnPlay = document.querySelector(".play"); // tasto play
