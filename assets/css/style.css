@@ -531,25 +531,35 @@ nav button:hover {
   /* .containerPlaylist{
     gap:1 !important
   } */
-  .body{
-   padding: 0px;
+  .body {
+    padding: 0px;
   }
   /* Hide scrollbar for Chrome, Safari and Opera */
-.body::-webkit-scrollbar {
-  display: none;
-}
-/* Hide scrollbar for IE, Edge and Firefox */
-.body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-  .navbar{
+  .body::-webkit-scrollbar {
     display: none;
   }
-  #div-sponsor{
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .navbar {
+    display: none;
+  }
+  #div-sponsor {
     display: none !important;
   }
-  .fs-5{
-    font-size: 12px !important;
+  .fs-5 {
+    font-size: 14px !important;
+  }
+  .colplaylist{
+    padding: 10px;
+    margin: 0px;
+  }
+  .padrespan{
+    width: 8rem;
+  }
+  .p-card {
+    padding-inline:0px ;
   }
 }
