@@ -151,47 +151,129 @@ body {
   overflow: scroll;
 }
 
-/* SIDEBAR SINISTRA PHILIP */
 
-#player-container p:first-of-type {
-  font-size: 0.8rem;
+
+/* ALBUM PAGE NICOLE */
+.album-page-header-padding {
+  padding-left: 3rem !important;
+  padding-right: 1.5rem !important;
+}
+.text-secondary {
+  color: var(--greyText) !important;
 }
 
-#player-container p:last-of-type {
-  font-size: 0.7rem;
+.album-page-image-container {
+  width: 65%;
+  height: 65%;
+  margin-inline: auto;
+  margin-block: 3rem;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.323);
+  padding: 0;
+  cursor: pointer;
+}
+.album-page-image-container:hover {
+  scale: 1.1;
+  transition: 0.3s;
 }
 
-.player-img-container {
-  height: 3.7rem;
-  width: 3.7rem;
+.album-page-info p {
+  margin: 0;
+  margin-inline-start: 0.5rem;
+}
+
+.album-page-list-fs-big {
+  font-size: 1.6rem;
+}
+
+.album-page-list-fs-small {
+  font-size: 1.4rem;
+}
+.btn-page-album-play {
+  background-color: var(--green);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #131313;
+  cursor: pointer;
+}
+.btn-page-album-play:hover {
+  transition: 0.1s;
+  scale: 1.1;
+  background-color: #2ee26d;
+}
+.album-page-points,
+.album-page-list,
+#album-page-list-row {
+  cursor: pointer;
+}
+.album-page-points:hover {
+  color: white;
+  scale: 1.1;
+}
+.album-page-list:hover {
+  color: white;
+}
+#album-page-header-list-song {
+  border-bottom: 1px solid var(--grey2);
+}
+
+#album-page-header-list-song p {
+  margin-bottom: 0.5rem;
+}
+
+.img-container-album-song {
+  width: 3.6rem;
+  height: 3.6rem;
   overflow: hidden;
+  border-radius: 2px;
 }
 
-.player-img-container img {
-  width: 100%;
-  height: 100%;
-}
-
-.audio-track {
-  width: 90%;
-  height: 2px;
+#album-page-list-row:hover {
+  background-color: var(--grey2);
   border-radius: 5px;
-  background-color: #dddddd;
+  color: white !important;
 }
 
-.time {
-  width: 0;
-  height: 3px;
-  background-color: #474747;
+.album-page-main-title-mobile {
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
 
-.activeColor {
-  color: var(--green);
+#album-page-icons-songs svg:hover {
+  scale: 1.1;
+  color: white;
+  cursor: pointer;
 }
 
-.range {
-  height: 0.2rem;
-  font-size: 300;
+#footer-page ul {
+  list-style-type: none;
+  margin-inline-end: 2rem;
+}
+
+#footer-page {
+  padding-bottom: 10rem;
+}
+
+#footer-page p {
+  color: var(--greyText);
+  font-size: 0.9rem;
+  padding-inline: 0;
+}
+#footer-page p span {
+  margin-right: 1rem;
+}
+
+.album-page-icon-social-footer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--grey2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* LU_________________ */
@@ -246,11 +328,11 @@ a {
 }
 
 #player-container p:first-of-type {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
 }
 
 #player-container p:last-of-type {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 .player-img-container {
@@ -265,6 +347,9 @@ a {
   height: 100%;
   overflow: scroll;
 }
+
+
+
 
 nav button:hover {
   scale: 1.04;
@@ -312,6 +397,7 @@ nav button:hover {
 }
 
 /* classi per "far camminare" il player */
+
 .audio-track {
   position: absolute;
   bottom: 0;
@@ -331,8 +417,43 @@ nav button:hover {
   font-size: 300;
 }
 
-/* player version mobile */
+/* player and album page version mobile */
 @media screen and (min-width: 778px) {
+  /* album page mobile */
+  .album-page-image-container {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.323);
+    padding: 0;
+    cursor: pointer;
+    margin-block: 0;
+  }
+
+  .album-page-list-fs-big {
+    font-size: 1.4rem;
+  }
+
+  .album-page-list-fs-small {
+    font-size: 1.1rem;
+  }
+
+  .album-page-info {
+    width: "30px";
+    height: "30px";
+  }
+
+  .album-page-icon-middle-points {
+    transform: rotate(0);
+  }
+
+  .w-20 {
+    width: 20%;
+  }
+  .w-60 {
+    width: 60%;
+  }
+
+  /* player mobile */
   .bg-player-color {
     background-color: black;
     border-radius: initial;
@@ -348,6 +469,13 @@ nav button:hover {
     border-radius: 5px;
     height: 3.9rem;
     width: 3.9rem;
+  }
+
+
+
+  .play svg {
+    width: 34px;
+    height: 34px;
   }
 
   #minute-walk-song {

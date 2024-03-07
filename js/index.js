@@ -122,6 +122,12 @@ function hiddenLibreria2() {
     showRemove(sectionFriends,"hidden","show")
   }
 }
+//funzione chiusura friend da tasto x in alto
+const closeBtnFriends = document.getElementById("close-btn-friend-section");
+closeBtnFriends.onclick = () => {
+  showRemove(sectionFriends,"hidden","show")
+
+};
 
 //funzione che fa scomparire la scrollbar
 
@@ -152,7 +158,7 @@ function getFetch(url, id) {
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
-    .then((response) => {
+    .then(response => {
       if (response.ok) {
         return response.json();
       } else {
@@ -168,10 +174,10 @@ function getFetch(url, id) {
         throw new Error("Errore nel reperimento dati");
       }
     })
-    .then((oggetto) => {
+    .then(oggetto => {
       console.log(oggetto);
     })
-    .catch((err) => console.log(err));
+    .catch(err => console.log(err));
 }
 
 getFetch(apiSearch, "elvis");
