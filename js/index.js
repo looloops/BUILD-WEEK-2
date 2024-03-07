@@ -53,6 +53,7 @@ function hiddenSectionfriends() {
       body.className = "col-9 body";
     } else {
       //mi chiude friends
+      console.log("mm")
       showRemove(sectionFriends,"hidden","show")
       body.className = "col-11 body";
     }
