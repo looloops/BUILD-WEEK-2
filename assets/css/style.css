@@ -411,6 +411,7 @@ nav button:hover {
     display: block;
   }
 }
+/* qua parte il mobile */
 @media screen and (max-width: 992px) {
   #sectionFriends {
     display: none !important;
