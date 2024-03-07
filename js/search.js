@@ -19,7 +19,7 @@ function formatTime(time) {
 
     return `${formattedMinutes}:${formattedSeconds}`;
 }
-
+//effettua ricerca su Deezer utilizzando la API
 async function getData(query) {
     const response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=' + query)
     const data = await response.json()
@@ -64,7 +64,7 @@ async function displayResults(results) {
     `).join('')
     }
 }
-
+//VISUALIZZAZIONE CATALOGUE MUSICALI
 async function displayHome() {
 
     const container = document.querySelector('#sfoglia')
