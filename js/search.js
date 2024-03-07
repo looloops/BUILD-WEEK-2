@@ -1,7 +1,8 @@
 const SearchInput = document.querySelector('#SearchBar')
 const player = document.querySelector('#player')
 const row = document.querySelector('.container.main')
-
+const PlayerButton = document.querySelector('#Player-Button')
+const progress = document.querySelector('.player-progress-bar')
 
 let timer;
 
@@ -70,12 +71,7 @@ async function displayHome() {
     const container = document.querySelector('#sfoglia')
 
     container.innerHTML = `
-        <div class="row w-100 my-3">
-            <div class="col d-flex justify-content-center justify-content-lg-start">
-                <h3 class="text-light">Sfoglia tutto</h3>
-        </div>
-        
-        <div class="row g-4 my-4 mt-1">
+        <div class="row g-4 my-4">
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="square w-100 rounded" style="background: rgb(39,133,106);">
                     <h3 class="ps-3 pt-3 fw-bold" style="font-size: 24px">Podcast</h3>
@@ -223,6 +219,108 @@ async function displayHome() {
     `
 }
 
+async function playAudio(id) {
+
+    /* FETCH DEI DATI CORRISPONDEDNTI ALLA CANZONE */
+    const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/track/" + id);
+    const data = await response.json();
+
+    const { title, album, artist } = data;
+
+    /* RECUPERO DATI NECESSARI */
+    const target = document.querySelector(`#_${id}`);
+    const player = document.getElementById('player');
+
+    const songName = target.querySelector('h5');
+    const currentAudio = target.querySelector('audio');
+    const icon = target.querySelector(".play-button");
+
+    /* CONTROLLA SE CI SONO CANZONI IN RIPRODUZIONE */
+    const previousPlaying = document.querySelector('.playing');
+    if (previousPlaying) {
+        const previousIcon = previousPlaying.querySelector('.play-button');
+        const previousSongName = previousPlaying.querySelector('h5');
+        const previousAudio = previousPlaying.querySelector('audio');
+
+        /* SE E' LA STESSA CANZONE FERMA L'AUDIO */
+        if (previousAudio === currentAudio && !currentAudio.pause()){
+            previousAudio.pause();
+            previousIcon.classList.remove('active')
+            previousIcon.innerHTML = '<i class="bi bi-play-fill text-white"></i>';
+            PlayerButton.innerHTML = '<i class="bi bi-play-fill  fs-4 text-white"></i>';
+            progress.style.transition = `none`
+            progress.style.width = '0%';
+
+            previousSongName.style.color = "#fff";
+            previousPlaying.classList.remove('playing');
+
+            return;
+        }
+
+        /* SE NON E' LA STESSA FERMA LA CANZONE DI PRIMA */
+        previousAudio.pause()
+        previousAudio.currentTime = 0;
+        previousIcon.classList.remove('active')
+        previousIcon.innerHTML = '<i class="bi bi-play-fill text-white"></i>';
+
+        progress.style.transition = 'none'
+        progress.style.width = '0%';
+
+        previousSongName.style.color = "#fff";
+
+        previousPlaying.classList.remove('playing');
+    }
+
+    /* AGGIUNGE LA CLASSE PLAYING ALLA CANZONE IN RIPRODUZIONE */
+    currentAudio.play();
+    target.classList.add('playing');
+
+    /* IMPOSTA IMFORMAZIONI NEL PLAYER */
+    player.querySelector('img').src = album.cover_big;
+    player.querySelector('h5').innerHTML = title;
+    player.querySelector('p').innerHTML = artist.name;
+
+    icon.classList.add("active");
+    icon.innerHTML = '<i class="bi bi-pause-fill text-white"></i>';
+    PlayerButton.innerHTML = '<i class="bi bi-pause-fill fs-4  text-white"></i>';
+
+    if (progress.offsetWidth == 0) {
+        progress.style.transition = `width ${currentAudio.duration}s linear`
+        progress.style.width = '100%';
+    }
+
+
+
+    songName.style.color = "var(--color-green)";
+
+    /* QUANDO LA CANZONE FINISCE SI STOPPA */
+    currentAudio.addEventListener('ended', function () {
+
+        icon.classList.remove("active");
+        icon.innerHTML = '<i class="bi bi-play-fill text-white"></i>';
+        PlayerButton.innerHTML = '<i class="bi bi-play-fill  fs-4 text-white"></i>';
+        progress.style.transition = `width 0s linear`
+        progress.style.width = '0%';
+
+        songName.style.color = "#fff";
+    });
+
+}
+
+function stopAll() {
+    const audio = document.querySelectorAll('audio')
+
+    audio.forEach(audio => {
+        if (!audio.paused) {
+            audio.pause()
+        }
+    });
+
+    PlayerButton.innerHTML = '<i class="bi bi-play-fill  fs-4 text-white"></i>';
+    progress.style.transition = `width 0s linear`
+    progress.style.width = '0%'; 
+    
+}
 
 window.onload = async () => {
 
@@ -230,3 +328,4 @@ window.onload = async () => {
     const RandomArtistData = await GetSongFromRandomArtist()
     DisplaySongFromRandomArtist(RandomArtistData)
 }
+
