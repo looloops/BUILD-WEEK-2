@@ -36,7 +36,7 @@
                 </ul>
             </div>
         </div>
-           <!-- SIDEBAR SINISTRA PHILIP aperta -->
+        <!-- SIDEBAR SINISTRA PHILIP aperta -->
         <div class="col-0 col-md-3 p-0 libreria hidden">
             <nav class="bg-black">
                 <div class="w-100 m-0 ">
@@ -116,11 +116,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="border-top border-secondary bg-black text-white p-3 position-relative"
+                    <div class="border-top border-secondary bg-black text-white p-3 position-relative overflow-auto"
                         style="height:65vh">
 
                         <!-- ARRAY PLAYLIST FINITE -->
-                        <div class="d-flex flex-column h-100 philip ">
+                        <div class="d-flex flex-column h-100 ">
                             <p> Playllist già ascoltati</p>
                             <span>early strage emily syndrone (sett-ott 2022)</span>
                             <span>Be The Young</span>
@@ -171,6 +171,7 @@
         <div class="col-12 col-lg-11  body ">
             <div class="container-fluid m-0">
 
+                <!------------------------------------------------------------------------------------------------------- inizio navbar -->
                 <nav class="navbar py-3 px-0 ">
                     <div>
                         <button class="rounded-circle border-0" style="background-color: #131313;">
@@ -197,7 +198,7 @@
                                 <path
                                     d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
                             </svg></button>
-                        <!-- logo avatr profilo -->
+                        <!-- logo avatar profilo -->
                         <button type="button" id="btnlogoAvatar"
                             class="btn border-0 dropdown-toggle dropdown-toggle-split text-white rounded-pill  overflow-hiddens fs-4 pe-3 d-inline-flex align-items-center"
                             style="background-color: #0A0A0A;" data-bs-toggle="dropdown" aria-expanded="false">
@@ -207,7 +208,7 @@
                             <span class="px-2"></span>
 
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end me-2 ">
+                        <ul class="dropdown-menu dropdown-menu-end ">
                             <li><a class="dropdown-item d-flex justify-content-between" href="#"><span>Account</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
@@ -236,17 +237,18 @@
                 </nav>
 
                 <!-- --------------------------------------------------------------------------------header -->
-                <div class="row ms-1 header py-5">
+                <div class="d-flex ms-1 header py-5 position-relative" id="div-sponsor">
                     <!-- img cantante -->
-                    <div class="col-3">
+                    <div class="img-singer ps-3">
                         <img src="https://iconpop.it/cdn/shop/products/battisti.jpg?v=1666724943" alt=""
-                            class="img-fluid object-fit-cover" width="300rem" srcset="">
+                            class=" object-fit-cover">
                     </div>
                     <!-- descrizione canzone -->
-                    <div class="col-7">
+                    <div class="info-song">
                         <h6 class="fw-bold">Playlist</h6>
-                        <h1 id="titleSongHeader">Lucio Battisti- Le migliori...</h1>
-                        <h6 class="py-2 fw-bold">Ascoltiamo Lucio Battisti, preparandoci a celebrarne l'anniversario
+                        <h1 class="fw-bold" id="titleSongHeader">Lucio Battisti- Le migliori canzoni</h1>
+                        <h6 class="fw-bold py-2 fw-bold">Ascoltiamo Lucio Battisti, preparandoci a celebrarne
+                            l'anniversario
                             della nascita domani.</h6>
                         <!-- bottoni play segui ecc -->
                         <div class="d-flex gap-3">
@@ -257,242 +259,211 @@
                             <button type="button" class="d-inline-flex btn  px-3  fs-2">...</button>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <span class="bg-body-tertiary p-1">Sponsorizzato</span>
+                    <div class="position-absolute span-sponsor">
+                        <span class=" bg-body-tertiary p-1">Sponsorizzato</span>
                     </div>
                 </div>
                 <!-- -------------------------------------------------------------------------------------------------------Luljeta -->
                 <section id="consigliati" class="text-white">
-
                     <h2 class="d-flex fs-3 align-items-center  my-2">
                         Buonasera
                     </h2>
-                    <div class="row px-1 justify-content-between gy-2 gx-2">
-                        <div class="col-6 col-lg-4  overflow-hidden">
-                            <div class="card-consigliati container-fluid ">
-                                <a href="#" class="row Jude">
-                                    <div class="col-4 img-mix">
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
+                    <div class="row px-1 justify-content-between g-2">
+                        <div class="col-6 col-lg-4">
+                            <div class="card-consigliati card p-0">
+                                <a href="#" class="d-flex">
+                                    <div class="d-flex" style="width: 48px;">
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-8 text-mix d-flex align-items-center ">
-                                        <p>Hey Jude</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class=" col-6 col-lg-4   overflow-hidden">
-                            <div class="card-consigliati container-fluid ">
-                                <a href="#" class="row Jude">
-                                    <div class="col-4 img-mix">
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
                                         </div>
                                     </div>
-                                    <div class="col-8 text-mix d-flex align-items-center ">
-                                        <p>Hey Jude</p>
+                                    <div class="text-mix d-flex align-items-center p-2">
+                                        <span>Hey Jude</span>
                                     </div>
                                 </a>
                             </div>
                         </div>
-                        <div class=" col-6 col-lg-4   overflow-hidden">
-                            <div class="card-consigliati container-fluid ">
-                                <a href="#" class="row Jude">
-                                    <div class="col-4 img-mix">
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card-consigliati card p-0">
+                                <a href="#" class="d-flex">
+                                    <div class="d-flex" style="width: 48px;">
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-8 text-mix d-flex align-items-center ">
-                                        <p>Hey Jude</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class=" col-6 col-lg-4   overflow-hidden">
-                            <div class="card-consigliati container-fluid ">
-                                <a href="#" class="row Jude">
-                                    <div class="col-4 img-mix">
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
                                         </div>
                                     </div>
-                                    <div class="col-8 text-mix d-flex align-items-center ">
-                                        <p>Hey Jude</p>
+                                    <div class="text-mix d-flex align-items-center p-2">
+                                        <span>Hey Jude</span>
                                     </div>
                                 </a>
                             </div>
                         </div>
-                        <div class=" col-6 col-lg-4   overflow-hidden">
-                            <div class="card-consigliati container-fluid ">
-                                <a href="#" class="row Jude">
-                                    <div class="col-4 img-mix">
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card-consigliati card p-0">
+                                <a href="#" class="d-flex">
+                                    <div class="d-flex" style="width: 48px;">
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-8 text-mix d-flex align-items-center ">
-                                        <p>Hey Jude</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class=" col-6 col-lg-4   overflow-hidden">
-                            <div class="card-consigliati container-fluid ">
-                                <a href="#" class="row Jude">
-                                    <div class="col-4 img-mix">
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
-                                            <div class="col-6 p-0"><img src="./assets/imgs/main/image-10.jpg"
-                                                    class="img-fluid" alt=""></div>
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
                                         </div>
                                     </div>
-                                    <div class="col-8 text-mix d-flex align-items-center ">
-                                        <p>Hey Jude</p>
+                                    <div class="text-mix d-flex align-items-center p-2">
+                                        <span>Hey Jude</span>
                                     </div>
                                 </a>
                             </div>
                         </div>
-
-
+                        <div class="col-6 col-lg-4">
+                            <div class="card-consigliati card p-0">
+                                <a href="#" class="d-flex">
+                                    <div class="d-flex" style="width: 48px;">
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                        </div>
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-mix d-flex align-items-center p-2">
+                                        <span>Hey Jude</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card-consigliati card p-0">
+                                <a href="#" class="d-flex">
+                                    <div class="d-flex" style="width: 48px;">
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                        </div>
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-mix d-flex align-items-center p-2">
+                                        <span>Hey Jude</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card-consigliati card p-0">
+                                <a href="#" class="d-flex">
+                                    <div class="d-flex" style="width: 48px;">
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                        </div>
+                                        <div class="">
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                            <div class=""><img src="./assets/imgs/main/image-10.jpg" class="img-fluid"
+                                                    alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-mix d-flex align-items-center p-2">
+                                        <span>Hey Jude</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- -----------------------------------------------------------------------------------------------------inizio cards -->
                     <h3 class="d-flex fs-5 align-items-center my-3 ">Altro di ciò che ti piace</h3>
-
-                    <div class="row row-gap-3">
-                        <div class="col-6 col-md-4 col-lg-3 ">
-                            <div class="card ">
-                                <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body px-0">
-                                    <h5 class="card-title text-white">Mix anni 2010</h5>
-                                    <p class="card-text text-body-secondary">
-                                        artista,artista,artista,artista</p>
+                    <div class="container-fluid">
+                        <div class="row row-cols-md-4 row-cols-lg-5 row-cols-sm-3 row-gap-3">
+                            <div class="col ">
+                                <div class="card ">
+                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-white">Mix anni 2010</h5>
+                                        <p class="card-text text-body-secondary">
+                                            artista,artista,artista,artista</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 ">
-                            <div class="card ">
-                                <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body px-0">
-                                    <h5 class="card-title text-white">Mix anni 2010</h5>
-                                    <p class="card-text text-body-secondary">
-                                        artista,artista,artista,artista</p>
+                            <div class="col ">
+                                <div class="card ">
+                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-white">Mix anni 2010</h5>
+                                        <p class="card-text text-body-secondary">
+                                            artista,artista,artista,artista</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 ">
-                            <div class="card ">
-                                <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body px-0">
-                                    <h5 class="card-title text-white">Mix anni 2010</h5>
-                                    <p class="card-text text-body-secondary">
-                                        artista,artista,artista,artista</p>
+                            <div class="col ">
+                                <div class="card ">
+                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-white">Mix anni 2010</h5>
+                                        <p class="card-text text-body-secondary">
+                                            artista,artista,artista,artista</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 ">
-                            <div class="card ">
-                                <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body px-0">
-                                    <h5 class="card-title text-white">Mix anni 2010</h5>
-                                    <p class="card-text text-body-secondary">
-                                        artista,artista,artista,artista</p>
+                            <div class="col ">
+                                <div class="card ">
+                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-white">Mix anni 2010</h5>
+                                        <p class="card-text text-body-secondary">
+                                            artista,artista,artista,artista</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 ">
-                            <div class="card ">
-                                <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body px-0">
-                                    <h5 class="card-title text-white">Mix anni 2010</h5>
-                                    <p class="card-text text-body-secondary">
-                                        artista,artista,artista,artista</p>
+                            <div class="col ">
+                                <div class="card ">
+                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-white">Mix anni 2010</h5>
+                                        <p class="card-text text-body-secondary">
+                                            artista,artista,artista,artista</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 ">
-                            <div class="card ">
-                                <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body px-0">
-                                    <h5 class="card-title text-white">Mix anni 2010</h5>
-                                    <p class="card-text text-body-secondary">
-                                        artista,artista,artista,artista</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 ">
-                            <div class="card ">
-                                <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body px-0">
-                                    <h5 class="card-title text-white">Mix anni 2010</h5>
-                                    <p class="card-text text-body-secondary">
-                                        artista,artista,artista,artista</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 ">
-                            <div class="card ">
-                                <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body px-0">
-                                    <h5 class="card-title text-white">Mix anni 2010</h5>
-                                    <p class="card-text text-body-secondary">
-                                        artista,artista,artista,artista</p>
-                                </div>
-                            </div>
+                            <!--  -->
                         </div>
                     </div>
 
@@ -538,21 +509,14 @@
                     </div>
                     <span class="ms-auto">4 ore</span>
                 </div>
-                <div class="col-12 border-top border-secondary bg-black text white-50 p-2 position-relative">
-                    <div class="d-flex flex-column">
-                        <!-- ARRAY PLAYLIST FINITE -->
-                        <div class="bg-black ps-0">
-                            <p>Playllist già ascoltati</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             </nav>
         </div>
 
         <!-- ----------------------------------------------------------------------------------------------------------lavoro nicole -->
 
-        <!-- player versione dexstop -->
+        <!-- player versione desktop -->
         <div class="text-white fixed-bottom bg-player-color">
             <div class="player-mobile-relative">
                 <div class="row justify-content-center align-items-center position-relative" id="player-container">
@@ -752,7 +716,7 @@
             crossorigin="anonymous"></script>
         <script src="./js/audioplayer.js"></script>
         <script src="./js/index.js"></script>
-
+    </div>
 </body>
 
 </html>
