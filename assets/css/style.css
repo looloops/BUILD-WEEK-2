@@ -361,6 +361,10 @@ nav button:hover {
 /* 
   SEARCH 
 */
+.search {
+  padding-left: 10px;
+}
+
 input[type="text"]:focus{
   outline: none !important;
 }

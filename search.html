@@ -30,7 +30,7 @@
                                     <path
                                         d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
                                     </svg>
-                                    <a href="#" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">Home</a>
+                                    <a href="./index.html" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">Home</a>
                                 </li>
                                 <li class="mt-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -43,15 +43,15 @@
                                 </li>
                             </ul>
                             
-                            <div class="border-top border-secondary bg-black text-white p-3 position-relative" style="height: 100%;">
+                            <div class="border-top border-secondary bg-black text-white p-3 position-relative search" style="height: 100%;">
                                 <div class="d-flex justify-content-center align-items-center ps-0">
-                                    <div class="text-decoration-none py-2">
+                                    <div class="text-decoration-none py-2 me-4">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                         class="bi bi-collection-play-fill" viewBox="0 0 16 16">
                                         <path
                                             d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437" />
                                     </svg>
-                                    <a href="./album.html" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">La
+                                    <a href="./album.html" class="text-white px-1 pt-4 me-3 text-decoration-none fs-6">La
                                         tua libreria</a>   
                                     </div>
                                     <div class="d-flex justify-content-center align-items-center">
@@ -60,27 +60,27 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- PARTE SOtto libreria -->
-                            <div class="d-flex flex-wrap mt-3 justify-content-center-left" style="font-size: 0.9rem;">
+                            <!-- PARTE SOTTO LIBRERIA -->
+                            <div class="d-flex flex-wrap mt-3 justify-content-center-left" style="font-size: 0.8rem;">
                                 <div class="sidebar-button d-flex justify-content-center align-items-center mt-2 me-2">
-                                    <a href="#_" class="text-decoration-none fw-medium text-white px-2 ">
+                                    <a href="#" class="text-decoration-none fw-medium text-white px-2 ">
                                         Playlist
                                     </a>
                                 </div>
                                 <div class="sidebar-button d-flex justify-content-center align-items-center mt-2 me-2">
-                                    <a href="#_" class="text-decoration-none fw-medium text-white px-2 ">
+                                    <a href="#" class="text-decoration-none fw-medium text-white px-2 ">
 
                                         Podcast e show
                                     </a>
                                 </div>
                                 <div class="sidebar-button d-flex justify-content-center align-items-center mt-2 me-2">
-                                    <a href="#_" class="text-decoration-none fw-medium text-white px-2 ">
+                                    <a href="./album.html" class="text-decoration-none fw-medium text-white px-2 ">
 
                                         Album
                                     </a>
                                 </div>
                                 <div class="sidebar-button d-flex justify-content-center align-items-center mt-2 me-2">
-                                    <a href="#_" class="text-decoration-none fw-medium text-white px-2 ">
+                                    <a href="./artist.html" class="text-decoration-none fw-medium text-white px-2 ">
 
                                         Artisti
                                     </a>
@@ -108,8 +108,8 @@
             <!-- MAIN CONTENT -->
             <div class="col h-100" id="main">
                 <!-- INPUT TAB -->
-                <div class="container">
-                    <nav class="navbar py-3 px-0">
+                <div class="container d-sm-none d-md-block d-none d-sm-block">
+                    <nav class="navbar py-3 me-3">
                         <div>
                             <button class="rounded-circle border-0" style="background-color: #131313;">
                                 <img src="./assets/arrow-prev-small-svgrepo-com.svg" alt="" srcset=""
@@ -119,13 +119,12 @@
                                 <img src="./assets/arrow-next-small-svgrepo-com.svg" alt="" srcset=""
                                     class="rounded-circle">
                             </button>
-                           
                         </div>
-                        <div>
+                        <div class="row px-3 pt-3 bg-dark d-flex align-items-center justify-content-between d-md-none">
                             <div class="rounded-pill py-2 px-5 bg-dark d-flex">
                                 <span class="text-white me-3"><i
                                         class="bi bi-search"></i></span>
-                                <input class="border-0 bg-transparent text-white w-100" type="text" id="SearchBar"
+                                <input class="border-0 bg-transparent text-light w-100 rounded-4" type="text" id="SearchBar"
                                     placeholder="Cosa vuoi ascoltare?" oninput="debounce(() => {displayResults(SearchBar.value)}, 500)">
                             </div>
                         </div>
@@ -182,7 +181,7 @@
                 </div>
                 <!-- DISPLAY TAB -->
                 <div class="col d-flex justify-content-center justify-content-lg-start" id="sfoglia">
-                    <h3 class="text-white">Sfoglia tutto</h3>
+                    
                 </div>
 
                 <!-- FOOTER -->
