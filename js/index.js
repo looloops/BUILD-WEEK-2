@@ -123,6 +123,15 @@ function hiddenLibreria2() {
   }
 }
 
+const closeBtnFriends = document.getElementById("close-btn-friend-section");
+closeBtnFriends.onclick = () => {
+  if (sectionFriends.classList == "col-2 bg-black rounded d-block") {
+    sectionFriends.classList.remove("d-block");
+    sectionFriends.classList.add("d-none");
+    body.className = "col-lg-9 body";
+  }
+};
+
 //funzione che fa scomparire la scrollbar
 
 // body.style.overflow = "hidden";
@@ -152,7 +161,7 @@ function getFetch(url, id) {
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
-    .then((response) => {
+    .then(response => {
       if (response.ok) {
         return response.json();
       } else {
@@ -168,10 +177,10 @@ function getFetch(url, id) {
         throw new Error("Errore nel reperimento dati");
       }
     })
-    .then((oggetto) => {
+    .then(oggetto => {
       console.log(oggetto);
     })
-    .catch((err) => console.log(err));
+    .catch(err => console.log(err));
 }
 
 getFetch(apiSearch, "elvis");
