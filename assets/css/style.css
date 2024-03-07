@@ -14,10 +14,31 @@
   );
   --grey2: #2a2a2a;
   --greycard: #1d1d1d;
-  --bgArtist: linear-gradient(29deg, rgba(0, 0, 0, 1) 6%, rgba(25, 16, 16, 0.715) 49%, rgba(32, 32, 32, 0) 94%);
+  --bgArtist: linear-gradient(
+    29deg,
+    rgba(0, 0, 0, 1) 6%,
+    rgba(0, 0, 0, 0.7148109243697479) 49%,
+    rgba(32, 32, 32, 0) 94%
+  );
+  --bgGrey: linear-gradient(
+    180deg,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(30, 30, 30, 1) 17%,
+    rgba(24, 24, 24, 1) 37%,
+    rgba(18, 18, 18, 1) 70%,
+    rgba(18, 18, 18, 1) 100%
+  );
+  --grey2: #2a2a2a;
+  --greycard: #1d1d1d;
+  --bgArtist: linear-gradient(
+    29deg,
+    rgba(0, 0, 0, 1) 6%,
+    rgba(0, 0, 0, 0.7148109243697479) 49%,
+    rgba(32, 32, 32, 0) 94%
+  );
   --btnNav: #131313;
-  --greyText: #bebebc;
 }
+
 body {
   font-family: "Circular";
 }
@@ -29,12 +50,15 @@ body {
 :root {
   --green: #25d865;
 }
+
 #btnHeaderplay {
   background-color: var(--green);
 }
+
 #titleSongHeader {
   font-size: 4rem;
 }
+
 .bi:hover {
   cursor: pointer;
 }
@@ -43,23 +67,26 @@ body {
 #btnlogoAvatar {
   padding: 3px;
 }
+
 #titleSongHeader {
   font-size: 4rem;
 }
+
 .header {
   background: var(--bgArtist);
 }
+
 .body {
   background: var(--bgGrey);
   height: 100%;
   overflow: scroll;
 }
-
 /* sono funzioni estetiche dello scroll body  */
 *::-webkit-scrollbar {
   height: 0px;
   width: 13px;
 }
+
 *::-webkit-scrollbar-track {
   border-radius: 0px;
   background-color: #46464600;
@@ -85,6 +112,7 @@ body {
 *::-webkit-scrollbar-thumb:active {
   background-color: #979797;
 }
+
 /*-------------------------------------------------- */
 /* icona per aggiungere amici */
 .bi-person-add:hover {
@@ -122,10 +150,14 @@ body {
 .philip {
   overflow: scroll;
 }
-/* SIDEBAR SINISTRA PHILIP */
+
+
 
 /* ALBUM PAGE NICOLE */
-
+.album-page-header-padding {
+  padding-left: 3rem !important;
+  padding-right: 1.5rem !important;
+}
 .text-secondary {
   color: var(--greyText) !important;
 }
@@ -261,6 +293,7 @@ body {
 .Jude {
   background-color: var(--grey2);
 }
+
 .mix-card {
   padding: 0;
   height: 60px;
@@ -327,6 +360,10 @@ a {
   height: 100%;
   overflow: scroll;
 }
+
+
+
+
 nav button:hover {
   scale: 1.04;
 }
@@ -345,6 +382,7 @@ nav button:hover {
 .add-pref-song svg:hover {
   color: white;
 }
+
 #controls svg:active {
   color: rgb(150, 148, 148) !important;
 }
@@ -358,6 +396,7 @@ nav button:hover {
 #controls .pause:hover {
   scale: 1.1;
 }
+
 #controls .play svg:active,
 #controls .pause svg:active {
   color: white !important;
@@ -434,21 +473,28 @@ nav button:hover {
     width: 100%;
     padding-bottom: 1rem;
   }
+
   .player-container {
     position: relative;
   }
+
   .player-img-container {
     border-radius: 5px;
     height: 3.9rem;
     width: 3.9rem;
   }
+
+
+
   .play svg {
     width: 34px;
     height: 34px;
   }
+
   #minute-walk-song {
     justify-content: center;
   }
+
   .audio-track {
     position: initial;
     width: 70%;
@@ -458,6 +504,63 @@ nav button:hover {
   }
 }
 
-/* 
-  SEARCH 
-*/
+/* SEZIONE CENTRALE - SPONSOR */
+/* LU */
+.img-singer img {
+  height: 230px;
+}
+
+#div-sponsor {
+  height: 300px;
+  align-items: center;
+}
+
+#titleSongHeader {
+  font-size: 4rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: normal;
+}
+
+.info-song {
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.span-sponsor {
+  top: 10px;
+  right: 10px;
+}
+/* ----------------------------------------------------- */
+.show {
+  display: block!important;
+}
+
+.hidden {
+  display: none!important;
+}
+@media screen and (max-width: 1199px) {
+  .libreria {
+    display: none;
+  }
+  .sectionFriends {
+    display: none;
+  }
+  .libreriaSm {
+    display: block;
+  }
+}
+/* qua parte il mobile */
+@media screen and (max-width: 992px) {
+  #sectionFriends {
+    display: none !important;
+  }
+  .libreria {
+    display: none !important;
+  }
+  .libreriaSm {
+    display: none !important;
+  }
+}
