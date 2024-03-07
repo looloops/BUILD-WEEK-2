@@ -58,6 +58,12 @@ body {
   height: 100%;
   overflow: scroll;
 }
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
 
 /* sono funzioni estetiche dello scroll body  */
 *::-webkit-scrollbar {

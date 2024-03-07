@@ -1,50 +1,59 @@
 const body = document.getElementsByClassName("body")[0]; //div centrale pagina
 const btnFriends = document.getElementById("btnFriends"); //bottone amici navbar
 const sectionFriends = document.getElementById("sectionFriends"); //sezione amici creata da samuele
-sectionFriends.style.display = "none";
+
+function showRemove(elemento,add,remove){
+  elemento.classList.add(add)
+  elemento.classList.remove(remove)
+}
 
 //funzione che nasconde/mostra la sezione amici
 function hiddenSectionfriends() {
   //caso che siamo sopre a 1200 di schermo
   //gestione apertura
-  if (window.innerWidth >= 1200 && sectionFriends.style.display === "none") {
-    if (libreria.style.display === "block") {
+  if (
+    window.innerWidth >= 1200 &&
+    sectionFriends.classList.contains("hidden")
+  ) {
+    if (libreria.classList.contains("show")) {
       //contollo se libreria è aperta e apro amici
-      sectionFriends.style.display = "block";
+      sectionFriends.classList.remove("hidden");
+      sectionFriends.classList.add("show");
       body.className = "col-7 body";
     } else {
       //caso libreria chiusa e apro amici
-      sectionFriends.style.display = "block";
+      sectionFriends.classList.remove("hidden");
+      sectionFriends.classList.add("show");
       body.className = "col-9 body";
     }
     //gestine chiusura
-  } else if (window.innerWidth >= 1200 && libreria.style.display === "block") {
+  } else if (window.innerWidth >= 1200 && libreria.classList.contains("show")) {
     //chiudo amici ma controllo se libreria è aperta
-    sectionFriends.style.display = "none";
+    showRemove(sectionFriends,"hidden","show")
     body.className = "col-9 body";
   } else if (window.innerWidth >= 1200) {
     //caso libreria chiusa
-    sectionFriends.style.display = "none";
+    sectionFriends.classList.remove("show");
+    sectionFriends.classList.add("hidden");
     body.className = "col-11 body";
-  }else if (  //gestione sotto i 1200 px
-  //---------------------apertura section friend
-    libreria.style.display === "block" &&
-    sectionFriends.style.display === "none"
-  ) {
-    //vedo se libreria è aperta
-    libreria.style.display = "none";
-    sectionFriends.style.display = "block";
+  } else if (libreria.classList.contains("show") && sectionFriends.classList.contains("hidden")) { //gestione sotto i 1200 px
+     //vedo se libreria è aperta
+    //---------------------apertura section friend 
     body.className = "col-9 body";
-    libreriaSm.style.display = "block";
+    showRemove(libreria,"hidden","show")
+    showRemove(libreriaSm,"show","hidden")
+    showRemove(sectionFriends,"show","hidden")
+
   } else {
     //librera chiusa
-    if (sectionFriends.style.display === "none") {
+    if (sectionFriends.classList.contains("hidden")) {
+      console.log("paolo")
       //mi apre friends
-      sectionFriends.style.display = "block";
+      showRemove(sectionFriends,"show","hidden")
       body.className = "col-9 body";
     } else {
       //mi chiude friends
-      sectionFriends.style.display = "none";
+      showRemove(sectionFriends,"hidden","show")
       body.className = "col-11 body";
     }
   }
@@ -57,10 +66,11 @@ const btnLibreria = document.getElementsByClassName("btnlibreria")[0];
 const btnlibreriaSm = document.getElementsByClassName("btnlibreriaSm")[0];
 const libreria = document.getElementsByClassName("libreria")[0];
 const libreriaSm = document.getElementsByClassName("libreriaSm")[0];
-libreria.style.display = "none";
 
-window.innerWidth <992 ?libreriaSm.style.display = "none" :libreriaSm.style.display = "block";
 
+// window.innerWidth < 992
+//   ? showRemove(libreriaSm,"hidden","show")
+//   :showRemove(libreriaSm,"show","hidden");
 
 btnLibreria.onclick = () => {
   hiddenLibreria();
@@ -71,44 +81,44 @@ btnlibreriaSm.onclick = () => {
 
 function hiddenLibreria() {
   if (window.innerWidth >= 1200) {
-    if (sectionFriends.style.display === "block") {
+    if (sectionFriends.classList.contains("show")) {
       //sezione amici aperta
-      libreria.style.display = "none";
+      showRemove(libreria,"hidden","show")
       body.className = "col-9 body";
-      libreriaSm.style.display = "block";
+      showRemove(libreriaSm,"show","hidden")
     } else {
       //sezione amici chiusa
-      libreria.style.display = "none";
+      showRemove(libreria,"hidden","show")
       body.className = "col-11 body";
-      libreriaSm.style.display = "block";
+      showRemove(libreriaSm,"show","hidden")
     }
   } else {
     //sotto i 1200
-    libreria.style.display = "none";
+    showRemove(libreria,"hidden","show")
     body.className = "col-11 body";
-    libreriaSm.style.display = "block";
-    sectionFriends.style.display = "none";
+    showRemove(libreriaSm,"show","hidden")
+    showRemove(sectionFriends,"hidden","show")
   }
 }
 function hiddenLibreria2() {
   if (window.innerWidth >= 1200) {
-    if (sectionFriends.style.display === "block") {
+    if (sectionFriends.classList.contains("show")) {
       //sezione amici aperta
-      libreria.style.display = "block";
+      showRemove(libreria,"show","hidden")
       body.className = "col-7 body";
-      libreriaSm.style.display = "none";
+      showRemove(libreriaSm,"hidden","show")
     } else {
       //sezioni amici chiusa
-      libreria.style.display = "block";
+      showRemove(libreria,"show","hidden")
       body.className = "col-9 body";
-      libreriaSm.style.display = "none";
+      showRemove(libreriaSm,"hidden","show")
     }
   } else {
     //sotto i 1200
-    libreria.style.display = "block";
+    showRemove(libreria,"show","hidden")
     body.className = "col-9 body";
-    libreriaSm.style.display = "none";
-    sectionFriends.style.display = "none";
+    showRemove(libreriaSm,"hidden","show")
+    showRemove(sectionFriends,"hidden","show")
   }
 }
 
