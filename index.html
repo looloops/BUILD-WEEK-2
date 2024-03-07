@@ -20,18 +20,36 @@
 
 <body data-bs-theme="dark">
     <div class="row h-100 w-100 m-0 justify-content-center ">
-        <!-- SIDEBAR SINISTRA PHILIP -->
-        <div class="col-3  p-0 d-none d-lg-block position-relative">
+        <!-- SIDEBAR SINISTRA PHILIP chiusa -->
+        <div class="col-1 libreriaSm bg-black h-100 p-0">
+            <div class="px-3 pt-3">
+                <ul class="list-unstyled">
+                    <li>
+                        <button class="bg-black border-0 btnlibreriaSm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+           <!-- SIDEBAR SINISTRA PHILIP aperta -->
+        <div class="col-0 col-md-3 p-0 libreria">
             <nav class="bg-black">
                 <div class="w-100 m-0 ">
                     <div class="px-3 pt-3">
                         <ul class="list-unstyled">
                             <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                    class="bi bi-three-dots" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
-                                </svg>
+                                <button class="bg-black border-0 btnlibreria">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-three-dots" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                                    </svg>
+                                </button>
                                 <a href="#"></a>
                             </li>
                             <li class="mt-2">
@@ -52,11 +70,14 @@
                                     class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">Cerca</a>
                             </li>
                             <li class="mt-2">
+
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-collection-play-fill" viewBox="0 0 16 16">
                                     <path
                                         d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437" />
                                 </svg>
+
+
                                 <a href="./album.html" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">La
                                     tua libreria</a>
                             </li>
@@ -91,7 +112,7 @@
                                 </svg>
                                 <a href="#" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">I tuoi
                                     episodi</a>
-                                    
+
                             </li>
                         </ul>
                     </div>
@@ -147,7 +168,7 @@
             </nav>
         </div>
         <!------------------------------------------------------------------------------------------------------- inizio navbar -->
-        <div class="col-7 body ">
+        <div class="col-12 col-lg-11  body ">
             <div class="container-fluid m-0">
 
                 <nav class="navbar py-3 px-0 ">
@@ -480,7 +501,7 @@
             </div>
         </div>
         <!------------------------------------------------------------------------- samuele -->
-        <div class="col-2 bg-black rounded d-block" id="sectionFriends">
+        <div class="col-0 col-lg-2 bg-black rounded" id="sectionFriends">
             <div class="d-flex mt-3 align-items-center">
                 <p>Attività amici</p>
                 <p class="bi bi-person-add ms-auto me-2 pe-auto"></p>

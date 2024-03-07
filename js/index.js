@@ -1,22 +1,116 @@
-const body = document.getElementsByClassName("body")[0];//div centrale pagina
-const btnFriends = document.getElementById("btnFriends");//bottone amici navbar
-const sectionFriends = document.getElementById("sectionFriends");//sezione amici creata da samuele
+const body = document.getElementsByClassName("body")[0]; //div centrale pagina
+const btnFriends = document.getElementById("btnFriends"); //bottone amici navbar
+const sectionFriends = document.getElementById("sectionFriends"); //sezione amici creata da samuele
+sectionFriends.style.display = "none";
 
 //funzione che nasconde/mostra la sezione amici
 function hiddenSectionfriends() {
-  if (sectionFriends.classList == "col-2 bg-black rounded d-block") {
-    sectionFriends.classList.remove("d-block");
-    sectionFriends.classList.add("d-none");
+  //caso che siamo sopre a 1200 di schermo
+  //gestione apertura
+  if (window.innerWidth >= 1200 && sectionFriends.style.display === "none") {
+    if (libreria.style.display === "block") {
+      //contollo se libreria è aperta e apro amici
+      sectionFriends.style.display = "block";
+      body.className = "col-7 body";
+    } else {
+      //caso libreria chiusa e apro amici
+      sectionFriends.style.display = "block";
+      body.className = "col-9 body";
+    }
+    //gestine chiusura
+  } else if (window.innerWidth >= 1200 && libreria.style.display === "block") {
+    //chiudo amici ma controllo se libreria è aperta
+    sectionFriends.style.display = "none";
     body.className = "col-9 body";
+  } else if (window.innerWidth >= 1200) {
+    //caso libreria chiusa
+    sectionFriends.style.display = "none";
+    body.className = "col-11 body";
+  }else if (  //gestione sotto i 1200 px
+  //---------------------apertura section friend
+    libreria.style.display === "block" &&
+    sectionFriends.style.display === "none"
+  ) {
+    //vedo se libreria è aperta
+    libreria.style.display = "none";
+    sectionFriends.style.display = "block";
+    body.className = "col-9 body";
+    libreriaSm.style.display = "block";
   } else {
-    sectionFriends.classList.remove("d-none");
-    sectionFriends.classList.add("d-block");
-    body.className = "col-7 body";
+    //librera chiusa
+    if (sectionFriends.style.display === "none") {
+      //mi apre friends
+      sectionFriends.style.display = "block";
+      body.className = "col-9 body";
+    } else {
+      //mi chiude friends
+      sectionFriends.style.display = "none";
+      body.className = "col-11 body";
+    }
   }
 }
 btnFriends.onclick = function () {
   hiddenSectionfriends();
 };
+//funzione che nasconde la libreria
+const btnLibreria = document.getElementsByClassName("btnlibreria")[0];
+const btnlibreriaSm = document.getElementsByClassName("btnlibreriaSm")[0];
+const libreria = document.getElementsByClassName("libreria")[0];
+const libreriaSm = document.getElementsByClassName("libreriaSm")[0];
+libreria.style.display = "none";
+
+window.innerWidth <992 ?libreriaSm.style.display = "none" :libreriaSm.style.display = "block";
+
+
+btnLibreria.onclick = () => {
+  hiddenLibreria();
+};
+btnlibreriaSm.onclick = () => {
+  hiddenLibreria2();
+};
+
+function hiddenLibreria() {
+  if (window.innerWidth >= 1200) {
+    if (sectionFriends.style.display === "block") {
+      //sezione amici aperta
+      libreria.style.display = "none";
+      body.className = "col-9 body";
+      libreriaSm.style.display = "block";
+    } else {
+      //sezione amici chiusa
+      libreria.style.display = "none";
+      body.className = "col-11 body";
+      libreriaSm.style.display = "block";
+    }
+  } else {
+    //sotto i 1200
+    libreria.style.display = "none";
+    body.className = "col-11 body";
+    libreriaSm.style.display = "block";
+    sectionFriends.style.display = "none";
+  }
+}
+function hiddenLibreria2() {
+  if (window.innerWidth >= 1200) {
+    if (sectionFriends.style.display === "block") {
+      //sezione amici aperta
+      libreria.style.display = "block";
+      body.className = "col-7 body";
+      libreriaSm.style.display = "none";
+    } else {
+      //sezioni amici chiusa
+      libreria.style.display = "block";
+      body.className = "col-9 body";
+      libreriaSm.style.display = "none";
+    }
+  } else {
+    //sotto i 1200
+    libreria.style.display = "block";
+    body.className = "col-9 body";
+    libreriaSm.style.display = "none";
+    sectionFriends.style.display = "none";
+  }
+}
 
 //funzione che fa scomparire la scrollbar
 
@@ -33,11 +127,11 @@ btnFriends.onclick = function () {
 // ////////////////////////////////////
 
 //fetch
-const apiSearch = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";//+nome artista
+const apiSearch = "https://deezerdevs-deezer.p.rapidapi.com/search?q="; //+nome artista
 const apiInfos = "https://deezerdevs-deezer.p.rapidapi.com/infos";
-const apiPlaylist ="https://deezerdevs-deezer.p.rapidapi.com/playlist/";//+id playlist
-const getAlbum = "https://deezerdevs-deezer.p.rapidapi.com/album/";//+id album
-const getArtist='https://deezerdevs-deezer.p.rapidapi.com/artist/';//+id artista
+const apiPlaylist = "https://deezerdevs-deezer.p.rapidapi.com/playlist/"; //+id playlist
+const getAlbum = "https://deezerdevs-deezer.p.rapidapi.com/album/"; //+id album
+const getArtist = "https://deezerdevs-deezer.p.rapidapi.com/artist/"; //+id artista
 
 function getFetch(url, id) {
   fetch(url + id, {
@@ -69,4 +163,4 @@ function getFetch(url, id) {
     .catch((err) => console.log(err));
 }
 
-getFetch(apiSearch,"elvis")
+getFetch(apiSearch, "elvis");
