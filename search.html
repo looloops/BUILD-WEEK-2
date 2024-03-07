@@ -120,12 +120,15 @@
                                 <img src="./assets/arrow-next-small-svgrepo-com.svg" alt="" srcset=""
                                     class="rounded-circle">
                             </button>
+                           
                         </div>
-                        <div class="rounded-pill py-2 px-5 bg-dark d-flex">
-                            <span class="text-white me-3"><i
-                                    class="bi bi-search"></i></span>
-                            <input class="border-0 bg-transparent text-white w-100" type="text" id="SearchBar"
-                                placeholder="Cosa vuoi ascoltare?" oninput="debounce(() => {displayResults(SearchBar.value)}, 500)">
+                        <div>
+                            <div class="rounded-pill py-2 px-5 bg-dark d-flex">
+                                <span class="text-white me-3"><i
+                                        class="bi bi-search"></i></span>
+                                <input class="border-0 bg-transparent text-white w-100" type="text" id="SearchBar"
+                                    placeholder="Cosa vuoi ascoltare?" oninput="debounce(() => {displayResults(SearchBar.value)}, 500)">
+                            </div>
                         </div>
                         <div>
                             <button type="button" class="btn btn-light rounded-pill fw-bold px-3">Esplora Premium</button>
@@ -179,8 +182,11 @@
                     </nav>
                 </div>
                 <!-- DISPLAY TAB -->
-                <div class="container main mt-5" id="sfoglia">
-                    <h3 class="text-center text-md-start fw-bold fs-5">Sfoglia tutto</h3>
+                <!-- <div class="container main mt-5" id="sfoglia">
+                    <h2 class="text-center text-md-start fw-bold fs-5">Sfoglia tutto</h2>
+                </div> -->
+                <div class="col d-flex justify-content-center justify-content-lg-start" id="sfoglia">
+                    <h3 class="text-white">Sfoglia tutto</h3>
                 </div>
 
                 <!-- FOOTER -->
