@@ -224,6 +224,8 @@ async function displayHome() {
 }
 
 
+
+
 window.onload = async () => {
 
     await displayHome()
