@@ -122,14 +122,11 @@ function hiddenLibreria2() {
     showRemove(sectionFriends,"hidden","show")
   }
 }
-
+//funzione chiusura friend da tasto x in alto
 const closeBtnFriends = document.getElementById("close-btn-friend-section");
 closeBtnFriends.onclick = () => {
-  if (sectionFriends.classList == "col-2 bg-black rounded d-block") {
-    sectionFriends.classList.remove("d-block");
-    sectionFriends.classList.add("d-none");
-    body.className = "col-lg-9 body";
-  }
+  showRemove(sectionFriends,"hidden","show")
+
 };
 
 //funzione che fa scomparire la scrollbar

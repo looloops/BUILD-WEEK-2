@@ -151,10 +151,13 @@ body {
   overflow: scroll;
 }
 
-/* SIDEBAR SINISTRA PHILIP */
+
 
 /* ALBUM PAGE NICOLE */
-
+.album-page-header-padding {
+  padding-left: 3rem !important;
+  padding-right: 1.5rem !important;
+}
 .text-secondary {
   color: var(--greyText) !important;
 }
