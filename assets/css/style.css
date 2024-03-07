@@ -4,22 +4,38 @@
 
 :root {
   --green: #25d865;
-  --bgGrey: linear-gradient(180deg,
-      rgba(33, 33, 33, 1) 0%,
-      rgba(30, 30, 30, 1) 17%,
-      rgba(24, 24, 24, 1) 37%,
-      rgba(18, 18, 18, 1) 70%,
-      rgba(18, 18, 18, 1) 100%);
+  --bgGrey: linear-gradient(
+    180deg,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(30, 30, 30, 1) 17%,
+    rgba(24, 24, 24, 1) 37%,
+    rgba(18, 18, 18, 1) 70%,
+    rgba(18, 18, 18, 1) 100%
+  );
   --grey2: #2a2a2a;
   --greycard: #1d1d1d;
-  --bgArtist: linear-gradient(29deg,
-      rgba(0, 0, 0, 1) 6%,
-      rgba(0, 0, 0, 0.7148109243697479) 49%,
-      rgba(32, 32, 32, 0) 94%);
-  --bgGrey: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(30, 30, 30, 1) 17%, rgba(24, 24, 24, 1) 37%, rgba(18, 18, 18, 1) 70%, rgba(18, 18, 18, 1) 100%);
-  --grey2: #2A2A2A;
+  --bgArtist: linear-gradient(
+    29deg,
+    rgba(0, 0, 0, 1) 6%,
+    rgba(0, 0, 0, 0.7148109243697479) 49%,
+    rgba(32, 32, 32, 0) 94%
+  );
+  --bgGrey: linear-gradient(
+    180deg,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(30, 30, 30, 1) 17%,
+    rgba(24, 24, 24, 1) 37%,
+    rgba(18, 18, 18, 1) 70%,
+    rgba(18, 18, 18, 1) 100%
+  );
+  --grey2: #2a2a2a;
   --greycard: #1d1d1d;
-  --bgArtist: linear-gradient(29deg, rgba(0, 0, 0, 1) 6%, rgba(0, 0, 0, 0.7148109243697479) 49%, rgba(32, 32, 32, 0) 94%);
+  --bgArtist: linear-gradient(
+    29deg,
+    rgba(0, 0, 0, 1) 6%,
+    rgba(0, 0, 0, 0.7148109243697479) 49%,
+    rgba(32, 32, 32, 0) 94%
+  );
   --btnNav: #131313;
 }
 
@@ -64,18 +80,7 @@ body {
   background: var(--bgGrey);
   height: 100%;
   overflow: scroll;
-
 }
-
-.show {
-  display: block;
-}
-
-.hidden {
-  display: none;
-
-}
-
 /* sono funzioni estetiche dello scroll body  */
 *::-webkit-scrollbar {
   height: 0px;
@@ -358,37 +363,15 @@ nav button:hover {
   }
 }
 
-/* 
-  SEARCH 
-*/
-/* mobile */
-@media screen and (max-width: 992) {
-  #sectionFriends {
-    display: none;
-  }
-
-  .libreria {
-    display: none;
-  }
-
-  .libreriaSm {
-    display: none;
-  }
-
-}
-
-
 /* SEZIONE CENTRALE - SPONSOR */
 /* LU */
 .img-singer img {
   height: 230px;
-
 }
 
 #div-sponsor {
   height: 300px;
   align-items: center;
-
 }
 
 #titleSongHeader {
@@ -408,4 +391,35 @@ nav button:hover {
 .span-sponsor {
   top: 10px;
   right: 10px;
+}
+/* ----------------------------------------------------- */
+.show {
+  display: block!important;
+}
+
+.hidden {
+  display: none!important;
+}
+@media screen and (max-width: 1199px) {
+  .libreria {
+    display: none;
+  }
+  .sectionFriends {
+    display: none;
+  }
+  .libreriaSm {
+    display: block;
+  }
+}
+/* qua parte il mobile */
+@media screen and (max-width: 992px) {
+  #sectionFriends {
+    display: none !important;
+  }
+  .libreria {
+    display: none !important;
+  }
+  .libreriaSm {
+    display: none !important;
+  }
 }
