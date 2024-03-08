@@ -27,13 +27,8 @@ const secToMin = (sec) => {
 
 const id = new URLSearchParams(window.location.search).get("idAlbum");
 const URL = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id
-
-
-
 fetch(URL)
           .then(response => {
-              console.log(response)
-
               if (response.ok) {
                   return response.json()
               } else {
@@ -70,8 +65,6 @@ fetch(URL)
 
               fetch(URLTrackList)
           .then(response => {
-              console.log(response)
-
               if (response.ok) {
                   return response.json()
               } else {
@@ -126,10 +119,7 @@ fetch(URL)
                                               
                                           }
                                           
-                                      }
-                                      
-                              
-                                      
+                                      }                                      
                                       actTrack.name = titleTrack
                                       actTrack.artist = artistTrack
                                       actTrack.image = imgTrack
