@@ -4,7 +4,7 @@ const row = document.querySelector('.container.main')
 
 
 let timer;
-
+//CALLBACK & DELAY FUNCTION
 function debounce(callback, delay) {
     clearTimeout(timer);
     timer = setTimeout(callback, delay);
@@ -19,7 +19,7 @@ function formatTime(time) {
 
     return `${formattedMinutes}:${formattedSeconds}`;
 }
-
+//effettua ricerca su Deezer utilizzando la API
 async function getData(query) {
     const response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=' + query)
     const data = await response.json()
@@ -64,18 +64,17 @@ async function displayResults(results) {
     `).join('')
     }
 }
-
+//VISUALIZZAZIONE CATALOGUE MUSICALI
 async function displayHome() {
 
     const container = document.querySelector('#sfoglia')
 
     container.innerHTML = `
-        <div class="row w-100 my-3">
+        <div class="row w-100 justify-content-center my-3">
             <div class="col d-flex justify-content-center justify-content-lg-start">
                 <h3 class="text-light">Sfoglia tutto</h3>
-        </div>
-
-        <div class="row g-4 my-4 mt-1">
+            </div>
+        <div class="row g-4 my-4 pe-0 mt-1">
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="square w-100 rounded" style="background: rgb(39,133,106);">
                     <h3 class="ps-3 pt-3 fw-bold" style="font-size: 24px">Podcast</h3>
@@ -221,6 +220,67 @@ async function displayHome() {
             </div>
         </div>
     `
+}
+
+/* RANDOM SIDEBAR  */
+const ArtisInfo = document.querySelector(".ArtistInfo")
+const ArtistSongs = document.querySelector(".Top10Songs")
+let number
+let check  
+
+function randomnumber() { 
+    number = Math.floor(Math.random() * 5000) + 1
+}
+
+const sleep = (milliseconds=500) => new Promise(resolve => setTimeout(resolve, milliseconds)) //funzione per timing 1.5sec
+
+async function GetSongFromRandomArtist() {  // funzione che fetcha randomicamente un artista 
+    try {
+        
+        do {                                //ciclo do while che cicla fino a quando non trova un array pieno
+            await sleep(2000)               //funzione che fa fetchare ogni 1.5sec per non intasare il server
+            randomnumber()                  // funzione per avere un numero random 
+
+            const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${number}/top?limit=10`)
+            const result = await response.json()
+
+            check = result.data
+            console.log(check)
+
+        } while ((check.length === 0))
+
+        return check
+    }
+    catch(error) {
+        console.log(error);
+        ArtisInfo.innerHTML = `"oh oh qualcosa non va`
+    } finally {
+        document.querySelector(".dot-pulse").classList.add("d-none");
+    }
+
+}
+
+async function DisplaySongFromRandomArtist(RandomArtistData) { //display random artist nella sidebar 
+
+    ArtisInfo.innerHTML = /*html*/`
+        <img src="${RandomArtistData[0].contributors[0].picture}" alt="" class="mb-3">
+        <h5 class="mb-3"><a class="text-decoration-none text-light fw-bold" href="/artist/artist.html?id=${RandomArtistData[0].artist.id}">${RandomArtistData[0].artist.name}</h5>
+        <hr>
+    `
+    ArtistSongs.innerHTML = RandomArtistData.map(Song => /*html*/`
+            <div class="d-flex align-items-center py-3 h-90">
+                    <img src="${Song.album.cover}" alt="" style="width: 80px; height: 80px; border-radius: 4px;" class="me-3 img-fluid">
+                <div class="ms-2">
+                    <p class="m-0 text-grey">Song: <span class="fw-bolder">${Song.title_short}</span></p>
+                    <p class="m-0 text-grey">Album: 
+                        <span class="fw-bolder">
+                            <a class="text-decoration-none text-light" href="/album/album.html?id=${Song.album.id}">${Song.album.title}</a>
+                        </span>
+                    </p> 
+                </div>
+            </div>
+    `
+    ).join("")
 }
 
 
