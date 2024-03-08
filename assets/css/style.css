@@ -223,7 +223,7 @@ body {
   background-color: #121212;
 }
 
-#album-page-list-row:hover {
+.album-page-list-row:hover {
   background-color: var(--grey2);
   border-radius: 5px;
   color: white !important;
@@ -423,7 +423,7 @@ nav button:hover {
   }
 
   .album-page-list-fs-big {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .album-page-list-fs-small {
@@ -565,14 +565,14 @@ nav button:hover {
   .fs-5 {
     font-size: 14px !important;
   }
-  .colplaylist{
+  .colplaylist {
     padding: 10px;
     margin: 0px;
   }
-  .padrespan{
+  .padrespan {
     width: 8rem;
   }
   .p-card {
-    padding-inline:0px ;
+    padding-inline: 0px;
   }
 }
