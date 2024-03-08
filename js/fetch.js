@@ -27,7 +27,7 @@ let arrayArtist = [
   "madonna",
   "the weeknd",
   "kanye west",
-  "drake"
+  "drake",
 ];
 function getFetch(url, id) {
   fetch(url + id, {
@@ -105,7 +105,7 @@ rangeInput.oninput = () => {
 function creaCard(link, text1, text2) {
   const divcards = document.getElementById("divcards");
   const div = document.createElement("div");
-  div.className = "col-12 col-sm-6 p-card ";
+  div.className = "col-12 col-sm-4 col-md-3 gx-2 card-container";
   divcards.appendChild(div);
   ///////////////////////////
   const div2 = document.createElement("div");
@@ -160,16 +160,11 @@ function getFetchcard(url, id) {
     })
     .then((oggetto) => {
       let random = Math.floor(Math.random() * oggetto.data.length);
-      creaCard(
-        oggetto.data[random].album.cover_medium,
-        oggetto.data[random].title,
-        oggetto.data[random].artist.name
-      );
-    
+      creaCard(oggetto.data[random].album.cover_medium, oggetto.data[random].title, oggetto.data[random].artist.name);
     })
     .catch((err) => console.log(err));
 }
-for (let index = 0; index <5; index++) {
+for (let index = 0; index < 5; index++) {
   let rand2 = Math.floor(Math.random() * arrayArtist.length);
-  getFetchcard(apiSearch, arrayArtist[rand2]);  
+  getFetchcard(apiSearch, arrayArtist[rand2]);
 }
