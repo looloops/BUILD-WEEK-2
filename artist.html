@@ -1,323 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
 
-    <link rel="stylesheet" href="./assets/css/circular-font.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="shortcut icon" href="./assets/imgs/logo.svg"/>
-    <title>Spotify</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-  <body data-bs-theme="dark">
-    <div class="row h-100 m-0 justify-content-center">
-      <!-- SIDEBAR SINISTRA PHILIP -->
-      <div class="col-lg-3 bg-black d-none d-lg-block">
-        <nav class="bg-black">
-          <div class="row w-100">
-            <ul class="list-unstyled px-2">
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-three-dots"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
-                  />
-                </svg>
-                <a href="#"></a>
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-house-door-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
-                  />
-                </svg>
-                <a href="#" class="text-white text-decoration-none home">Home</a>
-              </li>
-              <li class="my-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-search"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                  />
-                </svg>
-                <a href="./search.html" class="text-white text-decoration-none home">Cerca</a>
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-collection-play-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437"
-                  />
-                </svg>
-                <a href="./album.html" class="text-white text-decoration-none">La tua libreria</a>
-              </li>
-              <li class="mt-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-plus-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
-                  />
-                  <path
-                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-                  />
-                </svg>
-                <a href="#" class="text-white text-decoration-none">Cerca playlist</a>
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-clipboard-heart"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5 1.5A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm5 0a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"
-                  />
-                  <path
-                    d="M3 1.5h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2"
-                  />
-                  <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.31 8 6.982" />
-                </svg>
-                <a href="#" class="text-white text-decoration-none">Brani che ti piacciono</a>
-              </li>
-              <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-bookmark-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
-                  />
-                </svg>
-                <a href="#" class="text-white text-decoration-none">I tuoi episodi</a>
-              </li>
-            </ul>
+  <link rel="stylesheet" href="./assets/css/circular-font.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="shortcut icon" href="./assets/imgs/logo.svg" />
+  <title>Spotify</title>
+</head>
 
+<body data-bs-theme="dark">
+  <div class="row h-100 m-0 justify-content-center">
+    <!-- SIDEBAR SINISTRA PHILIP -->
+    <div class="col-lg-3 bg-black d-none d-lg-block">
+      <nav class="bg-black">
+        <div class="row w-100">
+          <ul class="list-unstyled px-2">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+              </svg>
+              <a href="#"></a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+              </svg>
+              <a href="#" class="text-white text-decoration-none home">Home</a>
+            </li>
+            <li class="my-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+              </svg>
+              <a href="./search.html" class="text-white text-decoration-none home">Cerca</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-collection-play-fill" viewBox="0 0 16 16">
+                <path
+                  d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437" />
+              </svg>
+              <a href="./album.html" class="text-white text-decoration-none">La tua libreria</a>
+            </li>
+            <li class="mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-plus-square" viewBox="0 0 16 16">
+                <path
+                  d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+              </svg>
+              <a href="#" class="text-white text-decoration-none">Cerca playlist</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-clipboard-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M5 1.5A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm5 0a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" />
+                <path
+                  d="M3 1.5h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2" />
+                <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.31 8 6.982" />
+              </svg>
+              <a href="#" class="text-white text-decoration-none">Brani che ti piacciono</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                <path
+                  d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2" />
+              </svg>
+              <a href="#" class="text-white text-decoration-none">I tuoi episodi</a>
+            </li>
+          </ul>
 
-                    <div class="col-12 border-top border-secondary bg-black text white-50 p-2 position-relative">
-                        <div class="d-flex flex-column">
-                            <!-- ARRAY PLAYLIST FINITE -->
-                            <div class=" bg-black ps-0">
-                                <p> Playlist già ascoltati</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class="col-12 col-lg-7 body p-0">
-            <!------------------------------------------------------------------------------------------------------- inizio navbar -->
-            <div class="container-fluid m-0 p-0">
-                <div style="width: 100%; height: 40vh; background-repeat: no-repeat; background-size: cover;" class="d-flex flex-column  justify-content-between bg-artist">
-                <nav class="navbar py-3 px-4">
-                    <div>
-                        <button class="rounded-circle border-0" style="background-color: #131313;">
-                            <img src="./assets/arrow-prev-small-svgrepo-com.svg" alt="" srcset=""
-                                class="rounded-circle">
-                        </button>
-                        <button class="rounded-circle border-0" style="background-color: #131313;">
-                            <img src="./assets/arrow-next-small-svgrepo-com.svg" alt="" srcset=""
-                                class="rounded-circle">
-                        </button>
-                        
-                    </div>
-                    <button type="button" class="btn rounded-circle fw-bold d-none d-lg-block ms-lg-auto me-lg-2"style="background-color: #131313;" id="btnFriends"><svg
-                      xmlns="http://www.w3.org/2000/svg" width="15" height="26" fill="currentColor"
-                      class="bi bi-people-fill" viewBox="0 0 16 16">
-                      <path
-                          d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                  </svg></button>
-
-                    <div>
-                      
-                        <!-- logo avatr profilo -->
-                        <button type="button" id="btnlogoAvatar"
-                            class="btn border-0 dropdown-toggle dropdown-toggle-split text-white rounded-pill  overflow-hiddens fs-4 pe-3 d-inline-flex align-items-center"style="background-color: #0A0A0A;"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdR-W0o7aRlmTTSDUnIZuUEu1GR5nx7Zarsw&usqp=CAU"
-                                class="rounded-circle" width="36rem" alt="logo">
-                            <span class="fs-6 ps-2">Lidia Nautilus... </span>
-                            <span class="px-2"></span>
-
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end me-2 ">
-                            <li><a class="dropdown-item d-flex justify-content-between" href="#"><span>Account</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                                        <path fill-rule="evenodd"
-                                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-                                    </svg></a></li>
-                            <li><a class="dropdown-item" href="#"> Profilo</a></li>
-                            <li><a class="dropdown-item d-flex justify-content-between g-2" href="#"><span>Effettua
-                                        l'upgrade a Premium</span> <svg xmlns="http://www.w3.org/2000/svg" class="ms-3"
-                                        width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right"
-                                        viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                                        <path fill-rule="evenodd"
-                                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-                                    </svg></a></li>
-                            <li><a class="dropdown-item" href="#"> Sessione privata</a></li>
-                            <li><a class="dropdown-item" href="#"> Impostazioni</a></li>
-                            <hr>
-                            <li><a class="dropdown-item" href="#"> Esci</a></li>
-                        </ul>
-                    </div>
-
-                </nav>
-
-                <!-- --------------------------------------------------------------------------------header -->
-                <div class="ms-4 text-white">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-patch-check fs-5"></i>
-                        <span class="ps-2" style="font-size: small;">Artista verificato</span>
-                    </div>
-                    <h1 class="display-1 m-0 fw-bold artistName"></h1>
-                    <p class="mb-3 monthlyListeners" style="font-size: small;"></p>
-                  </div>
-                </div>
-                
-                <section class="text-white mt-3 ms-4">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-play-circle-fill fs-1"></i>
-                        <button type="button" class="btn btn-outline-light ms-4"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                   <p class="m-0 fw-medium" style="font-size: smaller; letter-spacing: 1px;">FOLLOWING</p>
-                        </button>
-                        <i class="bi bi-three-dots ms-4 fs-4" style="color: rgb(145, 145, 145);"></i>
-                    </div>
-                    <div class="container-fluid mt-3">
-                        <div class="row column-gap-lg-5 flex-sm-column flex-xl-row">
-                            <div class="col-10 col-xl-6 p-0">
-                                <h5>Popolari</h5>
-                                <div class="d-flex flex-column artistSongsContainer ms-3 mt-4">
-                                    
-                                </div>
-                                
-                                
-                            </div>
-                            <div class="col-10 col-xl-5 p-0 ps-2 ps-md-5 mb-3">
-                                <h5>Brani che ti piacciono</h5>
-                                <div class="d-flex align-items-center">
-                                    <img src="" alt="" class="rounded-circle artistImgLikeSection" style="width: 75px; height: 75px;">
-                                    <div class="d-flex flex-column ms-3">
-                                        <p class="fw-bold m-0 mb-2">Hai messo Mi piace a 11 brani</p>
-                                        <p class="m-0 artistNameRight" style="font-size: smaller;"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <!------------------------------------------------------------------------- samuele -->
-        <div class="col-2 bg-black rounded d-none d-lg-block" id="sectionFriends">
-            <div class="d-flex mt-3 align-items-center">
-                <p>Attività amici</p>
-                <p class="bi bi-person-add ms-auto me-2 pe-auto"></p>
-                <p class="bi bi-x-lg rounded-circle"></p>
-            </div>
+          <div class="col-12 border-top border-secondary bg-black text white-50 p-2 position-relative">
             <div class="d-flex flex-column">
-                <div class="d-flex mb-3">
-                    <img class="rounded-circle" src="assets/imgs/main/image-2.jpg" alt=""
-                        style="width: 30px; height: 30px" />
-                    <div class="d-inline-block ms-2">
-                        <p class="m-0">Charlie Hookham</p>
-                        <p class="m-0">Lorem ipsum dolor sit</p>
-                        <p class="m-0">EP III</p>
-                    </div>
-                    <span class="ms-auto">4 ore</span>
+              <!-- ARRAY PLAYLIST FINITE -->
+              <div class=" bg-black ps-0">
+                <p> Playlist già ascoltati</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="col-12 col-lg-7 body p-0">
+      <!------------------------------------------------------------------------------------------------------- inizio navbar -->
+      <div class="container-fluid m-0 p-0">
+        <div style="width: 100%; height: 40vh; background-repeat: no-repeat; background-size: cover;"
+          class="d-flex flex-column  justify-content-between bg-artist">
+          <nav class="navbar py-3 px-4">
+            <div>
+              <button class="rounded-circle border-0" style="background-color: #131313;">
+                <img src="./assets/arrow-prev-small-svgrepo-com.svg" alt="" srcset="" class="rounded-circle">
+              </button>
+              <button class="rounded-circle border-0" style="background-color: #131313;">
+                <img src="./assets/arrow-next-small-svgrepo-com.svg" alt="" srcset="" class="rounded-circle">
+              </button>
+
+            </div>
+            <button type="button" class="btn rounded-circle fw-bold d-none d-lg-block ms-lg-auto me-lg-2"
+              style="background-color: #131313;" id="btnFriends"><svg xmlns="http://www.w3.org/2000/svg" width="15"
+                height="26" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path
+                  d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+              </svg></button>
+
+            <div>
+
+              <!-- logo avatr profilo -->
+              <button type="button" id="btnlogoAvatar"
+                class="btn border-0 dropdown-toggle dropdown-toggle-split text-white rounded-pill  overflow-hiddens fs-4 pe-3 d-inline-flex align-items-center"
+                style="background-color: #0A0A0A;" data-bs-toggle="dropdown" aria-expanded="false">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdR-W0o7aRlmTTSDUnIZuUEu1GR5nx7Zarsw&usqp=CAU"
+                  class="rounded-circle" width="36rem" alt="logo">
+                <span class="fs-6 ps-2">Lidia Nautilus... </span>
+                <span class="px-2"></span>
+
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end me-2 ">
+                <li><a class="dropdown-item d-flex justify-content-between" href="#"><span>Account</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                      <path fill-rule="evenodd"
+                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                    </svg></a></li>
+                <li><a class="dropdown-item" href="#"> Profilo</a></li>
+                <li><a class="dropdown-item d-flex justify-content-between g-2" href="#"><span>Effettua
+                      l'upgrade a Premium</span> <svg xmlns="http://www.w3.org/2000/svg" class="ms-3" width="16"
+                      height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                      <path fill-rule="evenodd"
+                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                    </svg></a></li>
+                <li><a class="dropdown-item" href="#"> Sessione privata</a></li>
+                <li><a class="dropdown-item" href="#"> Impostazioni</a></li>
+                <hr>
+                <li><a class="dropdown-item" href="#"> Esci</a></li>
+              </ul>
+            </div>
+
+          </nav>
+
+          <!-- --------------------------------------------------------------------------------header -->
+          <div class="ms-4 text-white">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-patch-check fs-5"></i>
+              <span class="ps-2" style="font-size: small;">Artista verificato</span>
+            </div>
+            <h1 class="display-1 m-0 fw-bold artistName"></h1>
+            <p class="mb-3 monthlyListeners" style="font-size: small;"></p>
+          </div>
+        </div>
+
+        <section class="text-white mt-3 ms-4">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-play-circle-fill fs-1"></i>
+            <button type="button" class="btn btn-outline-light ms-4"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+              <p class="m-0 fw-medium" style="font-size: smaller; letter-spacing: 1px;">FOLLOWING</p>
+            </button>
+            <i class="bi bi-three-dots ms-4 fs-4" style="color: rgb(145, 145, 145);"></i>
+          </div>
+          <div class="container-fluid mt-3">
+            <div class="row column-gap-lg-5 flex-sm-column flex-xl-row">
+              <div class="col-10 col-xl-6 p-0">
+                <h5>Popolari</h5>
+                <div class="d-flex flex-column artistSongsContainer ms-3 mt-4">
+
                 </div>
-                <div class="d-flex mb-3">
-                    <img class="rounded-circle" src="assets/imgs/main/image-3.jpg" alt=""
-                        style="width: 30px; height: 30px" />
-                    <div class="d-inline-block ms-2">
-                        <p class="m-0">Charlie Hookham</p>
-                        <p class="m-0">Lorem ipsum dolor sit</p>
-                        <p class="m-0">EP III</p>
-                    </div>
-                    <span class="ms-auto">4 ore</span>
-                </div>
-                <div class="d-flex mb-3">
-                    <img class="rounded-circle" src="assets/imgs/main/image-4.jpg" alt=""
-                        style="width: 30px; height: 30px" />
-                    <div class="d-inline-block ms-2">
-                        <p class="m-0">Charlie Hookham</p>
-                        <p class="m-0">Lorem ipsum dolor sit</p>
-                        <p class="m-0">EP III</p>
-                    </div>
-                    <span class="ms-auto">4 ore</span>
-                </div>
-            <div class="col-12 border-top border-secondary bg-black text white-50 p-2 position-relative">
-              <div class="d-flex flex-column">
-                <!-- ARRAY PLAYLIST FINITE -->
-                <div class="bg-black ps-0">
-                  <p>Playllist già ascoltati</p>
+
+
+              </div>
+              <div class="col-10 col-xl-5 p-0 ps-2 ps-md-5 mb-3">
+                <h5>Brani che ti piacciono</h5>
+                <div class="d-flex align-items-center">
+                  <img src="" alt="" class="rounded-circle artistImgLikeSection" style="width: 75px; height: 75px;">
+                  <div class="d-flex flex-column ms-3">
+                    <p class="fw-bold m-0 mb-2">Hai messo Mi piace a 11 brani</p>
+                    <p class="m-0 artistNameRight" style="font-size: smaller;"></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </nav>
+        </section>
       </div>
-
+    </div>
+    <!------------------------------------------------------------------------- samuele -->
+    <div class="col-2 bg-black rounded d-none d-lg-block" id="sectionFriends">
+      <div class="d-flex mt-3 align-items-center">
+        <p>Attività amici</p>
+        <p class="bi bi-person-add ms-auto me-2 pe-auto"></p>
+        <p class="bi bi-x-lg rounded-circle"></p>
+      </div>
+      <div class="d-flex flex-column">
+        <div class="d-flex mb-3">
+          <img class="rounded-circle" src="assets/imgs/main/image-2.jpg" alt="" style="width: 30px; height: 30px" />
+          <div class="d-inline-block ms-2">
+            <p class="m-0">Charlie Hookham</p>
+            <p class="m-0">Lorem ipsum dolor sit</p>
+            <p class="m-0">EP III</p>
+          </div>
+          <span class="ms-auto">4 ore</span>
+        </div>
+        <div class="d-flex mb-3">
+          <img class="rounded-circle" src="assets/imgs/main/image-3.jpg" alt="" style="width: 30px; height: 30px" />
+          <div class="d-inline-block ms-2">
+            <p class="m-0">Charlie Hookham</p>
+            <p class="m-0">Lorem ipsum dolor sit</p>
+            <p class="m-0">EP III</p>
+          </div>
+          <span class="ms-auto">4 ore</span>
+        </div>
+        <div class="d-flex mb-3">
+          <img class="rounded-circle" src="assets/imgs/main/image-4.jpg" alt="" style="width: 30px; height: 30px" />
+          <div class="d-inline-block ms-2">
+            <p class="m-0">Charlie Hookham</p>
+            <p class="m-0">Lorem ipsum dolor sit</p>
+            <p class="m-0">EP III</p>
+          </div>
+          <span class="ms-auto">4 ore</span>
+        </div>
+        <div class="col-12 border-top border-secondary bg-black text white-50 p-2 position-relative">
+          <div class="d-flex flex-column">
+            <!-- ARRAY PLAYLIST FINITE -->
+            <div class="bg-black ps-0">
+              <p>Playllist già ascoltati</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </nav>
+    </div>
     <!-- ----------------------------------------------------------------------------------------------------------lavoro nicole -->
 
     <!-- player versione dexstop -->
-    <div class="text-white fixed-bottom bg-player-color p-3 " style="background-color: #161616; border-top: 1px solid lightgray ;">
+    <div class="text-white fixed-bottom bg-player-color p-3 "
+      style="background-color: #161616; border-top: 1px solid lightgray ;">
       <div class="player container-fluid py-2">
         <div class="row justify-content-between">
           <div class="col-6 col-md-3 d-flex flex-row align-items-center ps-0">
@@ -329,9 +269,12 @@
           </div>
           <div class="col-6 d-flex flex-md-column align-items-center">
             <div class="buttons ms-auto m-md-0">
-              <div class="prev-track p-0 d-none d-md-block" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
-              <div class="playpause-track p-0 px-2 " onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
-              <div class="next-track p-0 d-none d-md-block" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+              <div class="prev-track p-0 d-none d-md-block" onclick="prevTrack()"><i
+                  class="fa fa-step-backward fa-2x"></i></div>
+              <div class="playpause-track p-0 px-2 " onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i>
+              </div>
+              <div class="next-track p-0 d-none d-md-block" onclick="nextTrack()"><i
+                  class="fa fa-step-forward fa-2x"></i></div>
             </div>
             <div class=" justify-content-center align-items-center d-none d-md-flex" style="width: 100%;">
               <div class="current-time p-0 pe-2">00:00</div>
@@ -340,20 +283,20 @@
             </div>
           </div>
           <div class="col-3  p-0 align-items-center d-none d-md-flex">
-            <i class="fa fa-volume-down ms-auto"></i>
+            <i class="fa fa-volume-up ms-auto" style="cursor: pointer;" onclick="muteTrack()"></i>
+            <i class="fa fa-volume-mute ms-auto p-3 d-none" style="cursor: pointer;" onclick="removeMuteTrack()"></i>
             <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()" />
-            <i class="fa fa-volume-up"></i>
+
           </div>
         </div>
       </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script src="./js/audioplayer.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/artist.js"></script>
-  </body>
+</body>
+
 </html>

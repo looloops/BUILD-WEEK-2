@@ -298,7 +298,7 @@ a {
 /* PLAYER NICOLE */
 
 .bg-player-color {
-  background-color: #e6e6e6;
+  background-color: #282828;
   border-radius: 15px;
   width: 98%;
   margin-inline: auto;
@@ -434,8 +434,6 @@ nav button:hover {
   }
 
   /* player mobile */
-/* player version mobile */
-@media screen and (min-width: 768px) {
   .bg-player-color {
     background-color: black;
     border-radius: initial;
@@ -530,12 +528,7 @@ nav button:hover {
   .libreriaSm {
     display: none !important;
   }
-  /* .containerPlaylist{
-    gap:1 !important
-  } */
-  .body {
-    padding: 0px;
-  }
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   .body::-webkit-scrollbar {
     display: none;
@@ -560,9 +553,6 @@ nav button:hover {
   }
   .padrespan{
     width: 8rem;
-  }
-  .p-card {
-    padding-inline:0px ;
   }
 }
 @media screen and (max-width: 992px){
