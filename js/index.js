@@ -68,11 +68,6 @@ const btnlibreriaSm = document.getElementsByClassName("btnlibreriaSm")[0];
 const libreria = document.getElementsByClassName("libreria")[0];
 const libreriaSm = document.getElementsByClassName("libreriaSm")[0];
 
-
-// window.innerWidth < 992
-//   ? showRemove(libreriaSm,"hidden","show")
-//   :showRemove(libreriaSm,"show","hidden");
-
 btnLibreria.onclick = () => {
   hiddenLibreria();
 };
