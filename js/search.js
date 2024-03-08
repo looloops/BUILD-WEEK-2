@@ -202,7 +202,7 @@ async function DisplaySongFromRandomArtist(RandomArtistData) { //display random 
         <hr>
     `
     ArtistSongs.innerHTML = RandomArtistData.map(Song => /*html*/`
-            <div class="d-flex align-items-center py-3 h-90">
+            <div class="d-flex align-items-center py-3 h-90 overflow-scroll">
                     <img src="${Song.album.cover}" alt="" style="width: 80px; height: 80px; border-radius: 4px;" class="me-3 img-fluid">
                 <div class="ms-2">
                     <p class="m-0 text-grey">Song: <span class="fw-bolder">${Song.title_short}</span></p>
