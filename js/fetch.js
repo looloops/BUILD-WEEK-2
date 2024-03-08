@@ -102,13 +102,15 @@ rangeInput.oninput = () => {
 
 //funzione crea card
 
-function creaCard(link, text1, text2) {
+function creaCard(link, text1, text2,id) {
   const divcards = document.getElementById("divcards");
   const div = document.createElement("div");
   div.className = "col-12 col-md p-card ";
   divcards.appendChild(div);
   ///////////////////////////
   const div2 = document.createElement("div");
+  div2.style.cursor="pointer"
+ div2.onclick=()=>{window.location.href = `./album.html?idAlbum=${id}`}
   div2.className = "card";
   div.appendChild(div2);
   ///////////////////////////
@@ -160,10 +162,12 @@ function getFetchcard(url, id) {
     })
     .then((oggetto) => {
       let random = Math.floor(Math.random() * oggetto.data.length);
+      console.log(oggetto),
       creaCard(
         oggetto.data[random].album.cover_medium,
         oggetto.data[random].title,
-        oggetto.data[random].artist.name
+        oggetto.data[random].artist.name,
+        oggetto.data[random].artist.name,        
       );
     
     })
