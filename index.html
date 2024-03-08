@@ -182,7 +182,7 @@
                         </button>
                     </div>
 
-                    <div>
+                    <div class="d-flex gap-2">
                         <button type="button" class="btn btn-light rounded-pill fw-bold px-3">Esplora Premium</button>
                         <button type="button" class="btn rounded-circle  fw-bold "
                             style="background-color: #131313;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -238,16 +238,13 @@
                 <div class="d-flex ms-1 header py-5 position-relative" id="div-sponsor">
                     <!-- img cantante -->
                     <div class="img-singer ps-3">
-                        <img src="https://iconpop.it/cdn/shop/products/battisti.jpg?v=1666724943" alt=""
-                            class=" object-fit-cover">
+                        <img src="" alt="" class=" object-fit-cover img-cantante">
                     </div>
                     <!-- descrizione canzone -->
                     <div class="info-song">
-                        <h6 class="fw-bold">Playlist</h6>
-                        <h1 class="fw-bold" id="titleSongHeader">Lucio Battisti- Le migliori canzoni</h1>
-                        <h6 class="fw-bold py-2 fw-bold">Ascoltiamo Lucio Battisti, preparandoci a celebrarne
-                            l'anniversario
-                            della nascita domani.</h6>
+                        <h6 class="fw-bold">Song</h6>
+                        <h1 class="fw-bold" id="titleSongHeader"></h1>
+                        <h6 class="fw-bold py-2 fw-bold ascoltiamo"></h6>
                         <!-- bottoni play segui ecc -->
                         <div class="d-flex gap-3">
                             <button type="button" id="btnHeaderplay"
@@ -270,7 +267,7 @@
                         <div class="col-6 col-lg-4 colplaylist">
                             <div class="card-consigliati card p-0">
                                 <a href="#" class="d-flex">
-                                    <div class="d-flex" style="width: 100px;">
+                                    <div class="d-flex" style="width: 75px;">
                                         <div class="">
                                             <div class=""><img src="./assets/imgs/main/image-1.jpg" class="img-fluid"
                                                     alt=""></div>
@@ -293,7 +290,7 @@
                         <div class="col-6 col-lg-4 colplaylist">
                             <div class="card-consigliati card p-0">
                                 <a href="#" class="d-flex">
-                                    <div class="d-flex" style="width: 100px;">
+                                    <div class="d-flex" style="width: 75px;">
                                         <div class="">
                                             <div class=""><img src="./assets/imgs/main/image-5.jpg" class="img-fluid"
                                                     alt=""></div>
@@ -317,7 +314,7 @@
                         <div class="col-6 col-lg-4 colplaylist">
                             <div class="card-consigliati card p-0">
                                 <a href="#" class="d-flex">
-                                    <div class="d-flex" style="width: 100px;">
+                                    <div class="d-flex" style="width: 75px;">
                                         <div class="">
                                             <div class=""><img src="./assets/imgs/main/image-5.jpg" class="img-fluid"
                                                     alt=""></div>
@@ -342,13 +339,13 @@
                         <div class="col-6 col-lg-4 colplaylist">
                             <div class="card-consigliati card p-0">
                                 <a href="#" class="d-flex">
-                                    <div style="width: 100px;">
+                                    <div style="width: 75px;">
                                         <img src="./assets/imgs/Screenshot 2024-03-07 162146.png" class="img-fluid"
                                             alt="">
                                     </div>
                                     <div class="d-flex align-items-center p-2 overflow-hidden padrespan">
                                         <span class="fs-5 text-nowrap text-truncate overflow-hidden  ">Brani che
-                                            pia</span>
+                                            piacciono</span>
                                     </div>
                                 </a>
                             </div>
@@ -356,7 +353,7 @@
                         <div class="col-6 col-lg-4 colplaylist">
                             <div class="card-consigliati card p-0">
                                 <a href="#" class="d-flex">
-                                    <div class="d-flex" style="width: 100px;">
+                                    <div class="d-flex" style="width: 75px;">
                                         <div class="">
                                             <div class=""><img src="./assets/imgs/main/image-13.jpg" class="img-fluid"
                                                     alt=""></div>
@@ -380,7 +377,7 @@
                         <div class="col-6 col-lg-4 colplaylist overflow-hidden">
                             <div class="card-consigliati card p-0">
                                 <a href="#" class="d-flex">
-                                    <div style="width: 100px;">
+                                    <div style="width: 75px;">
                                         <img src="./assets/imgs/main/image-17.jpg" class="img-fluid" alt="">
                                     </div>
                                     <div class="d-flex align-items-center p-2 overflow-hidden padrespan">
@@ -395,95 +392,23 @@
                     <!-- -----------------------------------------------------------------------------------------------------inizio cards -->
                     <h3 class="d-none d-md-flex fs-5 align-items-center my-3 ">Altro di ciò che ti piace</h3>
                     <div class="container-fluid">
-                        <div class="row row-cols-md-4 row-cols-lg-5 row-cols-sm-3 row-gap-3">
+                        <div class="row row-cols-md-4 row-cols-lg-5 row-cols-sm-3 row-gap-3"
+                            style="padding-bottom: 15rem;" id="divcards">
 
-                            <!-- stampo -->
-                            <div class="bg-success p-2">
-                                <div class="d-flex gap-2">
-                                    <div class="d-flex w-50">
-                                        <div class="">
-                                            <div class=""><img src="./assets/imgs/main/image-13.jpg" class="img-fluid"
-                                                    alt=""></div>
-                                            <div class=""><img src="./assets/imgs/main/image-14.jpg" class="img-fluid"
-                                                    alt=""></div>
-                                        </div>
-                                        <div class="">
-                                            <div class=""><img src="./assets/imgs/main/image-15.jpg" class="img-fluid"
-                                                    alt=""></div>
-                                            <div class=""><img src="./assets/imgs/main/image-16.jpg" class="img-fluid"
-                                                    alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="w-50">
-                                        <h5>Mix anni 2010</h5>
-                                        <p>
-                                            artista,artista,artista,artista</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ------ -->
-
-
-
-
-
-
-                            <div class="col p-card ">
-                                <div class="card">
-                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                    <div class="card-body px-0">
-                                        <h5 class="card-title text-white">Mix anni 2010</h5>
-                                        <p class="card-text text-body-secondary">
-                                            artista,artista,artista,artista</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col p-card  ">
+                            <!-- cardssssssssss vai su js -->
+                            <!-- <div class="col p-card ">
                                 <div class="card ">
-                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
+                                     <img src="./assets/imgs/main/image-11.jpg"
+                                        class="card-img-top img-fluid" alt="...">
                                     <div class="card-body px-0">
                                         <h5 class="card-title text-white">Mix anni 2010</h5>
                                         <p class="card-text text-body-secondary">
                                             artista,artista,artista,artista</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col p-card  ">
-                                <div class="card ">
-                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                    <div class="card-body px-0">
-                                        <h5 class="card-title text-white">Mix anni 2010</h5>
-                                        <p class="card-text text-body-secondary">
-                                            artista,artista,artista,artista</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col p-card ">
-                                <div class="card ">
-                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                    <div class="card-body px-0">
-                                        <h5 class="card-title text-white">Mix anni 2010</h5>
-                                        <p class="card-text text-body-secondary">
-                                            artista,artista,artista,artista</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col p-card ">
-                                <div class="card ">
-                                    <img src="./assets/imgs/main/image-11.jpg" class="card-img-top img-fluid" alt="...">
-                                    <div class="card-body px-0">
-                                        <h5 class="card-title text-white">Mix anni 2010</h5>
-                                        <p class="card-text text-body-secondary">
-                                            artista,artista,artista,artista</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--  -->
+                            </div> -->
                         </div>
                     </div>
-
-
                 </section>
             </div>
         </div>
@@ -525,14 +450,6 @@
                     </div>
                     <span class="ms-auto">4 ore</span>
                 </div>
-                <div class="col-12 border-top border-secondary bg-black text white-50 p-2 position-relative">
-                    <div class="d-flex flex-column">
-                        <!-- ARRAY PLAYLIST FINITE -->
-                        <div class="bg-black ps-0">
-                            <p>Playllist già ascoltati</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -547,10 +464,10 @@
                 <div class="row justify-content-center align-items-center position-relative" id="player-container">
                     <div class="col-6 col-md-4 d-flex align-items-center mb-3 mb-md-0">
                         <div class="player-img-container">
-                            <img src="./assets/imgs/main/image-3.jpg" alt="" />
+                            <img src="./assets/imgs/main/image-3.jpg" alt="" id="imgPlayer" />
                         </div>
                         <div class="ms-2">
-                            <p class="m-0" id="player-title ">Title song</p>
+                            <p class="m-0" id="player-title">Title song</p>
                             <p class="m-0 small text-secondary album-page-list-fs-small" id="player-artist">Artist</p>
                         </div>
                         <button class="player-btn text-secondary add-pref-song ms-2 d-none d-md-block">
@@ -589,7 +506,7 @@
                         <div>
                             <div class="d-flex justify-content-center align-items-center" id="controls">
                                 <!-- casual btn -->
-                                <audio id="audio" class="d-none" src="./song.mp3" controls></audio>
+                                <audio id="audio" class="d-none" src="" controls></audio>
                                 <button class="player-btn text-secondary d-none d-md-block">
                                     <svg fill="currentColor" width="16" height="16" data-encore-id="icon" role="img"
                                         aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
@@ -740,6 +657,8 @@
                     crossorigin="anonymous"></script>
                 <script src="./js/audioplayer.js"></script>
                 <script src="./js/index.js"></script>
+                <script src="./js/fetch.js"></script>
+
             </div>
 </body>
 
