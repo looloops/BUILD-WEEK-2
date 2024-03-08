@@ -298,7 +298,7 @@ a {
 /* PLAYER NICOLE */
 
 .bg-player-color {
-  background-color: #282828;
+  background-color: #e6e6e6;
   border-radius: 15px;
   width: 98%;
   margin-inline: auto;
@@ -434,6 +434,8 @@ nav button:hover {
   }
 
   /* player mobile */
+/* player version mobile */
+@media screen and (min-width: 768px) {
   .bg-player-color {
     background-color: black;
     border-radius: initial;
@@ -562,4 +564,92 @@ nav button:hover {
   .p-card {
     padding-inline:0px ;
   }
+}
+@media screen and (max-width: 992px){
+  .name-artist{
+    font-size: small;
+  }
+}
+
+
+
+/*AUDIO PLAYER*/
+
+.track-art {
+    
+  height: 63px;
+  width: 63px;
+  background-image: url("../imgs/logo.svg");
+  background-size: cover;
+  border-radius: 15%;
+}
+
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: xx-small;
+}
+
+.playpause-track, .prev-track, .next-track {
+  padding: 25px;
+  opacity: 0.8;
+
+ 
+  transition: opacity .2s;
+}
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+  opacity: 1.0;
+}
+
+
+
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: gray;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seek_slider:hover, .volume_slider:hover {
+  opacity: 1.0;
+}
+
+.seek_slider {
+  width: 100%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time, .total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+  cursor: pointer;
 }
