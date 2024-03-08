@@ -25,9 +25,8 @@ const secToMin = (sec) => {
   }
 
 
-const artistID = Math.floor(Math.random()*5000)
-
-const URL = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + 860
+const id = new URLSearchParams(window.location.search).get("idAlbum");
+const URL = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id
 
 
 

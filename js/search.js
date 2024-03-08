@@ -1,75 +1,81 @@
-const SearchInput = document.querySelector('#SearchBar')
-const player = document.querySelector('#player')
-const row = document.querySelector('.container.main')
-
+const SearchInput = document.querySelector("#SearchBar");
+const player = document.querySelector("#player");
+const row = document.querySelector(".container.main");
 
 let timer;
 //CALLBACK & DELAY FUNCTION
 function debounce(callback, delay) {
-    clearTimeout(timer);
-    timer = setTimeout(callback, delay);
+  clearTimeout(timer);
+  timer = setTimeout(callback, delay);
 }
 
 function formatTime(time) {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
 
-    const formattedMinutes = String(minutes).padStart(2, '0'); // Aggiunge uno zero iniziale se necessario
-    const formattedSeconds = String(seconds).padStart(2, '0'); // Aggiunge uno zero iniziale se necessario
+  const formattedMinutes = String(minutes).padStart(2, "0"); // Aggiunge uno zero iniziale se necessario
+  const formattedSeconds = String(seconds).padStart(2, "0"); // Aggiunge uno zero iniziale se necessario
 
-    return `${formattedMinutes}:${formattedSeconds}`;
+  return `${formattedMinutes}:${formattedSeconds}`;
 }
 //effettua ricerca su Deezer utilizzando la API
 async function getData(query) {
-    const response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=' + query)
-    const data = await response.json()
+  const response = await fetch(
+    "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + query
+  );
+  const data = await response.json();
 
-    return data.data;
+  return data.data;
 }
 
 async function displayResults(results) {
-
-    row.innerHTML = /*html*/`
+  row.innerHTML = /*html*/ `
         <div class="dot-pulse">
             <div class="dot-pulse__dot"></div>
         </div>
-    `
+    `;
 
-    if (results.length <= 3) {
-        stopAll()
-        displayHome();
-
-    } else {
-        stopAll()
-        const data = await getData(results)
-        row.innerHTML = data.map(({ album, artist, title, duration, preview, id }) => /*html*/`
+  if (results.length <= 3) {
+    stopAll();
+    displayHome();
+  } else {
+    stopAll();
+    const data = await getData(results);
+    row.innerHTML = data
+      .map(
+        ({ album, artist, title, duration, preview, id }) => /*html*/ `
     
         <div class="row mb-4" id="_${id}" onclick="playAudio(${id})">
             <div class="col-2 col-md-1 pe-0 pe-md-2">
                 <div style="position: relative" id="cover">
-                    <img src="${album.cover_big}" alt="" class="img-fluid rounded">
+                    <img src="${
+                      album.cover_big
+                    }" alt="" class="img-fluid rounded">
                     <audio src="${preview}"></audio>
                     <div class="play-button d-none d-md-flex"><i class="bi bi-play-fill text-white"></i></div>
                 </div>
             </div>
             <div class="col d-flex flex-column justify-content-center TextCut">
                 <h5 class="mb-1 fs-6 fw-semibold TextCut">${title}</h5>
-                <p class="mb-0 text-white-50 fw-semibold TextCut">${artist.name}</p>
+                <p class="mb-0 text-white-50 fw-semibold TextCut">${
+                  artist.name
+                }</p>
             </div>
             <div class="col-auto d-flex align-items-center">
                 <p class="text-white-50 fw-bold">${formatTime(duration)}</p>
             </div>
         </div>
 
-    `).join('')
-    }
+    `
+      )
+      .join("");
+  }
 }
 //VISUALIZZAZIONE CATALOGUE MUSICALI
 async function displayHome() {
+  const container = document.querySelector("#sfoglia");
 
-    const container = document.querySelector('#sfoglia')
-
-    container.innerHTML = `
+  container.innerHTML = `
         <div class="row w-100 justify-content-center my-3">
             <div class="col d-flex justify-content-center justify-content-lg-start">
                 <h3 class="text-light">Sfoglia tutto</h3>
@@ -219,55 +225,58 @@ async function displayHome() {
                 </div>
             </div>
         </div>
-    `
+    `;
 }
 
 /* RANDOM SIDEBAR  */
-const ArtisInfo = document.querySelector(".ArtistInfo")
-const ArtistSongs = document.querySelector(".Top10Songs")
-let number
-let check  
+const ArtisInfo = document.querySelector(".ArtistInfo");
+const ArtistSongs = document.querySelector(".Top10Songs");
+let number;
+let check;
 
-function randomnumber() { 
-    number = Math.floor(Math.random() * 5000) + 1
+function randomnumber() {
+  number = Math.floor(Math.random() * 5000) + 1;
 }
 
-const sleep = (milliseconds=500) => new Promise(resolve => setTimeout(resolve, milliseconds)) //funzione per timing 1.5sec
+const sleep = (milliseconds = 500) =>
+  new Promise((resolve) => setTimeout(resolve, milliseconds)); //funzione per timing 1.5sec
 
-async function GetSongFromRandomArtist() {  // funzione che fetcha randomicamente un artista 
-    try {
-        
-        do {                                //ciclo do while che cicla fino a quando non trova un array pieno
-            await sleep(2000)               //funzione che fa fetchare ogni 1.5sec per non intasare il server
-            randomnumber()                  // funzione per avere un numero random 
+async function GetSongFromRandomArtist() {
+  // funzione che fetcha randomicamente un artista
+  try {
+    do {
+      //ciclo do while che cicla fino a quando non trova un array pieno
+      await sleep(2000); //funzione che fa fetchare ogni 1.5sec per non intasare il server
+      randomnumber(); // funzione per avere un numero random
 
-            const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${number}/top?limit=10`)
-            const result = await response.json()
+      const response = await fetch(
+        `https://striveschool-api.herokuapp.com/api/deezer/artist/${number}/top?limit=10`
+      );
+      const result = await response.json();
 
-            check = result.data
-            console.log(check)
+      check = result.data;
+      console.log(check);
+    } while (check.length === 0);
 
-        } while ((check.length === 0))
-
-        return check
-    }
-    catch(error) {
-        console.log(error);
-        ArtisInfo.innerHTML = `"oh oh qualcosa non va`
-    } finally {
-        document.querySelector(".dot-pulse").classList.add("d-none");
-    }
-
+    return check;
+  } catch (error) {
+    console.log(error);
+    ArtisInfo.innerHTML = `"oh oh qualcosa non va`;
+  } finally {
+    document.querySelector(".dot-pulse").classList.add("d-none");
+  }
 }
 
-async function DisplaySongFromRandomArtist(RandomArtistData) { //display random artist nella sidebar 
+async function DisplaySongFromRandomArtist(RandomArtistData) {
+  //display random artist nella sidebar
 
-    ArtisInfo.innerHTML = /*html*/`
+  ArtisInfo.innerHTML = /*html*/ `
         <img src="${RandomArtistData[0].contributors[0].picture}" alt="" class="mb-3">
         <h5 class="mb-3"><a class="text-decoration-none text-light fw-bold" href="/artist/artist.html?id=${RandomArtistData[0].artist.id}">${RandomArtistData[0].artist.name}</h5>
         <hr>
-    `
-    ArtistSongs.innerHTML = RandomArtistData.map(Song => /*html*/`
+    `;
+  ArtistSongs.innerHTML = RandomArtistData.map(
+    (Song) => /*html*/ `
             <div class="d-flex align-items-center py-3 h-90">
                     <img src="${Song.album.cover}" alt="" style="width: 80px; height: 80px; border-radius: 4px;" class="me-3 img-fluid">
                 <div class="ms-2">
@@ -280,13 +289,53 @@ async function DisplaySongFromRandomArtist(RandomArtistData) { //display random 
                 </div>
             </div>
     `
-    ).join("")
+  ).join("");
 }
-
 
 window.onload = async () => {
+  await displayHome();
+  const RandomArtistData = await GetSongFromRandomArtist();
+  DisplaySongFromRandomArtist(RandomArtistData);
+};
 
-    await displayHome()
-    const RandomArtistData = await GetSongFromRandomArtist()
-    DisplaySongFromRandomArtist(RandomArtistData)
-}
+////alfio
+const searchForm = document.getElementById("searchForm");
+let idArtista
+searchForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+    const ricerca = document.getElementById("Searchbar").value;
+    
+    const apiSearch = "https://deezerdevs-deezer.p.rapidapi.com/search?q="; //+nome artista
+    fetch(apiSearch + ricerca, {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": "56d9802fa4msh3c9b858e765d317p12378djsn46ec36243627",
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          if (response.status === 400) {
+            throw new Error("400 - Errore lato client");
+          }
+          if (response.status === 404) {
+            throw new Error("404 - Dato non trovato");
+          }
+          if (response.status === 500) {
+            throw new Error("500 - Errore lato server");
+          }
+          throw new Error("Errore nel reperimento dati");
+        }
+      })
+      .then((oggetto) => {
+        idArtista=oggetto.data[0].artist.id
+
+        console.log(idArtista);
+        window.location.href = `./artist.html?idAlbum=${idArtista}`;
+
+      })
+      .catch((err) => console.log(err));
+});
