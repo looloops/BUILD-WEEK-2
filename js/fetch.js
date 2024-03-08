@@ -112,10 +112,23 @@ function creaCard(link, text1, text2) {
   div2.className = "card";
   div.appendChild(div2);
   ///////////////////////////
+  const imgContainer = document.createElement("div");
+  imgContainer.className = "image-container";
+  div2.appendChild(imgContainer);
+  ///////////////////////////
   const img = document.createElement("img");
   img.className = "card-img-top img-fluid";
   img.src = link;
-  div2.appendChild(img);
+  imgContainer.appendChild(img);
+  ///////////////////////////
+  const buttonPlay = document.createElement("div");
+  buttonPlay.className = "button-play-container";
+  buttonPlay.innerHTML = `<div class="button-play-sub">
+                              <div class="button-play">
+                                <i class="bi bi-play-fill fs-1"></i>
+                              </div>
+                          </div>`;
+  imgContainer.appendChild(buttonPlay);
   ///////////////////////////
   const div3 = document.createElement("div");
   div3.className = "card-body px-0 overflow-hidden";
@@ -130,6 +143,7 @@ function creaCard(link, text1, text2) {
   p.className = "card-text text-body-secondary text-white text-nowrap text-truncate";
   p.textContent = text2;
   div3.appendChild(p);
+  cardMobileBG("card-img-top");
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////fetch che crea nella home le card dinamiche
