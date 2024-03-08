@@ -1,16 +1,15 @@
-
 input[type="text"]:focus{
     outline: none !important;
 }
-
+  
 input[type="text"]::placeholder, input[type="text"]{
     font-weight: bold;
 }
-
+  
 .card {
     transition: all .3s ease;
 }
-
+  
 .card-body{
     position: absolute;
     bottom: 0;
@@ -21,65 +20,7 @@ input[type="text"]::placeholder, input[type="text"]{
     align-items: flex-end;
     transition: all .3s ease;
 } 
-
-.play-button{
-    position: absolute;
-    right: calc(50% - 21px);
-    top: calc(50% - 21px);
-    transform: translateY(10px);
-    opacity: 0;
-    justify-content: center;
-    align-items: center;
-    width: 42px;
-    height: 42px;
-    background-color: var(--color-green);
-    transition: all .3s ease;
-    box-shadow: none;
-    border-radius: 50%;
-} 
-#cover:hover .play-button{
-    box-shadow: 0 0px 16px rgba(0, 0, 0, 0.75);
-}
-
-.player-play{
-    width: 48px;
-    height: 48px;
-    background-color: var(--color-green);
-    transition: all .3s ease;
-    box-shadow: none;
-    border-radius: 50%;
-}
-
-.TextCut{
-    white-space: nowrap;      
-    overflow: hidden;
-    text-overflow: ellipsis;  
-}
-.main.row {
-    cursor:pointer;
-}
-
-.main .row:hover .play-button{
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.active{
-    opacity: 1;
-    transform: translateY(0);
-    animation: linear 2s infinite running rotate;
-    color: var(--color-green);
-}
-
-@keyframes rotate{
-    0%{
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
+  
 .square {
     aspect-ratio: 1/1;
     background-position: center;
@@ -87,11 +28,11 @@ input[type="text"]::placeholder, input[type="text"]{
     position: relative;
     overflow: hidden;
 }
-
+  
 .square:hover{
     opacity: 0.75;
 }
-
+  
 .square img{
     position: absolute;
     bottom: 0;
@@ -100,4 +41,6 @@ input[type="text"]::placeholder, input[type="text"]{
     height: 50%;
     aspect-ratio: 1/1;
     transform: rotate(25deg) translate(18%,-2%);
+    transition:  0.5s;
+    cursor: pointer;
 }
