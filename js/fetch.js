@@ -102,8 +102,8 @@ rangeInput.oninput = () => {
 
 //funzione crea card
 
-function creaCard(link, text1, text2) {
-  const divcards = document.getElementById("divcards");
+function creaCard(link, text1, text2, idContainer) {
+  const divcards = document.getElementById(idContainer || "divcards");
   const div = document.createElement("div");
   div.className = "col-12 col-sm-4 col-md-3 gx-2 card-container";
   divcards.appendChild(div);
@@ -148,7 +148,7 @@ function creaCard(link, text1, text2) {
 
 //////////////////////////////////////////////////////////////////////////////////////////fetch che crea nella home le card dinamiche
 
-function getFetchcard(url, id) {
+function getFetchcard(url, id, idContainer) {
   fetch(url + id, {
     method: "GET",
     headers: {
@@ -174,11 +174,22 @@ function getFetchcard(url, id) {
     })
     .then((oggetto) => {
       let random = Math.floor(Math.random() * oggetto.data.length);
-      creaCard(oggetto.data[random].album.cover_medium, oggetto.data[random].title, oggetto.data[random].artist.name);
+      creaCard(
+        oggetto.data[random].album.cover_medium,
+        oggetto.data[random].title,
+        oggetto.data[random].artist.name,
+        idContainer
+      );
     })
     .catch((err) => console.log(err));
 }
+
 for (let index = 0; index < 5; index++) {
   let rand2 = Math.floor(Math.random() * arrayArtist.length);
   getFetchcard(apiSearch, arrayArtist[rand2]);
+}
+
+for (let index = 0; index < 5; index++) {
+  let rand2 = Math.floor(Math.random() * arrayArtist.length);
+  getFetchcard(apiSearch, arrayArtist[rand2], "divcards-2");
 }
