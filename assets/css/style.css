@@ -297,7 +297,7 @@ a {
 
 /*SEARCH*/
 .search {
-  padding-left: 10px;
+  overflow: scroll;
 }
 
 input[type="text"]:focus{

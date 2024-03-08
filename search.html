@@ -15,8 +15,8 @@
     <title>Search Page</title>
 </head>
 
-<body class="search bg-black">
-    <div class="container-fluid bg black">
+<body data-bs-theme="dark">
+    <div class="bg-black">
         <div class="row">
             <!-- SIDEBAR -->
             <div class="col-3 p-0 d-none d-lg-block position-relative">
@@ -24,6 +24,15 @@
                     <div class="w-90 m-0">
                         <div class="px-3 pt-3">
                             <ul class="list-unstyled">
+                                <li>
+                                    <button class="bg-black border-0 btnlibreriaSm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                            class="bi bi-three-dots" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                                        </svg>
+                                    </button>
+                                </li>
                                 <li class="mt-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-house-door-fill" viewBox="0 0 16 16">
@@ -43,9 +52,9 @@
                                 </li>
                             </ul>
                             
-                            <div class="border-top border-secondary bg-black text-white p-3 position-relative search" style="height: 100%;">
-                                <div class="d-flex justify-content-center align-items-center ps-0">
-                                    <div class="text-decoration-none py-2 me-4">
+                            <!-- <div class="border-top border-secondary bg-black text-white p-3 position-relative search" style="height: 100%;">
+                                <div class="d-flex gap-3">
+                                    <div class="text-decoration-none py-2 ps-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                         class="bi bi-collection-play-fill" viewBox="0 0 16 16">
                                         <path
@@ -54,11 +63,27 @@
                                     <a href="./album.html" class="text-white px-1 pt-4 me-3 text-decoration-none fs-6">La
                                         tua libreria</a>   
                                     </div>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <i class="bi bi-plus-lg text-light fs-6 me-3"></i>
+                                    <div class="d-flex justify-content-center align-items-center me-4">
+                                        <i class="bi bi-plus-lg text-light fs-4"></i>
                                         <i class="bi bi-arrow-right-short text-light fs-4" style="margin-top: 1px;"></i>
                                     </div>
                                 </div>
+                            </div> -->
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div class="text-decoration-none py-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-collection-play-fill" viewBox="0 0 16 16">
+                                        <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437"></path>
+                                    </svg>
+                                    <a href="./album.html" class="text-white px-3 pt-4 me-3 text-decoration-none fs-6">La
+                                        tua libreria</a>   
+                                </div>
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <i class="bi bi-plus-lg text-light fs-6 me-3"></i>
+                                    <i class="bi bi-arrow-right-short text-light fs-4" style="margin-top: 1px;"></i>
+                                </div>
+
                             </div>
                             <!-- PARTE SOTTO LIBRERIA -->
                             <div class="d-flex flex-wrap mt-3 justify-content-center-left" style="font-size: 0.8rem;">
@@ -67,7 +92,7 @@
                                         Playlist
                                     </a>
                                 </div>
-                                <div class="sidebar-button d-flex justify-content-center align-items-center mt-2 me-2">
+                                <div class="sidebar-button d-flex justify-content-center align-items-center mt-2 me-2 rounded">
                                     <a href="#" class="text-decoration-none fw-medium text-white px-2 ">
 
                                         Podcast e show
@@ -87,7 +112,7 @@
                                 </div>
                             </div>
                             <!-- PARTE CANZONI/ALBUM -->
-                            <div class="d-flex flex-column h-100 mt-4 philip">
+                            <div class="d-flex flex-column h-100 mt-4 search">
                                 <div>
                                     <h6 class="mb-4 fw-bold text-light">Artista del Giorno</h6>
                                     <div class="dot-pulse d-flex">
@@ -110,23 +135,22 @@
                 <!-- INPUT TAB -->
                 <div class="container d-sm-none d-md-block d-none d-sm-block">
                     <nav class="navbar py-3 me-3">
-                        <div>
+                        <div class="pt-lg-1 d-flex align-items-center gap-3">
                             <button class="rounded-circle border-0" style="background-color: #131313;">
                                 <img src="./assets/arrow-prev-small-svgrepo-com.svg" alt="" srcset=""
                                     class="rounded-circle">
                             </button>
-                            <button class="rounded-circle border-0" style="background-color: #131313;">
+                            <button class="rounded-circle border-0 me-2" style="background-color: #131313;">
                                 <img src="./assets/arrow-next-small-svgrepo-com.svg" alt="" srcset=""
                                     class="rounded-circle">
                             </button>
-                        </div>
-                        <div class="row px-3 pt-3 bg-dark d-flex align-items-center justify-content-between">
-                            <div class="rounded-pill py-2 px-5 bg-dark d-flex">
-                                <span class="text-white me-3"><i
-                                        class="bi bi-search"></i></span>
-                                <input class="border-0 bg-transparent text-light w-100 rounded-4" type="text" id="SearchBar"
-                                    placeholder="Cosa vuoi ascoltare?" oninput="debounce(() => {displayResults(SearchBar.value)}, 500)">
-                            </div>
+
+                            <form class="form-search d-flex align-items-center border border-0 rounded-5 bg-dark p-2 gap-4 d-block" role="search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="gray" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                                </svg>
+                                <input class="input-search me-1 bg-dark border border-0 text-white" type="search" id="Searchbar" placeholder="Cosa vuoi ascoltare?" oninput="debounce(() => {displayResults(SearchBar.value)}, 500)"">
+                            </form> 
                         </div>
                         <div>
                             <button type="button" class="btn btn-light rounded-pill fw-bold px-3">Esplora Premium</button>
@@ -144,38 +168,38 @@
                                 </svg></button>
                             <!-- logo avatr profilo -->
                             <button type="button" id="btnlogoAvatar"
-                                class="btn border-0  text-white rounded-pill  fs-4 pe-3 d-inline-flex align-items-center"
-                                style="background-color: #0A0A0A;">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdR-W0o7aRlmTTSDUnIZuUEu1GR5nx7Zarsw&usqp=CAU"
-                                    class="rounded-circle" width="36rem" alt="logo">
-                                <!-- <span class="fs-6 ps-2">Lidia Nautilus... </span> -->
-                                <span class="px-2"></span>
-    
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end me-2 ">
-                                <li><a class="dropdown-item d-flex justify-content-between" href="#"><span>Account</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                            class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                                            <path fill-rule="evenodd"
-                                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-                                        </svg></a></li>
-                                <li><a class="dropdown-item" href="#"> Profilo</a></li>
-                                <li><a class="dropdown-item d-flex justify-content-between g-2" href="#"><span>Effettua
-                                            l'upgrade a Premium</span> <svg xmlns="http://www.w3.org/2000/svg" class="ms-3"
-                                            width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right"
-                                            viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                                            <path fill-rule="evenodd"
-                                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-                                        </svg></a></li>
-                                <li><a class="dropdown-item" href="#"> Sessione privata</a></li>
-                                <li><a class="dropdown-item" href="#"> Impostazioni</a></li>
-                                <hr>
-                                <li><a class="dropdown-item" href="#"> Esci</a></li>
-                            </ul>
+                            class="btn border-0 dropdown-toggle dropdown-toggle-split text-white rounded-pill  overflow-hiddens fs-4 pe-3 d-inline-flex align-items-center"
+                            style="background-color: #0A0A0A;" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdR-W0o7aRlmTTSDUnIZuUEu1GR5nx7Zarsw&usqp=CAU"
+                                class="rounded-circle" width="36rem" alt="logo">
+                            <span class="fs-6 ps-2">Lidia Nautilus... </span>
+                            <span class="px-2"></span>
+
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end ">
+                            <li><a class="dropdown-item d-flex justify-content-between" href="#"><span>Account</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                        <path fill-rule="evenodd"
+                                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                    </svg></a></li>
+                            <li><a class="dropdown-item" href="#"> Profilo</a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between g-2" href="#"><span>Effettua
+                                        l'upgrade a Premium</span> <svg xmlns="http://www.w3.org/2000/svg" class="ms-3"
+                                        width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                        <path fill-rule="evenodd"
+                                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                    </svg></a></li>
+                            <li><a class="dropdown-item" href="#"> Sessione privata</a></li>
+                            <li><a class="dropdown-item" href="#"> Impostazioni</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#"> Esci</a></li>
+                        </ul>
                         </div>
                     </nav>
                 </div>
