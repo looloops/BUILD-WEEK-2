@@ -72,6 +72,7 @@ let rand = Math.floor(Math.random() * arrayArtist.length);
 getFetch(apiSearch, arrayArtist[rand]);
 const endsongtime = document.getElementById("end-song");
 const startsongtime = document.getElementById("start-song");
+let time = document.querySelector(".time"); // traccia audio
 
 // click player in basso
 btnplay.onclick = () => {
@@ -91,6 +92,11 @@ btnHeaderplay.onclick = () => {
   } else {
     myaudio.pause();
   }
+  audioPlay = setInterval(function () {
+    let audioTime = Math.round(myaudio.currentTime); //getTime
+    let audioLength = Math.round(myaudio.duration);
+    time.style.width = (audioTime * 100) / audioLength + "%";
+  }, 30);
 };
 
 //funzione che gestisce il volume
@@ -162,7 +168,6 @@ function getFetchcard(url, id) {
     })
     .then((oggetto) => {
       let random = Math.floor(Math.random() * oggetto.data.length);
-      console.log(oggetto),
       creaCard(
         oggetto.data[random].album.cover_medium,
         oggetto.data[random].title,

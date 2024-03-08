@@ -1,5 +1,5 @@
 const artistID = Math.floor(Math.random() * 5000);
-console.log(artistID);
+
 const apiSearch = "https://deezerdevs-deezer.p.rapidapi.com/search?q="; //+nome artista
 const getAlbum = "https://deezerdevs-deezer.p.rapidapi.com/album/"; //+id album
 
@@ -9,13 +9,11 @@ const getAlbum = "https://deezerdevs-deezer.p.rapidapi.com/album/"; //+id album
 function getColorForAlbumPage() {
   const colorThief = new ColorThief();
   const img = document.getElementById("album-page-image-color");
-  console.log(img.src);
 
   // Make sure image is finished loading
   if (img) {
     let arrayColor = colorThief.getColor(img);
     let color = arrayColor.toString();
-    console.log(color);
     return color;
   } else {
     img.addEventListener("load", function () {
@@ -31,80 +29,69 @@ function albumPageBackground() {
   nav.style.backgroundColor = `rgb(${color})`;
   header.style = `background: linear-gradient(180deg, rgba(${color},1) 0%, rgba(18,18,18,1) 33%);`;
 }
+//funzione che gestisce il volume
+const rangeInput = document.getElementById("customRange1");
+rangeInput.oninput = () => {
+  const volume = parseFloat(rangeInput.value);
+  audio.volume = volume / 100; // Imposta il volume dell'audio in base al valore del range
+};
 
 // PLAYER WALKER
 
-let audio = document.getElementById("audio"); // elemento audio
+const audio = document.getElementById("audio"); // elemento audio
+const imgPlayer = document.getElementById("imgPlayer"); // elemento audio
+const playertitle = document.getElementById("player-title"); // elemento audio
+const playerartist = document.getElementById("player-artist"); // elemento audio
+const startsong = document.getElementById("start-song"); // elemento audio
 let time = document.querySelector(".time"); // traccia audio
 let btnPlay = document.querySelector(".play"); // tasto play
+let numeroMagico=0;
+let nArray
 
-let btnPause = document.querySelector(".pause"); // tasto pausa (da vedeere come implementarlo)
+
+
 let btnPrev = document.querySelector(".prev"); // tasto indietro
 let btnNext = document.querySelector(".next"); // tasto avanti
-
-// array di canzioni.. da implementare poi con la fetch
-let songs = ["track 1.mp3", "track 2.mp3", "track 3.mp3"]; // array di canzoni da dover riprodurre
-
-let track; // variabile index traccia
-
-window.onload = function () {
-  track = 0;
-};
-
-function switchTrack(numTrack) {
-  // assegnamo all'audio una risorsa
-  audio.src = "../song.mp3" + songs[numTrack]; // *cambiare l'indirizzo dell'audio in base alla fetch
-  // assegnamo alla canzione un tempo 0
-  audio.currentTime = 0;
-  //avviamo la canzone
-  audio.play();
+btnNext.onclick=()=>{
+  if(numeroMagico<nArray){
+    numeroMagico++
+    imgPlayer.src=tracks[numeroMagico].album.cover
+    playertitle.innerText=`${tracks[numeroMagico].title}`
+    playerartist.innerText=`${tracks[numeroMagico].artist.name}`
+    audio.src = tracks[numeroMagico].preview
+  }
+ 
+}
+btnPrev.onclick=()=>{
+  if(numeroMagico>0){
+    numeroMagico--
+    imgPlayer.src=tracks[numeroMagico].album.cover
+    playertitle.innerText=`${tracks[numeroMagico].title}`
+    playerartist.innerText=`${tracks[numeroMagico].artist.name}`
+    audio.src = tracks[numeroMagico].preview
+  }
 }
 
 btnPlay.onclick = () => {
-  audio.play();
-  // set intervall
-  btnPlay.classList.add("d-none");
-  btnPause.classList.remove("d-none");
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+
   audioPlay = setInterval(function () {
-    //prendere il valore del decondo della canzone
     let audioTime = Math.round(audio.currentTime); //getTime
-    // prendiamo tutto il tempo della canzone
     let audioLength = Math.round(audio.duration);
-
-    // function innerLongSong(time, length) {
-    //   let start = document.getElementById("start-song");
-    //   let long = document.getElementById("end-song");
-
-    // }
-
-    // assegnamo una lunghezza in base all'elemento
     time.style.width = (audioTime * 100) / audioLength + "%";
-    // mostra i secondi di riempimento della barra e controlla che la variabile sia meno di 4
-    if (audioTime === audioLength && track < songs.length) {
-      track++; //la traccia si incrementa
-      switchTrack(track); // cambia traccia
-    } else if (audioTime === audioLength >= songs.length) {
-      track = 0; // gli riassegnamo il valore 0
-      switchTrack(track); // e cambia traccia
-    }
-  }, 10);
-};
-
-btnPause.onclick = () => {
-  btnPause.classList.add("d-none");
-  btnPlay.classList.remove("d-none");
-  audio.pause(); // Interrompe la canzone
-  clearInterval(audioPlay); // interrompe l'intervallo
+  }, 30);
 };
 
 function innerAlbumPage(album, artist) {
   const cover = album.cover_medium;
-  console.log(cover);
   const title = album.title;
   const artistName = artist.name;
 
   const page = document.getElementById("page-container");
-  console.log(page);
   page.innerHTML = `<div class="container-fluid m-0 ps-0" id="inner-body">
   <nav class="row align-content-center album-page-header-padding sticky-top py-1" id="album-page-navbar-sticky">
     <div class="col-3 pt-1">
@@ -553,7 +540,7 @@ function innerAlbumPage(album, artist) {
 </div>
 </div>`;
 }
-
+let tracks
 function getFetch(url, id) {
   fetch(url + id, {
     method: "GET",
@@ -562,7 +549,7 @@ function getFetch(url, id) {
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
-    .then(response => {
+    .then((response) => {
       if (response.ok) {
         return response.json();
       } else {
@@ -578,22 +565,20 @@ function getFetch(url, id) {
         throw new Error("Errore nel reperimento dati");
       }
     })
-    .then(oggetto => {
-      console.log(oggetto);
+    .then((oggetto) => {
       const data = oggetto.data;
       const album = data[0].album;
       const artist = data[0].artist;
-      console.log(album.id);
-
       innerAlbumPage(album, artist);
       fetch(getAlbum + album.id, {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key": "56d9802fa4msh3c9b858e765d317p12378djsn46ec36243627",
+          "X-RapidAPI-Key":
+            "56d9802fa4msh3c9b858e765d317p12378djsn46ec36243627",
           "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
         },
       })
-        .then(response => {
+        .then((response) => {
           if (response.ok) {
             return response.json();
           } else {
@@ -609,9 +594,13 @@ function getFetch(url, id) {
             throw new Error("Errore nel reperimento dati");
           }
         })
-        .then(oggetto => {
-          const tracks = oggetto.tracks.data;
-          console.log("2", tracks);
+        .then((oggetto) => {
+          tracks = oggetto.tracks.data;
+          nArray=tracks.length
+          imgPlayer.src=tracks[numeroMagico].album.cover
+          playertitle.innerText=`${tracks[numeroMagico].title}`
+          playerartist.innerText=`${tracks[numeroMagico].artist.name}`
+          audio.src = tracks[numeroMagico].preview;
           for (let i = 0; i < 7; i++) {
             const list = document.getElementById("append");
             const item = document.createElement("div");
@@ -625,25 +614,37 @@ function getFetch(url, id) {
               "album-page-header-padding",
               "album-page-list-row"
             );
-            item.innerHTML = `<div class="col-1 d-none d-md-flex"><div class="album-page-list-fs-small">${[i]}</div>
+            item.innerHTML = `<div class="col-1 d-none d-md-flex"><div class="album-page-list-fs-small">${[
+              i,
+            ]}</div>
               </div>
               <div class="col-11 col-md-5">
                 <div class="d-flex align-items-center">
                   <div class="img-container-album-song me-2 d-none d-md-flex">
-                    <img src="${tracks[i].album.cover_medium}" width="100%" height="100%" alt="" />
+                    <img src="${
+                      tracks[i].album.cover_medium
+                    }" width="100%" height="100%" alt="" />
                   </div>
                   <div>
-                    <div class="text-white" id="album-page-list-title">${tracks[i].title}</div>
-                    <div class="album-page-list-fs-small" id="album-page-list-artist">${tracks[i].artist.name}</div>
+                    <div class="text-white" id="album-page-list-title">${
+                      tracks[i].title
+                    }</div>
+                    <div class="album-page-list-fs-small" id="album-page-list-artist">${
+                      tracks[i].artist.name
+                    }</div>
                   </div>
                 </div>
               </div>
               <div class="col-3 d-none d-md-flex">
-                <div class="album-page-list-fs-small" id="album-page-list-album">${tracks[i].album.title}</div>
+                <div class="album-page-list-fs-small" id="album-page-list-album">${
+                  tracks[i].album.title
+                }</div>
               </div>
               <div class="col-2 d-none d-md-flex"></div>
               <div class="col-1 d-none d-md-flex">
-                <div class="album-page-list-fs-small" id="album-page-list-timing">${tracks[i].duration}</div>
+                <div class="album-page-list-fs-small" id="album-page-list-timing">${
+                  tracks[i].duration
+                }</div>
               </div>
               <div class="col-1 d-md-none">
                 <!-- btn-points -->
@@ -661,9 +662,9 @@ function getFetch(url, id) {
           getColorForAlbumPage();
           albumPageBackground();
         })
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     })
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err));
 }
 
 const id = new URLSearchParams(window.location.search).get("idAlbum");
