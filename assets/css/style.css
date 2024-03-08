@@ -145,11 +145,6 @@ body {
   color: var(--greyText) !important;
 }
 
-.album-page-header-padding {
-  padding-left: 3rem !important;
-  padding-right: 1.5rem !important;
-}
-
 .album-page-image-container {
   width: 65%;
   height: 65%;
@@ -219,11 +214,7 @@ body {
   border-radius: 2px;
 }
 
-#album-page-header-list-song {
-  background-color: #121212;
-}
-
-.album-page-list-row:hover {
+#album-page-list-row:hover {
   background-color: var(--grey2);
   border-radius: 5px;
   color: white !important;
@@ -246,12 +237,13 @@ body {
 }
 
 #footer-page {
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
 }
 
 #footer-page p {
   color: var(--greyText);
   font-size: 0.9rem;
+  padding-inline: 0;
 }
 #footer-page p span {
   margin-right: 1rem;
@@ -265,11 +257,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#album-page-header-list-song {
-  position: sticky;
-  top: 3rem;
 }
 
 /* LU_________________ */
@@ -423,14 +410,14 @@ nav button:hover {
   }
 
   .album-page-list-fs-big {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .album-page-list-fs-small {
     font-size: 1.1rem;
   }
 
-  .album-page-info img {
+  .album-page-info {
     width: "30px";
     height: "30px";
   }
@@ -541,12 +528,7 @@ nav button:hover {
   .libreriaSm {
     display: none !important;
   }
-  /* .containerPlaylist{
-    gap:1 !important
-  } */
-  .body {
-    padding: 0px;
-  }
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   .body::-webkit-scrollbar {
     display: none;
@@ -565,14 +547,99 @@ nav button:hover {
   .fs-5 {
     font-size: 14px !important;
   }
-  .colplaylist {
+  .colplaylist{
     padding: 10px;
     margin: 0px;
   }
-  .padrespan {
+  .padrespan{
     width: 8rem;
   }
-  .p-card {
-    padding-inline: 0px;
+}
+@media screen and (max-width: 992px){
+  .name-artist{
+    font-size: small;
   }
+}
+
+
+
+/*AUDIO PLAYER*/
+
+.track-art {
+    
+  height: 63px;
+  width: 63px;
+  background-image: url("../imgs/logo.svg");
+  background-size: cover;
+  border-radius: 15%;
+}
+
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: xx-small;
+}
+
+.playpause-track, .prev-track, .next-track {
+  padding: 25px;
+  opacity: 0.8;
+
+ 
+  transition: opacity .2s;
+}
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+  opacity: 1.0;
+}
+
+
+
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: gray;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seek_slider:hover, .volume_slider:hover {
+  opacity: 1.0;
+}
+
+.seek_slider {
+  width: 100%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time, .total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+  cursor: pointer;
 }

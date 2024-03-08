@@ -666,4 +666,6 @@ function getFetch(url, id) {
     .catch(err => console.log(err));
 }
 
-getFetch(apiSearch, "queen");
+const id = new URLSearchParams(window.location.search).get("idAlbum");
+
+getFetch(apiSearch, id);
