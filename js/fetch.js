@@ -105,7 +105,7 @@ rangeInput.oninput = () => {
 function creaCard(link, text1, text2) {
   const divcards = document.getElementById("divcards");
   const div = document.createElement("div");
-  div.className = "col p-card ";
+  div.className = "col-12 col-sm-6 p-card ";
   divcards.appendChild(div);
   ///////////////////////////
   const div2 = document.createElement("div");
